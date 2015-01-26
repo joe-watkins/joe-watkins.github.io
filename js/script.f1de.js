@@ -1,0 +1,1 @@
+$(document).ready(function(){var a={ui:{mainNav:function(){var a=$(".navicon"),b=$("#site-navigation"),c=(b.find("a"),b.outerHeight(),"show-navigation");a.on("click",function(a){a.preventDefault(),$("body").toggleClass(c);var d=$("body").hasClass(c);b.toggleAria({aria:"hidden"}),d&&b.focus()}),b.on("focus",function(){$("body").addClass(c)})}}};a.ui.mainNav()});
