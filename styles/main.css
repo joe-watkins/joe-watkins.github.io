@@ -5263,11 +5263,13 @@ body.breakPointer:after {
 body {
   font-family: "PT Serif", serif;
   font-size: 230%;
-  margin-top: -100px;
   -webkit-transition: margin .3s ease-in-out;
   transition: margin .3s ease-in-out; }
   body.show-navigation {
     margin-top: 0; }
+  @media (min-width: 320px) {
+    body {
+      margin-top: -100px; } }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", sans-serif;
@@ -5323,13 +5325,17 @@ a {
     top: 26px;
     right: 15px;
     background: rgba(0, 0, 0, 0.9);
-    cursor: pointer; }
+    cursor: pointer;
+    display: none; }
     #header .navicon:hover, #header .navicon:focus {
       opacity: .8;
       color: #F3D491;
       outline: 1px dotted #94BCBF; }
     .show-navigation #header .navicon {
       color: #F3D491; }
+    @media (min-width: 320px) {
+      #header .navicon {
+        display: block; } }
   #header .mask-a, #header .mask-b {
     position: absolute;
     bottom: 0;
@@ -5348,13 +5354,16 @@ a {
   #header .site-name {
     color: #fff;
     text-transform: uppercase;
-    padding: 1em 2em 1em 1em;
+    padding: .5em 1em .5em .5em;
     background: #599094;
     position: absolute;
     top: 25px;
     font-family: "Open Sans", sans-serif;
     font-weight: normal;
     text-decoration: none; }
+    @media (min-width: 300px) {
+      #header .site-name {
+        padding: 1em 2em 1em 1em; } }
     #header .site-name:hover, #header .site-name:focus {
       -webkit-animation: tada 1s forwards;
       animation: tada 1s forwards; }
@@ -5363,8 +5372,18 @@ a {
     @media (min-width: 768px) {
       #header .site-name {
         top: 50px; } }
-    #header .site-name span {
+    #header .site-name .tld {
       opacity: .7; }
+    #header .site-name .prog-en {
+      position: absolute;
+      top: -999em;
+      left: -999em; }
+      @media (min-width: 400px) {
+        #header .site-name .prog-en {
+          position: relative;
+          top: auto;
+          left: auto;
+          opacity: 1; } }
     #header .site-name:after {
       position: absolute;
       content: " ";
@@ -5441,7 +5460,12 @@ a {
       text-align: center; }
       #footer .contact--info .contact--info-headshot img {
         margin: 0 auto;
-        max-width: 8em; }
+        width: 100%;
+        height: auto; }
+        @media (min-width: 320px) {
+          #footer .contact--info .contact--info-headshot img {
+            max-width: 8em;
+            width: auto; } }
       #footer .contact--info .contact--info-headshot figcaption {
         margin: 1em 0;
         font-size: .7em; }

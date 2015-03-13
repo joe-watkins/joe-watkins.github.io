@@ -270,9 +270,11 @@ p {
 body {
   font-family: "PT Serif", serif;
   font-size: 230%;
-  margin-top: -100px;
   -webkit-transition: margin .3s ease-in-out;
   transition: margin .3s ease-in-out; }
+  @media (min-width: 320px) {
+    body {
+      margin-top: -100px; } }
 h1, h3{
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
@@ -309,7 +311,11 @@ a {
     top: 26px;
     right: 15px;
     background: rgba(0, 0, 0, 0.9);
-    cursor: pointer; }
+    cursor: pointer;
+    display: none; }
+    @media (min-width: 320px) {
+      #header .navicon {
+        display: block; } }
   #header .mask-a, #header .mask-b {
     position: absolute;
     bottom: 0;
@@ -328,18 +334,31 @@ a {
   #header .site-name {
     color: #fff;
     text-transform: uppercase;
-    padding: 1em 2em 1em 1em;
+    padding: .5em 1em .5em .5em;
     background: #599094;
     position: absolute;
     top: 25px;
     font-family: "Open Sans", sans-serif;
     font-weight: normal;
     text-decoration: none; }
+    @media (min-width: 300px) {
+      #header .site-name {
+        padding: 1em 2em 1em 1em; } }
     @media (min-width: 768px) {
       #header .site-name {
         top: 50px; } }
-    #header .site-name span {
+    #header .site-name .tld {
       opacity: .7; }
+    #header .site-name .prog-en {
+      position: absolute;
+      top: -999em;
+      left: -999em; }
+      @media (min-width: 400px) {
+        #header .site-name .prog-en {
+          position: relative;
+          top: auto;
+          left: auto;
+          opacity: 1; } }
     #header .site-name:after {
       position: absolute;
       content: " ";
@@ -399,7 +418,12 @@ a {
       text-align: center; }
       #footer .contact--info .contact--info-headshot img {
         margin: 0 auto;
-        max-width: 8em; }
+        width: 100%;
+        height: auto; }
+        @media (min-width: 320px) {
+          #footer .contact--info .contact--info-headshot img {
+            max-width: 8em;
+            width: auto; } }
 </style>
 
 
@@ -462,7 +486,7 @@ a {
 
 
 
-<a href="/" class="site-name" id="logo">JoeWatkins<span>.io</span></a>
+<a href="/" class="site-name" id="logo">J<span class="prog-en">oe</span>W<span class="prog-en">atkins</span><span class="tld">.io</span></a>
 
 <p class="human-description">Front-end Web Developer<br>Web Accessibility Advocate</p>
 
