@@ -5206,7 +5206,7 @@ body.breakPointer:after {
 #skip-to-content {
   padding: 1em;
   position: absolute;
-  top: -45px;
+  top: -75px;
   left: 1em;
   z-index: 1000;
   color: white;
@@ -5357,13 +5357,20 @@ a {
     padding: .5em 1em .5em .5em;
     background: #599094;
     position: absolute;
-    top: 25px;
     font-family: "Open Sans", sans-serif;
     font-weight: normal;
-    text-decoration: none; }
+    text-decoration: none;
+    top: 50px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
     @media (min-width: 300px) {
       #header .site-name {
-        padding: 1em 2em 1em 1em; } }
+        padding: 1em 2em 1em 1em;
+        left: 0;
+        top: 25px;
+        -webkit-transform: inherit;
+        transform: inherit; } }
     #header .site-name:hover, #header .site-name:focus {
       -webkit-animation: tada 1s forwards;
       animation: tada 1s forwards; }
@@ -5374,16 +5381,6 @@ a {
         top: 50px; } }
     #header .site-name .tld {
       opacity: .7; }
-    #header .site-name .prog-en {
-      position: absolute;
-      top: -999em;
-      left: -999em; }
-      @media (min-width: 400px) {
-        #header .site-name .prog-en {
-          position: relative;
-          top: auto;
-          left: auto;
-          opacity: 1; } }
     #header .site-name:after {
       position: absolute;
       content: " ";
