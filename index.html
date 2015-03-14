@@ -15,7 +15,7 @@
 function loadCSS(e,t,n,r){"use strict";function u(){var t;for(var r=0;r<o.length;r++){if(o[r].href&&o[r].href.indexOf(e)>-1){t=true}}if(t){i.media=n||"all"}else{setTimeout(u)}}var i=window.document.createElement("link");var s=t||window.document.getElementsByTagName("script")[0];var o=window.document.styleSheets;i.rel="stylesheet";i.href=e;i.media="only x";i.onload=r||function(){};s.parentNode.insertBefore(i,s);u();return i}
 
 // load a file
-loadCSS( "/styles/main.css" );
+loadCSS( "/styles/main.min.css" );
 
 </script>
 
@@ -99,6 +99,17 @@ loadCSS( "/styles/main.css" );
       <!-- begin content -->
       <section class="home posts">
   <h1>Coming Soon</h1>
+  <ul>
+    
+      <li>
+        <a href="/blog/2014/09/22/welcome-to-jekyll.html">Welcome to Jekyll!</a>
+      </li>
+    
+      <li>
+        <a href="/blog/2014/09/22/yo-jekyllrb.html">Yo Jekyll!</a>
+      </li>
+    
+  </ul>
 </section>
 
       <!-- // end content -->
