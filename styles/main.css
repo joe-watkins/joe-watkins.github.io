@@ -5307,7 +5307,7 @@ a {
 /************************************/
 /* header */
 #header {
-  background: url("images/bg-city.jpg") 0 0 no-repeat;
+  background: url("/images/bg-city.jpg") 0 0 no-repeat;
   background-size: cover;
   background-attachment: fixed;
   height: 300px;
