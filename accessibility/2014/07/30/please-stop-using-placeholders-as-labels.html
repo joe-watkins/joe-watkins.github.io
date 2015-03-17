@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Joe Watkins.io | Front-end Web Developer | Web Accessibility Advocate</title>
+    <title>Please stop using placeholders as labels!!!!</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
@@ -88,38 +88,89 @@
 
     <div class="container-fluid">
       <!-- begin content -->
-      <section class="home posts">
+      <article class="posts-a post-detail">
+	<div class="post">
+	<header>
+		<h1>Please stop using placeholders as labels!!!!</h1>
+		<p class="author">by: Joe Watkins</p>
+		<ul class="meta">
+			<li class="date">July 30, 2014</li>
+			<!-- <li class="category"></li> -->
+		</ul>
+	</header>
+	<h2>Accessibility is the key :)</h2>
 
-  <div class="posts-a">
+<p>Accessibility is <strong>very</strong> important to keep in mind when authoring web-based experiences.  When you use a <code>placeholder</code> attribute on an <code>input</code> field in place of a <code>label</code> element you are not only misusing an attribute you could be rendering your web form unusable to many users and defying <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#attr-input-placeholder">a spec that clearly states</a>:</p>
 
-    
-    <div class="post">
-      <header>
-        <h2><a href="/accessibility/2014/12/01/getting-started-with-grunt-tenon-client.html">Getting started with Grunt Tenon Client</a></h2>
-        <p class="author">by: Joe Watkins</p>
-        <ul class="meta">
-          <li class="date">December 12, 2014</li>
-          <!-- <li class="category"> <span>accessibility</span> </li> -->
-        </ul>
-      </header>
-      <p><a href='http://www.tenon.io/'>Tenon.io</a> is a totally awesome web accessibility testing platform that you must check out! It is headed by web accessibility specialist <a href='http://www.karlgroves.com/'>Karl Groves</a>. You can visit <a href='http://www.tenon.io/'>Tenon.io</a> and plunk in a url to perform robust web accessibility tests in your web browser. While this project is in its early phases (beta currently at the time of this post), it will only get better and I'm very excited about its potential. <br><br> In this post I will walk you through setting up Grunt Tenon Client which will integrate Tenon's great accessibility testing into your Grunt-based workflow. </p>
-    </div>
-    
-    <div class="post">
-      <header>
-        <h2><a href="/accessibility/2014/07/30/please-stop-using-placeholders-as-labels.html">Please stop using placeholders as labels!!!!</a></h2>
-        <p class="author">by: Joe Watkins</p>
-        <ul class="meta">
-          <li class="date">July 30, 2014</li>
-          <!-- <li class="category"> <span>accessibility</span> </li> -->
-        </ul>
-      </header>
-      <p>Accessibility is very important to keep in mind when authoring web-based experiences. When you use a placeholder attribute on an input field in place of a label element you are not only misusing an attribute you could be rendering your web form unusable to many users. <br><br> There are many ways you can achieve the 'in-field-label' look, which is the primary cause for this attribute's misuse, while maintaining accessibility. </p>
-    </div>
-    
+<blockquote>
+<p>The placeholder attribute should not be used as an alternative to a label.</p>
+</blockquote>
 
-  </div>
-</section>
+<p>The <a href="http://www.w3.org/WAI/GL/wiki/Using_@placeholder_on_input">W3C</a> has this to say about it:</p>
+
+<blockquote>
+<p>The placeholder attribute is not a substitute for the label element.</p>
+</blockquote>
+
+<h2>What are placeholders for?</h2>
+
+<p>The placeholder attribute represents a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value. eg. <em>&quot;enter your email address&quot;</em> <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#attr-input-placeholder">read more</a></p>
+
+<h2>What are labels for?</h2>
+
+<p>The label element represents a caption in a user interface. The caption can be associated with a specific form control, known as the label element&#39;s labeled control, either using the for attribute, or by putting the form control inside the label element itself. <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-label-element">read more</a></p>
+
+<h2>In-field labels.. let&#39;s stop this too!</h2>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/in-field-example-2.png" alt="In-field example"></p>
+
+<p>The &#39;classic&#39; in-field label is something we should also try stray from using as well. An exception to this may be if the form consists of one or two fields eg. search/log in forms. Through usability testing folks are finding these types of forms are unusable,.. especially on a mobile device. The vertical space you are saving is not worth losing a conversion or excluding a user that requires your form to be accessible.</p>
+
+<h2>Why do we see this pattern?</h2>
+
+<p>I believe there are two major reasons why we are seeing placeholder misuse.</p>
+
+<ol>
+<li><p>The developer sticks a <code>placeholder</code> attribute inside the <code>input</code> field because the browser natively handles the show/hide once the user interacts with the field. It does not take a ton of javascript to handle your labels in the same way. <a href="http://codepen.io/joe-watkins/pen/misCA">Here is some code</a> if you need to do this :)</p></li>
+<li><p>The developer simply does not know what the attribute is for.  There is a shortage of of quality accessibility information out there for developers and it is easy to fall into the trap mentioned in reason #1.</p></li>
+</ol>
+
+<h2>Placeholder Browser support</h2>
+
+<p>It is also important to know browser support for the HTML5 <code>placeholder</code> feature. There are polyfill hacks out there for older browsers.</p>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/browser-support.png" alt="Placeholder browser support from can i use"></p>
+
+<h2>Helpers</h2>
+
+<p>Below you will find a couple pens I came up with that you might find useful.</p>
+
+<h3>Proper Label / Placeholder usage</h3>
+
+<p>[[[pen slug-hash=&#39;adfzl&#39; height=&#39;200&#39; ]]]</p>
+
+<h3>Hide in-field Labels with jQuery</h3>
+
+<p>[[[pen slug-hash=&#39;misCA&#39; height=&#39;230&#39; ]]]</p>
+
+<h3>Show placeholder values while typing</h3>
+
+<p>[[[pen slug-hash=&#39;kspFj&#39; height=&#39;400&#39; ]]]</p>
+
+<h2>Summary</h2>
+
+<p>Creating web-based projects that are accessible can be tough and there is still a lot to learn for us all. When it comes to an attribute like <code>placeholder</code> it is a cool feature that can add accessibility if used correctly,.. if misused it has quite the opposite effect.</p>
+
+<h3>Resources</h3>
+
+<ul>
+<li><a href="http://webaim.org">WebAim</a></li>
+<li><a href="http://a11yproject.com">a11y-project</a></li>
+<li><a href="http://www.w3.org/WAI/GL/wiki/Using_@placeholder_on_input">W3C Placeholder</a></li>
+</ul>
+
+	</div>
+</article>
 
       <!-- // end content -->
     </div>

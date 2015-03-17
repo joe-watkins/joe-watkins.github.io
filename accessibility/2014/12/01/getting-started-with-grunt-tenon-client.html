@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Joe Watkins.io | Front-end Web Developer | Web Accessibility Advocate</title>
+    <title>Getting started with Grunt Tenon Client</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
@@ -88,38 +88,148 @@
 
     <div class="container-fluid">
       <!-- begin content -->
-      <section class="home posts">
+      <article class="posts-a post-detail">
+	<div class="post">
+	<header>
+		<h1>Getting started with Grunt Tenon Client</h1>
+		<p class="author">by: Joe Watkins</p>
+		<ul class="meta">
+			<li class="date">December 12, 2014</li>
+			<!-- <li class="category"></li> -->
+		</ul>
+	</header>
+	<p><a href="http://www.w3.org/WAI/intro/accessibility.php">Web Accessibility</a> / A11Y is finally on a path of owning more mindshare in the web development community.  It has a long way to go but will get there eventually when we learn more about all the positive side effects gained from injecting basic web accessibility practices into our workflow.</p>
 
-  <div class="posts-a">
+<p>Learning about web accessibility can be a daunting task, which probably why it is taking so long to become automatic for developers to include in their code. A11Y is not hard to learn, but resources are scattered and not very fun to soak up. There are, however, tools popping up to make this easier which is great for you and A11Y.</p>
 
-    
-    <div class="post">
-      <header>
-        <h2><a href="/accessibility/2014/12/01/getting-started-with-grunt-tenon-client.html">Getting started with Grunt Tenon Client</a></h2>
-        <p class="author">by: Joe Watkins</p>
-        <ul class="meta">
-          <li class="date">December 12, 2014</li>
-          <!-- <li class="category"> <span>accessibility</span> </li> -->
-        </ul>
-      </header>
-      <p><a href='http://www.tenon.io/'>Tenon.io</a> is a totally awesome web accessibility testing platform that you must check out! It is headed by web accessibility specialist <a href='http://www.karlgroves.com/'>Karl Groves</a>. You can visit <a href='http://www.tenon.io/'>Tenon.io</a> and plunk in a url to perform robust web accessibility tests in your web browser. While this project is in its early phases (beta currently at the time of this post), it will only get better and I'm very excited about its potential. <br><br> In this post I will walk you through setting up Grunt Tenon Client which will integrate Tenon's great accessibility testing into your Grunt-based workflow. </p>
-    </div>
-    
-    <div class="post">
-      <header>
-        <h2><a href="/accessibility/2014/07/30/please-stop-using-placeholders-as-labels.html">Please stop using placeholders as labels!!!!</a></h2>
-        <p class="author">by: Joe Watkins</p>
-        <ul class="meta">
-          <li class="date">July 30, 2014</li>
-          <!-- <li class="category"> <span>accessibility</span> </li> -->
-        </ul>
-      </header>
-      <p>Accessibility is very important to keep in mind when authoring web-based experiences. When you use a placeholder attribute on an input field in place of a label element you are not only misusing an attribute you could be rendering your web form unusable to many users. <br><br> There are many ways you can achieve the 'in-field-label' look, which is the primary cause for this attribute's misuse, while maintaining accessibility. </p>
-    </div>
-    
+<p>Ideally web accessibility should be considered in every phase of a project: Discovery, Content Planning, IA, Design, Prototyping, Development, QA and beyond. In this post we are going to focus on the workflow/tooling development phase.</p>
 
-  </div>
-</section>
+<h2>Introducing Tenon.io</h2>
+
+<blockquote>
+<p>&quot;Tenon is a one of a kind accessibility testing tool in that it is aimed at offering unprecedented flexibility in tooling for designers developers testers and content authors&quot; - tenon.io</p>
+</blockquote>
+
+<p><a href="http://www.tenon.io/">Tenon.io</a> is a totally awesome web accessibility testing platform that you must check out! It is headed by web accessibility specialist <a href="http://www.karlgroves.com/">Karl Groves</a>. You can visit <a href="http://www.tenon.io/">Tenon.io</a> and plunk in a url to perfom robust web accessibility tests in your web browser. While this project is in its early phases (beta currently at the time of this post), it will only get better and I&#39;m very excited about its potential.</p>
+
+<p>Tenon.io has opened up their API up to the public and have created Grunt/Gulp tasks for everyone to use... lets see how we can do it!</p>
+
+<h2>Grunt-Tenon-Client</h2>
+
+<p><a href="https://www.npmjs.org/package/grunt-tenon-client">Grunt Tenon Client</a> is a Grunt Plugin for the Tenon Accessibility Testing API. While Tenon.io makes it super simple to test websites using their web services, there is a way to take advantage of their great API using a Grunt plugin. There is also a <a href="https://github.com/egauci/gulp-tenon-client">Gulp version</a> of this. I am going to walk through the basic setup of this Grunt plugin.</p>
+
+<p>**I assume you know what <a href="http://gruntjs.com/getting-started">Grunt.js</a> is. I also assume you understand how to configure and manage a basic <a href="http://gruntjs.com/getting-started#the-gruntfile">Gruntfile</a> and that you know how to use <a href="https://www.npmjs.org/">NPM</a>.</p>
+
+<hr>
+
+<h2>Video Demo</h2>
+
+<p>Here is a quick video demo (no sound) of <a href="https://www.npmjs.org/package/grunt-tenon-client">Grunt Tenon Client</a> in action. In this video I am running Grunt and then making edits to an html file that has accessibility issues in the page so we can see the Tenon catch them.</p>
+
+<iframe class="tscplayer_inline embeddedObject" name="tsc_player" scrolling="no" frameborder="0" type="text/html" style="overflow:hidden;" src="http://www.screencast.com/users/joe-watkins-emerge/folders/Snagit/media/e0ae845c-3aa4-411e-bf77-ddeaa0bfc0f9/embed" height="460" width="100%" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+<hr>
+
+<h2>Getting Started</h2>
+
+<h3>Step 1</h3>
+
+<p><strong>Obtain API Key</strong>
+You will need to sign up for a free account at <a href="http://www.tenon.io/register.php">Tenon.io</a>. Once your account is approved you will be given a unique API key.</p>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/tenon-account.png" alt="Tenon.io Account Area"></p>
+
+<hr>
+
+<h3>Step 2 - Install Plugin</h3>
+
+<p>From the command line run:<br>
+<code>npm install grunt-tenon-client --save-dev</code></p>
+
+<hr>
+
+<h3>Step 3 - Configure Grunt</h3>
+
+<p>Add the basic task to your Gruntfile.js</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript">tenon: {
+    options: {
+        key: &#39;you api key here&#39;, // ADD YOUR API KEY HERE
+        filter: [31, 54], // The tID maps to the specific unique ID for the test that was failed.
+        level: &#39;AA&#39; // WCAG AA OR AAA
+    },
+    all: {
+        options: {
+            saveOutputIn: &#39;allHtml.json&#39;, // output file for errors
+            snippet: true, // show code snippet for errors?
+            asyncLim: 2 // the maximum number of files to test in parallel. Default is 1
+        },
+        src: [&#39;index.html&#39;] // what file(s) to check
+    }
+}
+</code></pre></div>
+<p>Make sure this task is part of the watch task or create a separate task to run Tenon on it&#39;s own.</p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript">watch: {
+    html : {
+        files : [&#39;**/*.html&#39;],
+        tasks : [&#39;tenon&#39;]
+    }
+}
+</code></pre></div>
+<h3>Full Gruntfile.js example</h3>
+
+<p>In this example I also am using <a href="https://www.npmjs.org/package/load-grunt-tasks">load-grunt-tasks</a> and <a href="https://www.npmjs.org/package/grunt-contrib-watch">grunt-contrib-watch</a></p>
+<div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript">&#39;use strict&#39;;
+
+module.exports = function (grunt) {
+
+    // Load grunt tasks automatically
+    require(&#39;load-grunt-tasks&#39;)(grunt);
+
+    grunt.initConfig({
+
+        watch: {
+            html : {
+                files : [&#39;**/*.html&#39;],
+                tasks : [&#39;tenon&#39;]
+            }
+        }, // watch
+
+        tenon: {
+            options: {
+                key: &#39;you api key here&#39;,
+                filter: [31, 54],
+                level: &#39;AA&#39;
+            },
+            all: {
+                options: {
+                    saveOutputIn: &#39;allHtml.json&#39;,
+                    snippet: true,
+                    asyncLim: 2
+                },
+                src: [&#39;index.html&#39;]
+            }
+        }
+
+    }); // initConfig
+
+    grunt.registerTask(&#39;default&#39;, [&quot;watch&quot;]);
+
+};
+</code></pre></div>
+<hr>
+
+<h2>Step 4 - Watch for errors</h2>
+
+<p>After you have Grunt setup and running it is time to start testing. Make an edit to some HTML and watch the terminal for errors from Grunt Tenon Client.</p>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/tenon-errors.png" alt="Grunt Tonon Client Errors"></p>
+
+<h2>Example Files</h2>
+
+<p>I created a project that includes starter files that you can <a href="https://github.com/joe-watkins/grunt-tenon-client-starter">grab from Github</a>. I hope you consider integrating this tool into your workflow.</p>
+
+	</div>
+</article>
 
       <!-- // end content -->
     </div>
