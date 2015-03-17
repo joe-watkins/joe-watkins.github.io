@@ -5344,13 +5344,9 @@ a {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
   #header .mask-a {
-    height: 3.75em;
-    -webkit-animation: mask-a 1s ease-in-out forwards;
-    animation: mask-a 1s ease-in-out forwards; }
+    height: 3.75em; }
   #header .mask-b {
-    height: 5.3em;
-    -webkit-animation: mask-b 1.3s ease-in-out forwards;
-    animation: mask-b 1.3s ease-in-out forwards; }
+    height: 5.3em; }
   #header .site-name {
     color: #fff;
     text-transform: uppercase;
