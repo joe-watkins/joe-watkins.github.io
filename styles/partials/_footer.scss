@@ -1,0 +1,65 @@
+/*************************************
+/  Footer
+/************************************/
+/* footer */
+#footer {
+	background: #222;
+	color: white;
+	padding: 2em 0;
+	font-family: $sansSerif;
+	> div {
+		max-width: $tubeWidth;
+	}
+	.contact--info {
+
+		text-align: center;
+		max-width: 20em;
+		margin: 0 auto;
+
+		p {
+			font-size: .8em;
+		}
+
+		.contact--info-title {
+			color: white;
+			font-size: 1em;
+			font-weight: normal;
+		} // title
+
+		.contact--info-headshot {
+			margin: 1em 0;
+			text-align: center;
+			img {
+				margin: 0 auto;
+				width: 100%;
+				height: auto;
+				@media(min-width: 320px){
+					max-width: 8em;
+					width: auto;
+				}
+			}
+			figcaption {
+				margin: 1em 0;
+				font-size: .7em;
+			}
+		} // headshot
+
+
+		.social--properties {
+			svg {
+				width: 50px;
+				height: 50px;
+				fill: white;
+			}
+			a { text-decoration: none; }
+			a:hover { text-decoration: none; }
+			a:hover svg { fill: $brandSecondary !important; }
+		} // social properties
+
+	} // contact info
+
+	a:focus {
+		background: none;
+	}
+
+}

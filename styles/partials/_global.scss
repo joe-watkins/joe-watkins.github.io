@@ -1,0 +1,43 @@
+body {
+ // background: blue;
+}
+
+#skip-to-content {
+  padding: 1em;
+  position: absolute;
+  top: -75px;
+  left: 1em;
+  z-index: 1000;
+  color: white;
+  font-size: .7em;
+  font-family: $sansSerif;
+  text-decoration: none;
+}
+
+#skip-to-content:focus {
+  position: absolute;
+  top: 0;
+  background: black;
+  outline: 1px dotted $brandPrimary;
+}
+
+
+/* main */
+#main {
+  max-width: $tubeWidth;
+  margin: 0 auto;
+  padding: 1em 0;
+  @media(min-width: $toddlerBear){
+    padding: 2em;
+  }
+  @media(min-width: $papaBear){
+    padding: 2em 0;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+pre, code {
+  font-size: 16px;
+}

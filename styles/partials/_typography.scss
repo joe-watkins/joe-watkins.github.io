@@ -1,0 +1,66 @@
+/*************************************
+/  Typography
+/************************************/
+@import url(https://fonts.googleapis.com/css?family=PT+Serif:400,700|Open+Sans:100,200,400,700);
+
+body {
+	font-size: 230%;
+	transition: margin .3s ease-in-out;
+	&.show-navigation {
+		margin-top: 0;
+	}
+	@media(min-width: $babyBear){
+		// margin-top: -100px;
+	}
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: $sansSerif;
+	font-weight: bold;
+	color: $headingColor;
+}
+
+h1,h2 {
+	margin-bottom: .8em;
+}
+
+h2,h3,hr { margin-top: 1.5em; }
+
+p, ul {
+	color: $textColor;
+	font-size: .8em;
+	margin-bottom: 1em;
+	font-family: $serif;
+	@media(min-width: $mamaBear){
+		font-size: 1em;
+	}
+}
+
+p {
+	margin-bottom: 30px;
+}
+
+blockquote {
+	background: #F8F8F8;
+	font-size: inherit;
+	margin-bottom: 30px;
+}
+
+a {
+	color: $textLinkColor;
+	text-decoration: underline;
+	&:hover {
+		color: darken($textLinkColor, 10%);
+		text-decoration: none;
+	}
+	&:focus {
+		color: darken($textLinkColor, 10%);
+		text-decoration: none;
+		outline: dotted 1px darken($textLinkColor, 10%);
+		background: $textLinkFocusBackground;
+	}
+}
+
+li {
+	margin-bottom: 15px;
+}

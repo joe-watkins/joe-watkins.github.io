@@ -1,0 +1,114 @@
+/*************************************
+/  Header
+/************************************/
+/* header */
+#header {
+
+	background: url("/images/bg-city.jpg") 0 0 no-repeat;
+	background-size: cover;
+	// background-attachment: fixed;
+	height: 300px;
+	position: relative;
+
+	.navicon {
+		text-transform: uppercase;
+		font-size: 2em;
+		font-weight: 200;
+		background: transparent;
+		border: 0;
+		font-family: $sansSerif;
+		font-size: .8em;
+		color: white;
+		position: absolute;
+		top: 26px;
+		right: 15px;
+		background: rgba(0,0,0,.9);
+		cursor: pointer;
+		// width: 45px;
+		display: none;
+		&:hover, &:focus {
+			opacity: .8;
+			color: $brandSecondary;
+			outline: 1px dotted $brandPrimary;
+		}
+		.show-navigation & {
+			color: $brandSecondary;
+		}
+		@media(min-width: $babyBear){
+			display: block;
+		}
+	}
+
+	.mask-a, .mask-b {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		transform: translate3d(0,0,0);
+	}
+
+	.mask-a {
+		height: 3.75em;
+		// animation: mask-a 1s ease-in-out forwards;
+	}
+
+	.mask-b {
+		height: 5.3em;
+		// animation: mask-b 1.3s ease-in-out forwards;
+	}
+
+	.site-name {
+		color: #fff;
+		text-transform: uppercase;
+		padding: .5em 1em .5em .5em;
+		background: darken($brandPrimary,20%);
+		position: absolute;
+		font-family: $sansSerif;
+		font-weight: normal;
+		text-decoration: none;
+		top: 50px;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		@media(min-width: 300px){
+			padding: 1em 2em 1em 1em;
+			left: 0;
+			top: 25px;
+			transform: inherit;
+		}
+		&:hover, &:focus {
+			animation: tada 1s forwards;
+		}
+		&:focus {
+			outline: 1px dotted white;
+		}
+		@media(min-width: $mamaBear){
+			top: 50px;
+		}
+		.tld { opacity: .7; }
+		&:after {
+			position: absolute;
+			content: " ";
+			top: 0;
+			bottom: 0;
+			right: 0;
+			width: 10px;
+			background: darken($brandPrimary,30%);
+		}
+	}
+
+	.human-description {
+		position: absolute;
+		top: 110px;
+		left: 0;
+		font-family: $sansSerif;
+		color: white;
+		font-size: 60%;
+		background: rgba(22, 128, 136, .95);
+		padding: 1em 2em 1em 1em;
+		@media(min-width: $mamaBear){
+			top: 135px;
+		}
+	}
+
+
+} // header

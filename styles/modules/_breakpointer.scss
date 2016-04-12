@@ -1,0 +1,41 @@
+// a little helper -> http://codepen.io/joe-watkins/pen/HleDC
+/**************************************
+*	breakPointer() - expose breakpoints
+***************************************
+
+Usage:
+1. Edit the $breakPointer_breakpoints variable list below. These comma separated values should match your project's key breakpoints.
+
+3. Drop JS in your project's main JS file and call the breakPointer() function when you need it.
+
+*/
+
+$breakPointer_breakpoints: (
+  babyBear $babyBear,
+  toddlerBear $toddlerBear,
+  mamaBear $mamaBear,
+  papaBear $papaBear,
+  grandpaBear $grandpaBear
+);
+
+body.breakPointer:after {
+
+  content:'No media query';
+
+  @each $breakpoint in $breakPointer_breakpoints {
+    @media (min-width: nth($breakpoint,2)) {
+      content: '#{nth($breakpoint,1)}';
+    }
+  }
+
+  position:fixed;
+  top:3em;
+  right:0;
+  background:#fff;
+  padding:.2em .3em;
+  color:lighten(#000,17%);
+  font-size:1em;
+  opacity:.8;
+  z-index:9999;
+
+}

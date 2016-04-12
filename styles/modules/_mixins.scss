@@ -1,0 +1,54 @@
+// normalize lists
+@mixin tameLists(){
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    list-style:none;
+  }
+}
+
+// clearfix
+@mixin clear() {
+  &:before, &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// slight left bump from design
+@mixin bumpLeft160(){
+  padding-left: 160px;
+}
+
+
+// clear
+@mixin clearfix() {
+  &:before, &:after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      overflow: hidden;
+  }
+  &:after {
+      clear: both;
+  }
+}
+
+@mixin searchPlaceholder(){
+  font-family: $serif;
+  font-style: italic;
+  color: #003366;
+  font-size: 1.5em;
+}
+
+@mixin fontSmoothing(){
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

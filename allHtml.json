@@ -1,0 +1,111 @@
+{
+  "/Users/joewatkins/Desktop/joe-watkins.io-rebuild/index.html": {
+    "apiErrors": [],
+    "documentSize": 837,
+    "globalStats": {
+      "errorDensity": "55",
+      "warningDensity": "3",
+      "allDensity": "58",
+      "stdDev": "187"
+    },
+    "message": "success",
+    "request": {
+      "certainty": "0",
+      "docID": "d237196a-f374-4db3-b913-93c8c36d8ec2",
+      "importance": "0",
+      "key": "null",
+      "level": "AAA",
+      "priority": "0",
+      "projectID": "DEFAULT_PROJECT",
+      "ref": "0",
+      "reportID": "7fc728bc-d716-4bb2-d227-62b0e430d366",
+      "responseID": "53211d814daef666674169296c16d57d",
+      "uaString": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.111 Safari/537.36",
+      "url": "https://tenon.io/api/file.php?docID=7F1A85A8-30BF-BB1C-2CE4-36D2230540CF",
+      "viewport": {
+        "height": 768,
+        "width": 1024
+      },
+      "waitFor": "null",
+      "fragment": "0",
+      "store": "0",
+      "appID": null
+    },
+    "responseExecTime": "0.42",
+    "responseTime": "2016-04-02T14:34:25.216Z",
+    "resultSet": [
+      {
+        "bpID": 26,
+        "certainty": 100,
+        "errorDescription": "This page has no title. The page title is the first thing announced by assistive technologies and is therefore an important wayfinding cue. Provide a page TITLE that is clear, informative, unique, and concise.",
+        "errorSnippet": "&lt;head style=\"\"&gt;&lt;/head&gt;",
+        "errorTitle": "Page has no title",
+        "position": {
+          "column": 7,
+          "line": 12
+        },
+        "priority": 51,
+        "ref": "null",
+        "resultTitle": "Provide clear, informative TITLE elements on all pages",
+        "signature": "bc2795f7b9a32a650573fc8bd86cc9a6",
+        "standards": [
+          "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.2 Page Titled"
+        ],
+        "tID": 64,
+        "xpath": "/html/head[1]"
+      },
+      {
+        "bpID": 118,
+        "certainty": 100,
+        "errorDescription": "Language of the document has not been set. Set the language of the document by adding the 'lang' attribute on the &lt;html&gt; element using an ISO 639-1 language code",
+        "errorSnippet": "&lt;html&gt;&lt;head style=\"\"&gt;&lt;/head&gt;&lt;body style=\"\"&gt;---\nlayout: default\ntitle: Joe Watkins.io | Front-end Web Developer | Web Accessibility Advocate\n---\n\n&lt;section class=\"home posts\"&gt;\n\n  &lt;div class=\"posts-a\"&gt;\n\n    {% for post in",
+        "errorTitle": "Language not set",
+        "position": "",
+        "priority": 76,
+        "ref": "null",
+        "resultTitle": "Identify the primary language used in the document",
+        "signature": "3cc1161591cd0a1f606898e98ddeb0d6",
+        "standards": [
+          "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 3.1.1 Language of Page"
+        ],
+        "tID": 3,
+        "xpath": "/html"
+      }
+    ],
+    "resultSummary": {
+      "density": {
+        "allDensity": 245,
+        "errorDensity": 245,
+        "warningDensity": 0
+      },
+      "issues": {
+        "totalErrors": 2,
+        "totalIssues": 2,
+        "totalWarnings": 0
+      },
+      "issuesByLevel": {
+        "A": {
+          "count": 2,
+          "pct": 100
+        },
+        "AA": {
+          "count": 0,
+          "pct": 0
+        },
+        "AAA": {
+          "count": 0,
+          "pct": 0
+        }
+      },
+      "tests": {
+        "failing": 2,
+        "passing": 60,
+        "total": 62
+      }
+    },
+    "sourceHash": "8a0a2dc2c6a89089cac563322060e45d",
+    "status": 200,
+    "clientScriptErrors": [],
+    "log": null
+  }
+}

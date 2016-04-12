@@ -1,0 +1,25 @@
+---
+categories: blog
+date: 2014-09-22T00:00:00Z
+post_preview: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+  nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+  officia deserunt mollit anim id est laborum.
+title: Yo Jekyll!
+url: /2014/09/22/yo-jekyllrb/
+---
+
+# 'Allo, 'Allo!
+
+You now have
+
+- Jekyll
+- Html5 Boilerplate based templates
+- Sass
+- redcarpet markdown parser
+
+installed.
+
+**Enjoy coding!**

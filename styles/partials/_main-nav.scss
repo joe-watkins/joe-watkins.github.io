@@ -1,0 +1,31 @@
+/*************************************
+/  Main Nav
+/************************************/
+#site-navigation {
+
+  background: black;
+  font-family: $sansSerif;
+  color: #fff;
+  font-size: .6em;
+  padding: 1em;
+  text-align: center;
+  height: 100px;
+
+  h3 {
+    color: white;
+    font-weight: normal;
+    margin: 7px;
+  }
+  a {
+    color: $brandSecondary;
+    padding-right: 5px;
+    &:last-of-type { padding-right: 0; }
+    &:focus {
+      outline: 1px dotted $brandSecondary;
+      text-decoration: none;
+      color: white;
+      background: none;
+    }
+  }
+
+}
