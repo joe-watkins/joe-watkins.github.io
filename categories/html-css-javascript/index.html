@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+  <head>
+  <script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Joe Watkins.io is a blog covering topics such as front-end web development, web accessibility, and more!">
+    <meta name="keywords" content="Web Development, Accessibility, HTML, CSS, Javascript, jQuery, Grunt, Gulp, Angular, Web Components, Front-end">
+    <title>Html Css Javascript &middot; JoeWatkins.io</title>
+    <link rel="stylesheet" href="/styles/main.min.css">
+  </head>
+
+<body class="home-template">
+
+    <svg viewBox="0 0 50 50" style="display: none;">
+  <symbol viewBox="0 0 512 512" id="icon-codepen">
+    <title>codepen</title>
+    <g>
+      <path d="M254.5 16.5c-131.996 0-239 107.004-239 239s107.004 239 239 239 239-107.004 239-239-107.004-239-239-239zm158.392 397.392C370.584 456.2 314.332 479.5 254.5 479.5s-116.084-23.3-158.392-65.608C53.8 371.584 30.5 315.332 30.5 255.5S53.8 139.416 96.108 97.108 194.668 31.5 254.5 31.5s116.084 23.3 158.392 65.608C455.2 139.416 478.5 195.668 478.5 255.5s-23.3 116.084-65.608 158.392z"
+      />
+      <path d="M384.49 215.23c-.05-.315-.12-.63-.187-.933-.05-.182-.117-.366-.188-.548-.084-.273-.178-.55-.288-.823-.068-.182-.162-.366-.237-.548-.12-.252-.24-.508-.392-.75-.104-.184-.205-.35-.315-.523-.162-.225-.307-.46-.484-.68-.12-.175-.24-.32-.376-.486-.188-.207-.374-.412-.562-.61-.153-.15-.29-.295-.44-.436-.205-.182-.418-.366-.64-.54-.178-.132-.33-.263-.51-.382-.06-.043-.128-.1-.188-.15l-119.455-79.62c-3.77-2.51-8.687-2.51-12.456 0L128.327 207.83c-.073.05-.124.106-.184.15-.174.122-.34.25-.514.38-.21.175-.43.35-.64.542-.147.13-.293.29-.442.425-.19.2-.383.404-.557.612-.13.165-.263.31-.382.484-.174.23-.323.456-.48.68-.115.176-.217.34-.323.524-.14.242-.26.498-.383.75-.085.18-.175.356-.25.547-.108.272-.2.55-.29.822-.06.183-.125.366-.175.548-.077.302-.14.617-.19.932-.026.166-.07.324-.095.485-.064.48-.098.98-.098 1.476v79.626c0 .504.034.988.098 1.472.026.172.06.316.094.486.05.313.115.63.19.937.052.186.116.374.175.55.09.272.184.554.29.827.077.187.167.356.252.543.123.255.242.512.383.76.098.177.208.34.323.517.157.23.306.46.48.682.12.17.25.322.383.476.184.212.367.425.558.613.15.15.294.296.443.44.2.18.422.356.64.535.173.145.34.265.513.392.06.045.12.095.184.145l119.447 79.63c1.89 1.226 4.058 1.855 6.228 1.855s4.347-.63 6.228-1.886l119.447-79.632c.068-.052.138-.102.188-.145.18-.13.34-.247.51-.392.222-.178.443-.348.64-.536.16-.143.296-.29.44-.44.197-.188.384-.4.554-.614.144-.15.272-.307.392-.477.17-.22.322-.45.477-.68.117-.178.22-.34.312-.52.146-.255.265-.5.392-.757.085-.187.18-.356.247-.545.11-.27.195-.544.29-.823.05-.18.128-.356.18-.554.074-.307.145-.62.195-.937.017-.17.067-.314.085-.49.067-.444.102-.938.102-1.433V217.19c0-.498-.034-.987-.102-1.476-.02-.16-.072-.32-.09-.485zM254 283.57l-39.718-26.568L254 230.432l39.73 26.57L254 283.57zm-11.23-72.646l-48.69 32.567-39.31-26.284 88-58.664v52.382zm-68.89 46.078l-28.097 18.793V238.21L173.88 257zm20.2 13.51l48.69 32.568v52.38l-88-58.66 39.31-26.287zm71.15 32.568l48.69-32.567 39.31 26.287-88 58.66v-52.38zm68.878-46.078l28.11-18.793v37.585l-28.11-18.793zm-20.188-13.51l-48.69-32.568v-52.39l88.003 58.664-39.313 26.293z"
+      />
+    </g>
+  </symbol>
+  <symbol viewBox="0 0 512 512" id="icon-github">
+    <title>github</title>
+    <g>
+      <path d="M254.5 16.5c-131.996 0-239 107.004-239 239s107.004 239 239 239 239-107.004 239-239-107.004-239-239-239zm158.392 397.392C370.584 456.2 314.332 479.5 254.5 479.5c-59.833 0-116.084-23.3-158.392-65.608C53.8 371.584 30.5 315.332 30.5 255.5c0-59.833 23.3-116.084 65.608-158.392C138.416 54.8 194.668 31.5 254.5 31.5c59.833 0 116.084 23.3 158.392 65.608C455.2 139.416 478.5 195.668 478.5 255.5c0 59.833-23.3 116.084-65.608 158.392zM254 118.205c-75.97 0-137.563 61.594-137.563 137.563 0 60.788 39.412 112.34 94.08 130.527 6.876 1.26 9.386-2.99 9.386-6.616 0-3.276-.126-14.123-.193-25.61-38.253 8.313-46.34-16.22-46.34-16.22-6.262-15.886-15.272-20.117-15.272-20.117-12.502-8.53.948-8.363.948-8.363 13.812.957 21.083 14.173 21.083 14.173 12.274 21.024 32.207 14.945 40.032 11.42 1.25-8.867 4.81-14.946 8.732-18.372-30.537-3.475-62.66-15.28-62.66-67.99 0-15.03 5.365-27.288 14.147-36.92-1.4-3.492-6.137-17.488 1.36-36.42 0 0 11.537-3.695 37.834 14.105 10.965-3.065 22.728-4.576 34.424-4.626 11.687.05 23.46 1.577 34.44 4.642 26.248-17.817 37.8-14.106 37.8-14.106 7.524 18.95 2.79 32.93 1.378 36.406 8.816 9.63 14.14 21.89 14.14 36.918 0 52.846-32.175 64.483-62.82 67.892 4.953 4.265 9.336 12.628 9.336 25.457 0 18.387-.185 33.214-.185 37.748 0 3.66 2.502 7.943 9.47 6.6 54.627-18.22 94.005-69.773 94.005-130.528 0-75.97-61.593-137.565-137.562-137.565z"
+      />
+    </g>
+  </symbol>
+  <symbol viewBox="0 0 512 512" id="icon-linkedin">
+    <title>linkedin</title>
+    <g>
+      <path d="M374.5 369.5v-88.875c0-45.875-24.888-67.158-57.17-67.158-26.022 0-37.83 14.666-44.83 24.86V217.5h-49v152h49v-86.64c0-4.47.608-8.853 1.95-12.072 3.577-8.943 12.066-18.153 25.66-18.153 17.794 0 25.39 13.682 25.39 33.713V369.5h49zM171.684 141.034c-16.097 0-26.56 11.3-26.56 26.233 0 14.666 10.195 26.233 25.934 26.233h.357c16.365 0 26.56-11.567 26.56-26.233-.358-15.023-10.194-26.233-26.29-26.233zM145.5 217.5h49v152h-49zM254.5 16.5c-131.996 0-239 107.004-239 239s107.004 239 239 239 239-107.004 239-239-107.004-239-239-239zm158.392 397.392C370.584 456.2 314.332 479.5 254.5 479.5c-59.833 0-116.084-23.3-158.392-65.608C53.8 371.584 30.5 315.332 30.5 255.5c0-59.833 23.3-116.084 65.608-158.392C138.416 54.8 194.668 31.5 254.5 31.5c59.833 0 116.084 23.3 158.392 65.608C455.2 139.416 478.5 195.668 478.5 255.5c0 59.833-23.3 116.084-65.608 158.392z"
+      />
+    </g>
+  </symbol>
+  <symbol viewBox="0 0 512 512" id="icon-twitter">
+    <title>twitter</title>
+    <g>
+      <path d="M415 177.72c-10.697 4.756-22.21 7.963-34.288 9.398 12.333-7.383 21.79-19.08 26.25-33.03-11.536 6.845-24.306 11.814-37.91 14.495-10.885-11.6-26.402-18.854-43.572-18.854-32.964 0-59.693 26.726-59.693 59.698 0 4.672.526 9.226 1.548 13.603-49.616-2.492-93.61-26.254-123.053-62.373-5.14 8.812-8.08 19.066-8.08 30.017 0 20.71 10.537 38.984 26.555 49.687-9.78-.312-18.99-3-27.04-7.47-.007.247-.007.5-.007.754 0 28.92 20.58 53.04 47.89 58.535-5.008 1.358-10.282 2.09-15.728 2.09-3.85 0-7.59-.372-11.235-1.074 7.602 23.715 29.646 40.98 55.765 41.458-20.43 16.013-46.166 25.56-74.14 25.56-4.814 0-9.57-.285-14.24-.84 26.425 16.946 57.8 26.822 91.51 26.822 109.812 0 169.853-90.963 169.853-169.852 0-2.588-.053-5.168-.165-7.73 11.66-8.4 21.782-18.92 29.78-30.893zM254.5 16.5c-131.996 0-239 107.004-239 239s107.004 239 239 239 239-107.004 239-239-107.004-239-239-239zm158.392 397.392C370.584 456.2 314.332 479.5 254.5 479.5c-59.833 0-116.084-23.3-158.392-65.608C53.8 371.584 30.5 315.332 30.5 255.5c0-59.833 23.3-116.084 65.608-158.392C138.416 54.8 194.668 31.5 254.5 31.5c59.833 0 116.084 23.3 158.392 65.608C455.2 139.416 478.5 195.668 478.5 255.5c0 59.833-23.3 116.084-65.608 158.392z"
+      />
+    </g>
+  </symbol>
+</svg>
+
+
+
+
+<a id="skip-to-content" href="#main">skip to main content</a>
+
+<header id="header" role="banner">
+	<a href="/" class="site-name" id="logo">JoeWatkins<span class="tld">.io</span></a>
+	<p class="human-description">Front-end Web Developer<br>Web Accessibility Advocate</p>
+	<img class="mask-b" src="/images/angle-alt.svg" aria-hidden="true" alt="angle a">
+	<img class="mask-a" src="/images/angle.svg" aria-hidden="true" alt="angle b">
+</header>
+
+    
+
+    <main class="content" role="main">
+		<section class="home posts">
+
+  <div class="posts-a">
+    
+    
+    
+    <div class="post">
+      <header>
+        <h2><a href="/javascript/inline-critical-css-with-wordpress">Inline Critical CSS with Wordpress</a></h2>
+        <p class="author">by: Joe Watkins</p>
+        <ul class="meta">
+          <li class="date"><time datetime="05 April 2015">05 April 2015</time></li>
+        </ul>
+      </header>
+      <p>The importance of Web Performance is at an all-time high now due to the proliferation of mobile devices. One piece of that #webperf puzzle is the practice of inlining Critical CSS (only styles needed to render the page &lsquo;above-the-fold&rsquo;) into the document&rsquo;s <code>&lt;head&gt;</code> alongside calling CSS and JavaScript asynchronously. This &quot;progressive loading&quot; will make your website hit quicker and render faster for the user. There are a few awesome tools out there to assist with inlining Critical CSS with Wordpress.</p>
+      <p class="read-more">&raquo; <a href="/javascript/inline-critical-css-with-wordpress">read more <span class="visually-hidden">about Inline Critical CSS with Wordpress</span></a></p>
+    </div>
+    
+    
+    
+    <div class="post">
+      <header>
+        <h2><a href="/javascript/organize-your-jquery-with-object-literal-notation">Organize your jQuery with Object Literal Notation</a></h2>
+        <p class="author">by: Joe Watkins</p>
+        <ul class="meta">
+          <li class="date"><time datetime="24 March 2015">24 March 2015</time></li>
+        </ul>
+      </header>
+      <p>Often times a larger website can call for a few hundred lines of jQuery code. This can be tough to manage if you have one giant JavaScript file with a bunch of functions and no organization. In this post I will walk you through a cool method of using <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects'>Object Literal Notation</a> to help keep things in order and easy to maintain.</p>
+      <p class="read-more">&raquo; <a href="/javascript/organize-your-jquery-with-object-literal-notation">read more <span class="visually-hidden">about Organize your jQuery with Object Literal Notation</span></a></p>
+    </div>
+    
+    
+    
+    <div class="post">
+      <header>
+        <h2><a href="/css-visual-regression-testing-with-grunt-backstopjs">CSS Visual Regression Testing with Grunt-BackstopJS</a></h2>
+        <p class="author">by: Joe Watkins</p>
+        <ul class="meta">
+          <li class="date"><time datetime="21 March 2015">21 March 2015</time></li>
+        </ul>
+      </header>
+      <p>CSS visual regression testing is the process of running automated visual test comparisons on pages or elements in your projects. Generally these tests utilize tools consisting of <a href='https://github.com/Huddle/PhantomCSS'>PhantomCSS</a>, <a href='http://casperjs.org/'>CasperJS</a>, and <a href='http://huddle.github.io/Resemble.js/'>Resemble.js</a>. These tools can literally visit specified web pages, take snapshots at different screen sizes and then compare those images to each other. These comparisons can uncover bugs you’d otherwise not learn about until it’s too late.<br><br>Today we are going to learn how to automate this process using <a href='https://www.npmjs.com/package/grunt-backstop'>grunt-backstopjs</a></p>
+      <p class="read-more">&raquo; <a href="/css-visual-regression-testing-with-grunt-backstopjs">read more <span class="visually-hidden">about CSS Visual Regression Testing with Grunt-BackstopJS</span></a></p>
+    </div>
+    
+    
+  </div>
+</section>
+
+        
+    </main>
+
+    <footer role="contentinfo" id="footer">
+	<div class="container-fluid">
+		<div class="row contact--info">
+
+			<h3 class="contact--info-title">JoeWatkins.io</h3>
+
+			<figure class="contact--info-headshot">
+				<img src="/images/jojo.jpg" class="img-circle" alt="Joe Watkins" width="184">
+				<figcaption>Front-end Web Developer<br>
+					Web Accessibility Advocate</figcaption>
+				</figure>
+
+				<div class="social--properties">
+					<a href="https://twitter.com/_josephwatkins" onclick="_gaq.push(['_trackEvent', 'Footer Social Links', 'click', 'Twitter']);">
+						<svg role="image" aria-labeledby="label-icon-twitter">
+							<use xlink:href="#icon-twitter"></use>
+							<title id="label-icon-twitter">Twitter Icon</title>
+						</svg>
+					</a>
+
+					<a href="https://github.com/joe-watkins" onclick="_gaq.push(['_trackEvent', 'Footer Social Links', 'click', 'GitHub']);">
+						<svg role="image" aria-labeledby="label-icon-github">
+							<use xlink:href="#icon-github"></use>
+							<title id="label-icon-github">GitHub Icon</title>
+						</svg>
+					</a>
+
+					<a href="https://www.linkedin.com/profile/view?id=19392469" onclick="_gaq.push(['_trackEvent', 'Footer Social Links', 'click', 'LinkedIn']);">
+						<svg role="image" aria-labeledby="label-icon-linkedin">
+							<use xlink:href="#icon-linkedin"></use>
+							<title id="label-icon-linkedin">LinkedIn Icon</title>
+						</svg>
+					</a>
+
+					<a href="http://codepen.io/joe-watkins" onclick="_gaq.push(['_trackEvent', 'Footer Social Links', 'click', 'CodePen']);">
+						<svg role="image" aria-labeledby="label-icon-codepen">
+							<use xlink:href="#icon-codepen"></use>
+							<title id="label-icon-codepen">Codepen Icon</title>
+						</svg>
+					</a>
+
+				</div>
+
+		</div>
+	</div>
+</footer>
+
+    <script src="/js/main.min.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-857864-9']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+</body>
+</html>
