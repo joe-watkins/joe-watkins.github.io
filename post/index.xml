@@ -88,7 +88,7 @@ $ git clone https://github.com/dim0627/hugo_theme_robust.
 
 &lt;p&gt;Start your Hugo site with the new theme:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ hugo server —theme=hugo_theme_robust —buildDrafts
+&lt;pre&gt;&lt;code&gt;$ hugo server --theme=hugo_theme_robust --buildDrafts
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img src=&#34;/images/hugo-first-frontend.jpg&#34; alt=&#34;Hugo home page&#34;&gt;&lt;/p&gt;
