@@ -6,8 +6,78 @@
     <description>Recent content on JoeWatkins.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 16 Apr 2016 00:11:03 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 17 Apr 2016 08:28:24 -0700</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Progressive Enhancement and the 2016 Presidential Race</title>
+      <link>/webdev/progressive-enhancement-and-the-2016-presidential-race</link>
+      <pubDate>Sun, 17 Apr 2016 08:28:24 -0700</pubDate>
+      
+      <guid>/webdev/progressive-enhancement-and-the-2016-presidential-race</guid>
+      <description>
+
+&lt;figure&gt;
+  &lt;img src=&#34;/images/no-js-2016-candidates.jpg&#34; alt=&#34;2016 Candidates on Progressive Enhancement&#34; id=&#34;pe&#34;&gt;
+    &lt;style&gt;
+        #pe {
+            width: 100%;
+            margin-bottom: 1em;
+        }
+    &lt;/style&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;It appears that the development teams behind all the major presidential candidates are dropping the ball on &lt;a href=&#34;http://alistapart.com/article/understandingprogressiveenhancement&#34;&gt;progressive enhancement&lt;/a&gt; with the exception of Bernie&amp;rsquo;s. It&amp;rsquo;s pretty clear that &lt;a href=&#34;http://letsfreecongress.org/&#34;&gt;money wins elections&lt;/a&gt; so I&amp;rsquo;m amazed that more of these candidates aren&amp;rsquo;t onboard with progressive enhancement.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;It&amp;rsquo;s not a technique, it&amp;rsquo;s not a technology. It&amp;rsquo;s a way of viewing how you build, it&amp;rsquo;s an engineering approach.” - Jeremy Keith&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Who supports Progressive Enhancement?&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;bernie-sanders-span-class-bg-success-yes-span:1b87930d5cc179dfc06dc0a7bebd29e4&#34;&gt;Bernie Sanders - &lt;span class=&#34;bg-success&#34;&gt;yes&lt;/span&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://secure.actblue.com/contribute/page/lets-go-bernie?refcode=homepage_main_nav&#34;&gt;url tested&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&#34;embed-responsive embed-responsive-16by9&#34;&gt;
+    &lt;iframe width=&#34;960&#34; height=&#34;720&#34; src=&#34;https://www.youtube.com/embed/t4y5rh3ZQek&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;hillary-clinton-span-class-bg-danger-no-span:1b87930d5cc179dfc06dc0a7bebd29e4&#34;&gt;Hillary Clinton - &lt;span class=&#34;bg-danger&#34;&gt;no&lt;/span&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.hillaryclinton.com/contribute/donate/?amount=5&#34;&gt;url tested&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&#34;embed-responsive embed-responsive-16by9&#34;&gt;
+    &lt;iframe width=&#34;960&#34; height=&#34;720&#34; src=&#34;https://www.youtube.com/embed/Q_hHFGVWQNg&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;donald-trump-span-class-bg-danger-no-span:1b87930d5cc179dfc06dc0a7bebd29e4&#34;&gt;Donald Trump - &lt;span class=&#34;bg-danger&#34;&gt;no&lt;/span&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://secure.donaldjtrump.com/donate/&#34;&gt;url tested&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&#34;embed-responsive embed-responsive-16by9&#34;&gt;
+    &lt;iframe width=&#34;960&#34; height=&#34;720&#34; src=&#34;https://www.youtube.com/embed/pmMdpa6Btus&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;ted-cruz-span-class-bg-danger-no-span:1b87930d5cc179dfc06dc0a7bebd29e4&#34;&gt;Ted Cruz - &lt;span class=&#34;bg-danger&#34;&gt;no&lt;/span&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://contribute.tedcruz.org/road-to-victory-fund/?source=hpredirect&#34;&gt;url tested&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe width=&#34;960&#34; height=&#34;720&#34; src=&#34;https://www.youtube.com/embed/twkfc5RgRRs&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h2 id=&#34;john-kasich-span-class-bg-danger-no-span:1b87930d5cc179dfc06dc0a7bebd29e4&#34;&gt;John Kasich - &lt;span class=&#34;bg-danger&#34;&gt;no&lt;/span&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.johnkasich.com/donate/?sc=home1&#34;&gt;url tested&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe width=&#34;960&#34; height=&#34;720&#34; src=&#34;https://www.youtube.com/embed/fhg7JCWgzPs&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+</description>
+    </item>
     
     <item>
       <title>Migrate from Jekyll to Hugo</title>

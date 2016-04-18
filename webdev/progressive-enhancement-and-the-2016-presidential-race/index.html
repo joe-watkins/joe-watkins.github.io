@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html class="no-js" lang="en-us">
   <head>
@@ -7,13 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Joe Watkins.io is a blog covering topics such as front-end web development, web accessibility, and more!">
     <meta name="keywords" content="Web Development, Accessibility, HTML, CSS, Javascript, jQuery, Grunt, Gulp, Angular, Web Components, Front-end">
-    <title>Webdev &middot; JoeWatkins.io</title>
+    <title>Progressive Enhancement and the 2016 Presidential Race &middot; JoeWatkins.io</title>
     <link rel="stylesheet" href="/styles/main.min.css">
   </head>
 
-<body class="home-template">
 
-    <svg viewBox="0 0 50 50" style="display: none;">
+<body>
+
+  <svg viewBox="0 0 50 50" style="display: none;">
   <symbol viewBox="0 0 512 512" id="icon-codepen">
     <title>codepen</title>
     <g>
@@ -58,49 +60,108 @@
 	<img class="mask-a" src="/images/angle.svg" aria-hidden="true" alt="angle b">
 </header>
 
-    
 
-    <main class="content" role="main">
-		<section class="home posts">
+  <main role="main" id="main" tabindex="0">
 
-  <div class="posts-a">
-    
-    
-    
-    <div class="post">
-      <header>
-        <h2><a href="/webdev/progressive-enhancement-and-the-2016-presidential-race">Progressive Enhancement and the 2016 Presidential Race</a></h2>
-        <p class="author">by: Joe Watkins</p>
-        <ul class="meta">
-          <li class="date"><time datetime="17 April 2016">17 April 2016</time></li>
-        </ul>
-      </header>
-      <p>I did a little testing and found that only the Bernie Sanders camp appears to consider progressive enhancement as part of their development process for their donation mechanism.</p>
-      <p class="read-more">&raquo; <a href="/webdev/progressive-enhancement-and-the-2016-presidential-race">read more <span class="visually-hidden">about Progressive Enhancement and the 2016 Presidential Race</span></a></p>
+    <div class="container-fluid">
+      
+      <article class="posts-a post-detail">
+      	<div class="post">
+      	<header>
+      		<h1>Progressive Enhancement and the 2016 Presidential Race</h1>
+      		<p class="author">by: Joe Watkins</p>
+      		<ul class="meta">
+      			<li class="date">17 April 2016</li>
+      		</ul>
+      	</header>
+
+      	
+
+<figure>
+  <img src="/images/no-js-2016-candidates.jpg" alt="2016 Candidates on Progressive Enhancement" id="pe">
+    <style>
+        #pe {
+            width: 100%;
+            margin-bottom: 1em;
+        }
+    </style>
+</figure>
+
+<p>It appears that the development teams behind all the major presidential candidates are dropping the ball on <a href="http://alistapart.com/article/understandingprogressiveenhancement">progressive enhancement</a> with the exception of Bernie&rsquo;s. It&rsquo;s pretty clear that <a href="http://letsfreecongress.org/">money wins elections</a> so I&rsquo;m amazed that more of these candidates aren&rsquo;t onboard with progressive enhancement.</p>
+
+<blockquote>
+<p>&ldquo;It&rsquo;s not a technique, it&rsquo;s not a technology. It&rsquo;s a way of viewing how you build, it&rsquo;s an engineering approach.” - Jeremy Keith</p>
+</blockquote>
+
+<p>Who supports Progressive Enhancement?</p>
+
+<hr>
+
+<h2 id="bernie-sanders-span-class-bg-success-yes-span:1b87930d5cc179dfc06dc0a7bebd29e4">Bernie Sanders - <span class="bg-success">yes</span></h2>
+
+<p><a href="https://secure.actblue.com/contribute/page/lets-go-bernie?refcode=homepage_main_nav">url tested</a></p>
+
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe width="960" height="720" src="https://www.youtube.com/embed/t4y5rh3ZQek" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<hr>
+
+<h2 id="hillary-clinton-span-class-bg-danger-no-span:1b87930d5cc179dfc06dc0a7bebd29e4">Hillary Clinton - <span class="bg-danger">no</span></h2>
+
+<p><a href="https://www.hillaryclinton.com/contribute/donate/?amount=5">url tested</a></p>
+
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe width="960" height="720" src="https://www.youtube.com/embed/Q_hHFGVWQNg" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<hr>
+
+<h2 id="donald-trump-span-class-bg-danger-no-span:1b87930d5cc179dfc06dc0a7bebd29e4">Donald Trump - <span class="bg-danger">no</span></h2>
+
+<p><a href="https://secure.donaldjtrump.com/donate/">url tested</a></p>
+
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe width="960" height="720" src="https://www.youtube.com/embed/pmMdpa6Btus" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<h2 id="ted-cruz-span-class-bg-danger-no-span:1b87930d5cc179dfc06dc0a7bebd29e4">Ted Cruz - <span class="bg-danger">no</span></h2>
+
+<p><a href="https://contribute.tedcruz.org/road-to-victory-fund/?source=hpredirect">url tested</a></p>
+
+<iframe width="960" height="720" src="https://www.youtube.com/embed/twkfc5RgRRs" frameborder="0" allowfullscreen></iframe>
+
+<h2 id="john-kasich-span-class-bg-danger-no-span:1b87930d5cc179dfc06dc0a7bebd29e4">John Kasich - <span class="bg-danger">no</span></h2>
+
+<p><a href="https://www.johnkasich.com/donate/?sc=home1">url tested</a></p>
+
+<iframe width="960" height="720" src="https://www.youtube.com/embed/fhg7JCWgzPs" frameborder="0" allowfullscreen></iframe>
+
+
+        <div id="disqus-comments">
+      		<div id="disqus_thread"></div>
+      		<script type="text/javascript">
+      				 
+      				var disqus_shortname = 'joewatkinsio';
+
+      				 
+      				(function() {
+      						var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      						dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      						(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      				})();
+      		</script>
+      		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+      	</div>
+
+      	</div>
+      </article>
+      
     </div>
-    
-    
-    
-    <div class="post">
-      <header>
-        <h2><a href="/webdev/migrate-from-jekyll-to-hugo">Migrate from Jekyll to Hugo</a></h2>
-        <p class="author">by: Joe Watkins</p>
-        <ul class="meta">
-          <li class="date"><time datetime="16 April 2016">16 April 2016</time></li>
-        </ul>
-      </header>
-      <p>Early one Saturday morning I found myself unable to write a new blog post because my Jekyll site would not build. I was in what we call <strong><a href="https://en.wikipedia.org/wiki/Dependency_hell">Dependency Hell</a>!!</strong> This prompted me to research alternatives to <a href="https://jekyllrb.com/">Jekyll</a> and this is how I found <a href="http://gohugo.io">Hugo</a>. In this post I’ll show you how convert a Jekyll site to Hugo.</p>
-      <p class="read-more">&raquo; <a href="/webdev/migrate-from-jekyll-to-hugo">read more <span class="visually-hidden">about Migrate from Jekyll to Hugo</span></a></p>
-    </div>
-    
-    
-  </div>
-</section>
 
-        
-    </main>
+  </main>
 
-    <footer role="contentinfo" id="footer">
+  <footer role="contentinfo" id="footer">
 	<div class="container-fluid">
 		<div class="row contact--info">
 
@@ -147,7 +208,7 @@
 	</div>
 </footer>
 
-    <script src="/js/main.min.js"></script>
+  <script src="/js/main.min.js"></script>
 
 <script type="text/javascript">
 
@@ -164,5 +225,5 @@
 </script>
 
 
-</body>
+  </body>
 </html>
