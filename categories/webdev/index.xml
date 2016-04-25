@@ -147,7 +147,7 @@ $ hugo new post/good-to-great.md
 &lt;p&gt;Hugo doesn’t come with a default them so you need to create a themes directory and download a theme. Visit the &lt;a href=&#34;http://themes.gohugo.io/&#34;&gt;Theme Showcase&lt;/a&gt; to see all the cool themes available:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;$ mkdir themes &amp;amp;&amp;amp; cd themes
-$ git clone https://github.com/dim0627/hugo_theme_robust.
+$ git clone https://github.com/dim0627/hugo_theme_robust
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;4-add-content:1473a4d699e45cf0ff02f1224c9d2eff&#34;&gt;4. Add content&lt;/h3&gt;
