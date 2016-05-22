@@ -25,16 +25,7 @@ self.addEventListener("install", function(e){
         '/images/bg-city.jpg',
         'https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3aCWcynf_cDxXwCLxiixG1c.ttf',
         'https://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzInF5uFdDttMLvmWuJdhhgs.ttf',
-        '/webdev/progressive-enhancement-and-the-2016-presidential-race',
-        '/webdev/migrate-from-jekyll-to-hugo',
-        '/accessibility/infographics-may-not-belong-on-the-web',
-        '/accessibility/top-people-to-follow-in-web-accessibility',
-        '/accessibility/commonly-abused-html-and-css-that-hurt-accessibility',
-        '/javascript/inline-critical-css-with-wordpress',
-        '/javascript/organize-your-jquery-with-object-literal-notation',
-        '/css-visual-regression-testing-with-grunt-backstopjs',
-        '/accessibility/getting-started-with-grunt-tenon-client',
-        '/accessibility/please-stop-using-placeholders-as-labels'
+        'https://joe-watkins.io/webdev/progressive-enhancement-and-the-2016-presidential-race/'
 			]) // addAll()
 		}) // .open()
 	); // waitUntil
