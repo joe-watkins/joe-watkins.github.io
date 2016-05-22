@@ -52,6 +52,10 @@ $(document).ready(function(){
 				}
 
 				// handle no network
+				if(!navigator.onLine){
+					_showOfflineMessage();
+				}
+
 				window.addEventListener("offline", _showOfflineMessage, false);
 
 				window.addEventListener("online", _killOfflineMessage, false);
