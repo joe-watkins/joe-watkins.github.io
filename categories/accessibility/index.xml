@@ -11,10 +11,10 @@
     
     <item>
       <title>Infographics may not belong on the web</title>
-      <link>/accessibility/infographics-may-not-belong-on-the-web</link>
+      <link>/accessibility/infographics-may-not-belong-on-the-web/</link>
       <pubDate>Sat, 02 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>/accessibility/infographics-may-not-belong-on-the-web</guid>
+      <guid>/accessibility/infographics-may-not-belong-on-the-web/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;/images/infocrapic.jpg&#34; alt=&#34;Infographic image search result&#34; class=&#34;img-responsive&#34;&gt;&lt;/p&gt;
@@ -69,10 +69,10 @@
     
     <item>
       <title>Top People to Follow in Web Accessibility</title>
-      <link>/accessibility/top-people-to-follow-in-web-accessibility</link>
+      <link>/accessibility/top-people-to-follow-in-web-accessibility/</link>
       <pubDate>Sun, 25 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>/accessibility/top-people-to-follow-in-web-accessibility</guid>
+      <guid>/accessibility/top-people-to-follow-in-web-accessibility/</guid>
       <description>&lt;p&gt;The web accessibility community leans on Twitter greatly so it is an awesome way to keep up-to-date and learn from leaders in the industry.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;ve put together a list of &lt;a href=&#34;https://github.com/joe-watkins/top-people-to-follow-in-web-accessibility&#34;&gt;The Top People to follow in Web Accessibility&lt;/a&gt; that I feel you should follow if you are interested in web accessibility. It is an open source project so feel free to contribute names to the list.&lt;/p&gt;
@@ -81,10 +81,10 @@
     
     <item>
       <title>Commonly abused HTML &amp; CSS that hurt accessibility</title>
-      <link>/accessibility/commonly-abused-html-and-css-that-hurt-accessibility</link>
+      <link>/accessibility/commonly-abused-html-and-css-that-hurt-accessibility/</link>
       <pubDate>Fri, 04 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>/accessibility/commonly-abused-html-and-css-that-hurt-accessibility</guid>
+      <guid>/accessibility/commonly-abused-html-and-css-that-hurt-accessibility/</guid>
       <description>
 
 &lt;p&gt;After performing many website accessibility audits for clients, I find myself continually running into the same &lt;em&gt;key offenders&lt;/em&gt; that cause inaccessibility. I thought it would be fun to gather up these few buggers and show them to you and offer up some solutions for each.&lt;/p&gt;
@@ -151,10 +151,10 @@ Below is a good example of a &lt;code&gt;&amp;lt;label&amp;gt;&lt;/code&gt; tag.
     
     <item>
       <title>Getting started with Grunt Tenon Client</title>
-      <link>/accessibility/getting-started-with-grunt-tenon-client</link>
+      <link>/accessibility/getting-started-with-grunt-tenon-client/</link>
       <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>/accessibility/getting-started-with-grunt-tenon-client</guid>
+      <guid>/accessibility/getting-started-with-grunt-tenon-client/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;http://www.w3.org/WAI/intro/accessibility.php&#34;&gt;Web Accessibility&lt;/a&gt; / A11Y is finally on a path of owning more mindshare in the web development community.  It has a long way to go but will get there eventually when we learn more about all the positive side effects gained from injecting basic web accessibility practices into our workflow.&lt;/p&gt;
@@ -293,10 +293,10 @@ After you have Grunt setup and running it is time to start testing. Make an edit
     
     <item>
       <title>Please stop using placeholders as labels!!!!</title>
-      <link>/accessibility/please-stop-using-placeholders-as-labels</link>
+      <link>/accessibility/please-stop-using-placeholders-as-labels/</link>
       <pubDate>Wed, 30 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>/accessibility/please-stop-using-placeholders-as-labels</guid>
+      <guid>/accessibility/please-stop-using-placeholders-as-labels/</guid>
       <description>
 
 &lt;h2 id=&#34;accessibility-is-the-key:49c9eedd1aed5ff6edb12c9aedd18ee8&#34;&gt;Accessibility is the key :)&lt;/h2&gt;

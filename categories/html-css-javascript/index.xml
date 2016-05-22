@@ -11,10 +11,10 @@
     
     <item>
       <title>Inline Critical CSS with Wordpress</title>
-      <link>/javascript/inline-critical-css-with-wordpress</link>
+      <link>/javascript/inline-critical-css-with-wordpress/</link>
       <pubDate>Sun, 05 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>/javascript/inline-critical-css-with-wordpress</guid>
+      <guid>/javascript/inline-critical-css-with-wordpress/</guid>
       <description>
 
 &lt;p&gt;The importance of &lt;a href=&#34;https://developers.google.com/web/fundamentals/performance/index?hl=en&#34;&gt;web performance&lt;/a&gt; is at an all-time high now due to the proliferation of mobile devices. Google is now promoting &amp;ldquo;Mobile Friendly&amp;rdquo; websites giving them higher rank for meeting a &lt;a href=&#34;http://googlewebmastercentral.blogspot.com/2015/02/finding-more-mobile-friendly-search.html&#34;&gt;few key guidelines&lt;/a&gt;. One piece of that #webperf puzzle is the practice of inlining &lt;a href=&#34;https://css-tricks.com/authoring-critical-fold-css/&#34;&gt;Critical CSS&lt;/a&gt; (only styles needed to render the page &amp;lsquo;above-the-fold&amp;rsquo;) into the document&amp;rsquo;s &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; alongside calling CSS and JavaScript asynchronously. This &amp;ldquo;progressive loading&amp;rdquo; will make your website hit quicker and render faster for the user. There are a few awesome tools out there to assist with capturing these styles.&lt;/p&gt;
@@ -200,10 +200,10 @@ criticalcss: {
     
     <item>
       <title>Organize your jQuery with Object Literal Notation</title>
-      <link>/javascript/organize-your-jquery-with-object-literal-notation</link>
+      <link>/javascript/organize-your-jquery-with-object-literal-notation/</link>
       <pubDate>Tue, 24 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>/javascript/organize-your-jquery-with-object-literal-notation</guid>
+      <guid>/javascript/organize-your-jquery-with-object-literal-notation/</guid>
       <description>
 
 &lt;p&gt;A few years back I learned of a great way to organize JavaScript using &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects&#34;&gt;Object Literal Notation&lt;/a&gt;. I use this method daily to keep my jQuery driven projects organized and easier to maintain.&lt;/p&gt;
@@ -335,10 +335,10 @@ criticalcss: {
     
     <item>
       <title>CSS Visual Regression Testing with Grunt-BackstopJS</title>
-      <link>/css-visual-regression-testing-with-grunt-backstopjs</link>
+      <link>/css-visual-regression-testing-with-grunt-backstopjs/</link>
       <pubDate>Sat, 21 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>/css-visual-regression-testing-with-grunt-backstopjs</guid>
+      <guid>/css-visual-regression-testing-with-grunt-backstopjs/</guid>
       <description>
 
 &lt;p&gt;These days as a front-end web developer you can find yourself drowning in new tools to try out.  You can spend hours on end trying to keep up with all of these new tools to add to your workflow.  I find myself down this rabbit hole quite often. (I secretly like it)&lt;/p&gt;

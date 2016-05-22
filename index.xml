@@ -11,10 +11,10 @@
     
     <item>
       <title>Progressive Enhancement and the 2016 Presidential Race</title>
-      <link>/webdev/progressive-enhancement-and-the-2016-presidential-race</link>
+      <link>/webdev/progressive-enhancement-and-the-2016-presidential-race/</link>
       <pubDate>Sun, 17 Apr 2016 08:28:24 -0700</pubDate>
       
-      <guid>/webdev/progressive-enhancement-and-the-2016-presidential-race</guid>
+      <guid>/webdev/progressive-enhancement-and-the-2016-presidential-race/</guid>
       <description>
 
 &lt;figure&gt;
@@ -81,10 +81,10 @@
     
     <item>
       <title>Migrate from Jekyll to Hugo</title>
-      <link>/webdev/migrate-from-jekyll-to-hugo</link>
+      <link>/webdev/migrate-from-jekyll-to-hugo/</link>
       <pubDate>Sat, 16 Apr 2016 00:11:03 -0700</pubDate>
       
-      <guid>/webdev/migrate-from-jekyll-to-hugo</guid>
+      <guid>/webdev/migrate-from-jekyll-to-hugo/</guid>
       <description>
 
 &lt;p&gt;Early one Saturday morning I found myself unable to write a new blog post because my Jekyll site would not build. I was in what we call &lt;strong&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Dependency_hell&#34;&gt;Dependency Hell&lt;/a&gt;!!&lt;/strong&gt; This prompted me to research alternatives to &lt;a href=&#34;https://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt; and this is how I found &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt;. In this post I’ll show you how convert a Jekyll site to Hugo.&lt;/p&gt;
@@ -215,10 +215,10 @@ Congratulations! 1 posts imported!
     
     <item>
       <title>Infographics may not belong on the web</title>
-      <link>/accessibility/infographics-may-not-belong-on-the-web</link>
+      <link>/accessibility/infographics-may-not-belong-on-the-web/</link>
       <pubDate>Sat, 02 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>/accessibility/infographics-may-not-belong-on-the-web</guid>
+      <guid>/accessibility/infographics-may-not-belong-on-the-web/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;/images/infocrapic.jpg&#34; alt=&#34;Infographic image search result&#34; class=&#34;img-responsive&#34;&gt;&lt;/p&gt;
@@ -273,10 +273,10 @@ Congratulations! 1 posts imported!
     
     <item>
       <title>Top People to Follow in Web Accessibility</title>
-      <link>/accessibility/top-people-to-follow-in-web-accessibility</link>
+      <link>/accessibility/top-people-to-follow-in-web-accessibility/</link>
       <pubDate>Sun, 25 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>/accessibility/top-people-to-follow-in-web-accessibility</guid>
+      <guid>/accessibility/top-people-to-follow-in-web-accessibility/</guid>
       <description>&lt;p&gt;The web accessibility community leans on Twitter greatly so it is an awesome way to keep up-to-date and learn from leaders in the industry.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;ve put together a list of &lt;a href=&#34;https://github.com/joe-watkins/top-people-to-follow-in-web-accessibility&#34;&gt;The Top People to follow in Web Accessibility&lt;/a&gt; that I feel you should follow if you are interested in web accessibility. It is an open source project so feel free to contribute names to the list.&lt;/p&gt;
@@ -285,10 +285,10 @@ Congratulations! 1 posts imported!
     
     <item>
       <title>Commonly abused HTML &amp; CSS that hurt accessibility</title>
-      <link>/accessibility/commonly-abused-html-and-css-that-hurt-accessibility</link>
+      <link>/accessibility/commonly-abused-html-and-css-that-hurt-accessibility/</link>
       <pubDate>Fri, 04 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>/accessibility/commonly-abused-html-and-css-that-hurt-accessibility</guid>
+      <guid>/accessibility/commonly-abused-html-and-css-that-hurt-accessibility/</guid>
       <description>
 
 &lt;p&gt;After performing many website accessibility audits for clients, I find myself continually running into the same &lt;em&gt;key offenders&lt;/em&gt; that cause inaccessibility. I thought it would be fun to gather up these few buggers and show them to you and offer up some solutions for each.&lt;/p&gt;
@@ -355,10 +355,10 @@ Below is a good example of a &lt;code&gt;&amp;lt;label&amp;gt;&lt;/code&gt; tag.
     
     <item>
       <title>Inline Critical CSS with Wordpress</title>
-      <link>/javascript/inline-critical-css-with-wordpress</link>
+      <link>/javascript/inline-critical-css-with-wordpress/</link>
       <pubDate>Sun, 05 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>/javascript/inline-critical-css-with-wordpress</guid>
+      <guid>/javascript/inline-critical-css-with-wordpress/</guid>
       <description>
 
 &lt;p&gt;The importance of &lt;a href=&#34;https://developers.google.com/web/fundamentals/performance/index?hl=en&#34;&gt;web performance&lt;/a&gt; is at an all-time high now due to the proliferation of mobile devices. Google is now promoting &amp;ldquo;Mobile Friendly&amp;rdquo; websites giving them higher rank for meeting a &lt;a href=&#34;http://googlewebmastercentral.blogspot.com/2015/02/finding-more-mobile-friendly-search.html&#34;&gt;few key guidelines&lt;/a&gt;. One piece of that #webperf puzzle is the practice of inlining &lt;a href=&#34;https://css-tricks.com/authoring-critical-fold-css/&#34;&gt;Critical CSS&lt;/a&gt; (only styles needed to render the page &amp;lsquo;above-the-fold&amp;rsquo;) into the document&amp;rsquo;s &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; alongside calling CSS and JavaScript asynchronously. This &amp;ldquo;progressive loading&amp;rdquo; will make your website hit quicker and render faster for the user. There are a few awesome tools out there to assist with capturing these styles.&lt;/p&gt;
@@ -544,10 +544,10 @@ criticalcss: {
     
     <item>
       <title>Organize your jQuery with Object Literal Notation</title>
-      <link>/javascript/organize-your-jquery-with-object-literal-notation</link>
+      <link>/javascript/organize-your-jquery-with-object-literal-notation/</link>
       <pubDate>Tue, 24 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>/javascript/organize-your-jquery-with-object-literal-notation</guid>
+      <guid>/javascript/organize-your-jquery-with-object-literal-notation/</guid>
       <description>
 
 &lt;p&gt;A few years back I learned of a great way to organize JavaScript using &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects&#34;&gt;Object Literal Notation&lt;/a&gt;. I use this method daily to keep my jQuery driven projects organized and easier to maintain.&lt;/p&gt;
@@ -679,10 +679,10 @@ criticalcss: {
     
     <item>
       <title>CSS Visual Regression Testing with Grunt-BackstopJS</title>
-      <link>/css-visual-regression-testing-with-grunt-backstopjs</link>
+      <link>/css-visual-regression-testing-with-grunt-backstopjs/</link>
       <pubDate>Sat, 21 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>/css-visual-regression-testing-with-grunt-backstopjs</guid>
+      <guid>/css-visual-regression-testing-with-grunt-backstopjs/</guid>
       <description>
 
 &lt;p&gt;These days as a front-end web developer you can find yourself drowning in new tools to try out.  You can spend hours on end trying to keep up with all of these new tools to add to your workflow.  I find myself down this rabbit hole quite often. (I secretly like it)&lt;/p&gt;
@@ -829,10 +829,10 @@ CSS visual regression testing is the process of running automated visual test co
     
     <item>
       <title>Getting started with Grunt Tenon Client</title>
-      <link>/accessibility/getting-started-with-grunt-tenon-client</link>
+      <link>/accessibility/getting-started-with-grunt-tenon-client/</link>
       <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>/accessibility/getting-started-with-grunt-tenon-client</guid>
+      <guid>/accessibility/getting-started-with-grunt-tenon-client/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;http://www.w3.org/WAI/intro/accessibility.php&#34;&gt;Web Accessibility&lt;/a&gt; / A11Y is finally on a path of owning more mindshare in the web development community.  It has a long way to go but will get there eventually when we learn more about all the positive side effects gained from injecting basic web accessibility practices into our workflow.&lt;/p&gt;
@@ -971,10 +971,10 @@ After you have Grunt setup and running it is time to start testing. Make an edit
     
     <item>
       <title>Please stop using placeholders as labels!!!!</title>
-      <link>/accessibility/please-stop-using-placeholders-as-labels</link>
+      <link>/accessibility/please-stop-using-placeholders-as-labels/</link>
       <pubDate>Wed, 30 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>/accessibility/please-stop-using-placeholders-as-labels</guid>
+      <guid>/accessibility/please-stop-using-placeholders-as-labels/</guid>
       <description>
 
 &lt;h2 id=&#34;accessibility-is-the-key:49c9eedd1aed5ff6edb12c9aedd18ee8&#34;&gt;Accessibility is the key :)&lt;/h2&gt;

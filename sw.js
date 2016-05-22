@@ -25,7 +25,7 @@ self.addEventListener("install", function(e){
         '/images/bg-city.jpg',
         'https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3aCWcynf_cDxXwCLxiixG1c.ttf',
         'https://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzInF5uFdDttMLvmWuJdhhgs.ttf',
-        'https://joe-watkins.io/webdev/progressive-enhancement-and-the-2016-presidential-race'
+        'https://joe-watkins.io/webdev/progressive-enhancement-and-the-2016-presidential-race/'
 			]) // addAll()
 		}) // .open()
 	); // waitUntil

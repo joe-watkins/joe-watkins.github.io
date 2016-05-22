@@ -11,10 +11,10 @@
     
     <item>
       <title>Progressive Enhancement and the 2016 Presidential Race</title>
-      <link>/webdev/progressive-enhancement-and-the-2016-presidential-race</link>
+      <link>/webdev/progressive-enhancement-and-the-2016-presidential-race/</link>
       <pubDate>Sun, 17 Apr 2016 08:28:24 -0700</pubDate>
       
-      <guid>/webdev/progressive-enhancement-and-the-2016-presidential-race</guid>
+      <guid>/webdev/progressive-enhancement-and-the-2016-presidential-race/</guid>
       <description>
 
 &lt;figure&gt;
@@ -81,10 +81,10 @@
     
     <item>
       <title>Migrate from Jekyll to Hugo</title>
-      <link>/webdev/migrate-from-jekyll-to-hugo</link>
+      <link>/webdev/migrate-from-jekyll-to-hugo/</link>
       <pubDate>Sat, 16 Apr 2016 00:11:03 -0700</pubDate>
       
-      <guid>/webdev/migrate-from-jekyll-to-hugo</guid>
+      <guid>/webdev/migrate-from-jekyll-to-hugo/</guid>
       <description>
 
 &lt;p&gt;Early one Saturday morning I found myself unable to write a new blog post because my Jekyll site would not build. I was in what we call &lt;strong&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Dependency_hell&#34;&gt;Dependency Hell&lt;/a&gt;!!&lt;/strong&gt; This prompted me to research alternatives to &lt;a href=&#34;https://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt; and this is how I found &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt;. In this post I’ll show you how convert a Jekyll site to Hugo.&lt;/p&gt;
