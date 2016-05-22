@@ -34,6 +34,7 @@
   &[aria-hidden="true"]{
     display: none;
   }
+  .no-network-connection &,
   &[aria-hidden="false"]{
     display: block !important;
   }
