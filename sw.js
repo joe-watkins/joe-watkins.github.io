@@ -24,11 +24,7 @@ self.addEventListener("install", function(e){
         '/images/jojo.jpg',
         '/images/bg-city.jpg',
         'https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3aCWcynf_cDxXwCLxiixG1c.ttf',
-        'https://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzInF5uFdDttMLvmWuJdhhgs.ttf',
-        '/webdev/progressive-enhancement-and-the-2016-presidential-race/',
-        '/webdev/migrate-from-jekyll-to-hugo/',
-        '/accessibility/infographics-may-not-belong-on-the-web/',
-        '/accessibility/top-people-to-follow-in-web-accessibility/'
+        'https://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzInF5uFdDttMLvmWuJdhhgs.ttf'
 
 			]) // addAll()
 		}) // .open()
