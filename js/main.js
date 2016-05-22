@@ -32,7 +32,25 @@ $(document).ready(function(){
 				$('pre code').each(function(i, block) {
 					hljs.highlightBlock(block);
 				});
-			} // highlightjs
+			}, // highlightjs
+
+			offlineState: function(){
+
+				var serviceWorkerFile = "/sw.js";
+
+				if(navigator.serviceWorker){
+					_registerServiceWorker();
+				}
+
+				function _registerServiceWorker(){
+					navigator.serviceWorker.register(serviceWorkerFile).then(function(){
+						console.log("service worker running");
+					}).catch(function(){
+						console.log("nope there was a problem");
+					});
+				}
+
+			}
 
 		} // ui
 
@@ -40,5 +58,6 @@ $(document).ready(function(){
 
 	Engine.ui.mainNav();
 	Engine.ui.highlightjs();
+	Engine.ui.offlineState();
 
 });
