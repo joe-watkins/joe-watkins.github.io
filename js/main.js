@@ -34,9 +34,10 @@ $(document).ready(function(){
 				});
 			}, // highlightjs
 
-			offlineState: function(){
+			offlineSupport: function(){
 
-				var serviceWorkerFile = "/sw.js";
+				var serviceWorkerFile = "/sw.js",
+						offlineClass = "no-network-connection";
 
 				if(navigator.serviceWorker){
 					_registerServiceWorker();
@@ -50,7 +51,27 @@ $(document).ready(function(){
 					});
 				}
 
-			}
+				// handle no network
+				window.addEventListener("offline", _showOfflineMessage, false);
+
+				window.addEventListener("online", _killOfflineMessage, false);
+
+				function _showOfflineMessage(){
+					$("body").addClass(offlineClass);
+					setTimeout(function(){
+						$(".offline-message")
+							.attr("aria-hidden",false)
+							.focus();
+					},300);
+				}
+
+				function _killOfflineMessage(){
+					$("body").removeClass(offlineClass);
+					$(".offline-message")
+						.attr("aria-hidden",true);
+				}
+
+			} // offlineSupport
 
 		} // ui
 
@@ -58,6 +79,6 @@ $(document).ready(function(){
 
 	Engine.ui.mainNav();
 	Engine.ui.highlightjs();
-	Engine.ui.offlineState();
+	Engine.ui.offlineSupport();
 
 });

@@ -26,7 +26,15 @@ self.addEventListener("install", function(e){
         'https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3aCWcynf_cDxXwCLxiixG1c.ttf',
         'https://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzInF5uFdDttMLvmWuJdhhgs.ttf',
         'https://joe-watkins.io/webdev/progressive-enhancement-and-the-2016-presidential-race/',
-        'https://joe-watkins.io/webdev/migrate-from-jekyll-to-hugo/'
+        'https://joe-watkins.io/webdev/migrate-from-jekyll-to-hugo/',
+        'https://joe-watkins.io/accessibility/infographics-may-not-belong-on-the-web/',
+        'https://joe-watkins.io/accessibility/top-people-to-follow-in-web-accessibility/',
+        'https://joe-watkins.io/accessibility/commonly-abused-html-and-css-that-hurt-accessibility/',
+        'https://joe-watkins.io/javascript/inline-critical-css-with-wordpress/',
+        'https://joe-watkins.io/javascript/organize-your-jquery-with-object-literal-notation/',
+        'https://joe-watkins.io/css-visual-regression-testing-with-grunt-backstopjs/',
+        'https://joe-watkins.io/accessibility/getting-started-with-grunt-tenon-client/',
+        'https://joe-watkins.io/accessibility/please-stop-using-placeholders-as-labels/'
 			]) // addAll()
 		}) // .open()
 	); // waitUntil
