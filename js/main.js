@@ -57,7 +57,7 @@ $(document).ready(function(){
 				window.addEventListener("online", _killOfflineMessage, false);
 
 				function _showOfflineMessage(){
-					$("body").addClass(offlineClass);
+					$("body").addClass(offlineClass).show();
 					setTimeout(function(){
 						$(".offline-message")
 							.attr("aria-hidden",false)
@@ -66,7 +66,7 @@ $(document).ready(function(){
 				}
 
 				function _killOfflineMessage(){
-					$("body").removeClass(offlineClass);
+					$("body").removeClass(offlineClass).hide();
 					$(".offline-message")
 						.attr("aria-hidden",true);
 				}
