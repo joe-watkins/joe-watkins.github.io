@@ -57,17 +57,22 @@ $(document).ready(function(){
 				window.addEventListener("online", _killOfflineMessage, false);
 
 				function _showOfflineMessage(){
+
 					$("body").addClass(offlineClass);
+
 					setTimeout(function(){
 						$(".offline-message")
 							.attr("aria-hidden",false)
+							.attr("style","")
 							.show()
 							.focus();
 					},300);
 				}
 
 				function _killOfflineMessage(){
+
 					$("body").removeClass(offlineClass);
+
 					$(".offline-message")
 						.hide()
 						.attr("aria-hidden",true);
