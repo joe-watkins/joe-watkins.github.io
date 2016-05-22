@@ -67,7 +67,7 @@ $(document).ready(function(){
 				}
 
 				function _killOfflineMessage(){
-					$("body").removeClass(offlineClass).hide();
+					$("body").removeClass(offlineClass);
 					$(".offline-message")
 						.hide()
 						.attr("aria-hidden",true);
