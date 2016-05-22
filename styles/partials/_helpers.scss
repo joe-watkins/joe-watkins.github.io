@@ -35,6 +35,6 @@
     display: none;
   }
   &[aria-hidden="false"]{
-    display: block;
+    display: block !important;
   }
 }
