@@ -45,7 +45,7 @@
 &lt;!-- copy and paste. Modify height and width if desired. --&gt;
 
 &lt;div class=&#34;embed-responsive embed-responsive-16by9&#34; style=&#34;margin-bottom:30px;&#34;&gt;
-&lt;!-- copy and paste. Modify height and width if desired. --&gt;&lt;iframe class=&#34;tscplayer_inline embeddedObject&#34; name=&#34;tsc_player&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; type=&#34;text/html&#34; style=&#34;overflow:hidden;&#34; src=&#34;http://www.screencast.com/users/joe-watkins-emerge/folders/Snagit/media/4b05fa25-6e37-4287-975f-a130a650ba23/embed&#34; height=&#34;684&#34; width=&#34;922&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;!-- copy and paste. Modify height and width if desired. --&gt;&lt;iframe class=&#34;tscplayer_inline embeddedObject&#34; name=&#34;tsc_player&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; type=&#34;text/html&#34; style=&#34;overflow:hidden;&#34; src=&#34;https://www.screencast.com/users/joe-watkins-emerge/folders/Snagit/media/4b05fa25-6e37-4287-975f-a130a650ba23/embed&#34; height=&#34;684&#34; width=&#34;922&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 
 &lt;p&gt;After rebooting the virtual machine start up JAWS and you should now be able to perform the commands that require the Insert key.&lt;/p&gt;
@@ -63,7 +63,7 @@
 &lt;p&gt;After you completed the above steps start up your virtual environment and launch JAWS. A good test to make sure things are working correctly would be to open a web browser on the virtual machine with JAWS running, visit a web page and then hit &lt;code&gt;modifier key + F6&lt;/code&gt; (in my case the Right Command key) This will pull of the browse by headings tool. If this wasn&amp;rsquo;t setup correctly it would open the start menu.&lt;/p&gt;
 
 &lt;div class=&#34;embed-responsive embed-responsive-16by9&#34; style=&#34;margin-bottom:30px;&#34;&gt;
-&lt;!-- copy and paste. Modify height and width if desired. --&gt;&lt;iframe class=&#34;tscplayer_inline embeddedObject&#34; name=&#34;tsc_player&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; type=&#34;text/html&#34; style=&#34;overflow:hidden;&#34; src=&#34;http://www.screencast.com/users/joe-watkins-emerge/folders/Snagit/media/fe76ab21-eed3-464b-8665-17d85795fe90/embed&#34; height=&#34;684&#34; width=&#34;922&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;!-- copy and paste. Modify height and width if desired. --&gt;&lt;iframe class=&#34;tscplayer_inline embeddedObject&#34; name=&#34;tsc_player&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; type=&#34;text/html&#34; style=&#34;overflow:hidden;&#34; src=&#34;https://www.screencast.com/users/joe-watkins-emerge/folders/Snagit/media/fe76ab21-eed3-464b-8665-17d85795fe90/embed&#34; height=&#34;684&#34; width=&#34;922&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 </description>
     </item>
