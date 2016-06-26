@@ -13,7 +13,7 @@ self.addEventListener("install", function(e){
 	// if any fail the whole thing fails
 	// here we've named it airhorner
 	e.waitUntil(
-		caches.open('static-v1').then(function(cache){
+		caches.open('static-v2').then(function(cache){
 			return cache.addAll([
 				'/',
 				'/index.html',
