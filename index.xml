@@ -10,11 +10,11 @@
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>How to use JAWS on a Mac</title>
-      <link>/accessibility/how-to-use-jaws-on-a-mac/</link>
+      <title>Up and Running with JAWS on a MAC</title>
+      <link>/accessibility/up-and-running-with-jaws-on-a-mac/</link>
       <pubDate>Sat, 25 Jun 2016 08:28:24 -0700</pubDate>
       
-      <guid>/accessibility/how-to-use-jaws-on-a-mac/</guid>
+      <guid>/accessibility/up-and-running-with-jaws-on-a-mac/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;http://www.freedomscientific.com/Downloads/JAWS&#34;&gt;JAWS&lt;/a&gt; is one of the more popular assistive technologies used by people with disabilities. Since the application is a Windows-based application it can be a little tough to use on a Mac. Learn how you can install it on your Mac for use or accessibility testing.&lt;/p&gt;
@@ -22,25 +22,25 @@
 &lt;p&gt;Here are the bits of software needed to accomplish this:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;A virtual machine application such as &lt;a href=&#34;https://www.virtualbox.org/&#34;&gt;VirtualBox&lt;/a&gt;, &lt;a href=&#34;https://www.vmware.com/products/fusion&#34;&gt;VMware Fusion&lt;/a&gt;, or &lt;a href=&#34;https://support.apple.com/en-us/HT201468&#34;&gt;Bootcamp&lt;/a&gt; should work as well. This is how you can run a virtually Windows on your Mac.&lt;/li&gt;
-&lt;li&gt;A &lt;a href=&#34;https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/&#34;&gt;Windows Virtual Machine&lt;/a&gt; from Microsoft. Windows 7 Worked for me.&lt;/li&gt;
+&lt;li&gt;A virtual machine application such as &lt;a href=&#34;https://www.virtualbox.org/&#34;&gt;VirtualBox&lt;/a&gt; (free), &lt;a href=&#34;https://www.vmware.com/products/fusion&#34;&gt;VMware Fusion&lt;/a&gt;, or &lt;a href=&#34;https://support.apple.com/en-us/HT201468&#34;&gt;Bootcamp&lt;/a&gt; should work as well. This is how you can run Windows on your Mac.&lt;/li&gt;
+&lt;li&gt;A &lt;a href=&#34;https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/&#34;&gt;Windows Virtual Machine&lt;/a&gt; from Microsoft. Windows 7 Worked for me. This is an actual copy of Windows that you will install on your virtual machine.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.freedomscientific.com/Downloads/JAWS&#34;&gt;JAWS&lt;/a&gt; Screen Reading Software.&lt;/li&gt;
-&lt;li&gt;A keymapper application such as &lt;a href=&#34;https://sharpkeys.codeplex.com/&#34;&gt;SharpKeys&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;A keymapper application such as &lt;a href=&#34;https://sharpkeys.codeplex.com/&#34;&gt;SharpKeys&lt;/a&gt;. We will use this to &amp;ldquo;remap&amp;rdquo; a keyboard key that JAWS uses that isn&amp;rsquo;t on most Macs.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;1-set-up-your-virtual-machine&#34;&gt;1. Set up your Virtual Machine&lt;/h2&gt;
 
-&lt;p&gt;Follow directions for your Virtual Machine software on how to install Windows. &lt;a href=&#34;https://www.virtualbox.org/manual/ch01.html#gui-createvm&#34;&gt;VirtualBox&lt;/a&gt; makes this fairly simple. Once you have Windows running on your Mac you will then want to download the appropriate version of JAWS for your machine.&lt;/p&gt;
+&lt;p&gt;Follow directions on how to set up the Virtual Machine software on your Mac and how to install Windows within it. &lt;a href=&#34;https://www.virtualbox.org/manual/ch01.html#gui-createvm&#34;&gt;VirtualBox&lt;/a&gt; makes this fairly simple.&lt;/p&gt;
 
 &lt;h2 id=&#34;2-download-amp-install-jaws-it-s-free&#34;&gt;2. Download &amp;amp; Install JAWS &amp;ndash; It&amp;rsquo;s FREE!!&lt;/h2&gt;
 
-&lt;p&gt;JAWS (Job Access With Speech) is a very powerful application and is fairly expensive for use but you can use the application for &lt;strong&gt;40 minutes at a time for free&lt;/strong&gt;. This model works great for accessibility testing. Visit the &lt;a href=&#34;http://www.freedomscientific.com/Downloads/JAWS&#34;&gt;JAWS download page&lt;/a&gt; and download the appropriate version on your Windows virtual machine and then follow the setup instructions.&lt;/p&gt;
+&lt;p&gt;JAWS (Job Access With Speech) is a very powerful application and is fairly expensive for use but you can use the application for &lt;strong&gt;40 minutes at a time for free&lt;/strong&gt;. This model works great for accessibility testing. From the Windows virtual machine visit the &lt;a href=&#34;http://www.freedomscientific.com/Downloads/JAWS&#34;&gt;JAWS download page&lt;/a&gt; and download the appropriate version and then follow the setup instructions for installation.&lt;/p&gt;
 
 &lt;h2 id=&#34;3-set-up-keymapping-for-the-insert-key&#34;&gt;3. Set up keymapping for the INSERT key&lt;/h2&gt;
 
-&lt;p&gt;JAWS leans heavily on the Insert key for &lt;a href=&#34;http://webaim.org/resources/shortcuts/jaws&#34;&gt;keyboard commands&lt;/a&gt;. On a standard mac laptop you&amp;rsquo;ll find this key is missing and makes using JAWS very tough. One quick way around this is to map a key we will not more than likely use to the registry on the Windows machine for the insert key.&lt;/p&gt;
+&lt;p&gt;JAWS leans on the Insert key for some &lt;a href=&#34;http://webaim.org/resources/shortcuts/jaws&#34;&gt;keyboard commands&lt;/a&gt;. On a standard mac laptop keyboard you&amp;rsquo;ll find this key is missing and makes using JAWS very tough. One quick way around this is to map a key we will not more than likely use to the registry on the Windows machine for the insert key.&lt;/p&gt;
 
-&lt;p&gt;On the Windows virtual machine &lt;a href=&#34;https://sharpkeys.codeplex.com/&#34;&gt;download and install SharpKeys&lt;/a&gt;. Once it loads you can map a key (I chose the right command key) to the Insert key. Watch the video below of me doing this:&lt;/p&gt;
+&lt;p&gt;On the Windows virtual machine &lt;a href=&#34;https://sharpkeys.codeplex.com/&#34;&gt;download and install SharpKeys&lt;/a&gt;. Once it loads you can map a key (I chose the right command key) to the Insert key. The video below demonstrates mapping the Right Command key to the Insert key on the Windows virtual machine:&lt;/p&gt;
 
 &lt;!-- copy and paste. Modify height and width if desired. --&gt;
 
@@ -50,11 +50,21 @@
 
 &lt;p&gt;After rebooting the virtual machine start up JAWS and you should now be able to perform the commands that require the Insert key.&lt;/p&gt;
 
-&lt;h2 id=&#34;4-set-system-preferences-on-your-mac-to-use-all-f1-f2-etc-as-standard-function-keys&#34;&gt;4. Set system preferences on your Mac to use all F1,F2, etc. as standard function keys.&lt;/h2&gt;
+&lt;h2 id=&#34;4-f1-f2-etc-as-standard-function-keys&#34;&gt;4. F1,F2, etc. as standard function keys&lt;/h2&gt;
 
-&lt;p&gt;JAWS uses standard function keys as well. On your Mac visit: System Preferences -&amp;gt; Keyboard&lt;/p&gt;
+&lt;p&gt;JAWS uses standard function keys e.g. F1,F2,F3 etc. On your Mac visit:&lt;/p&gt;
+
+&lt;p&gt;System Preferences -&amp;gt; Keyboard&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://content.screencast.com/users/joe-watkins-emerge/folders/Snagit/media/15c1eaf3-8148-4a6d-ac3f-d2c5d617e639/2016-06-25_20-33-44.png&#34; style=&#34;max-width: 600px;&#34; alt=&#34;screenshot of system preferences keyboard settings&#34;&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;5-start-jaws&#34;&gt;5. Start JAWS&lt;/h2&gt;
+
+&lt;p&gt;After you completed the above steps start up your virtual environment and launch JAWS. A good test to make sure things are working correctly would be to open a web browser on the virtual machine with JAWS running, visit a web page and then hit &lt;code&gt;modifier key + F6&lt;/code&gt; (in my case the Right Command key) This will pull of the browse by headings tool. If this wasn&amp;rsquo;t setup correctly it would open the start menu.&lt;/p&gt;
+
+&lt;div class=&#34;embed-responsive embed-responsive-16by9&#34; style=&#34;margin-bottom:30px;&#34;&gt;
+&lt;!-- copy and paste. Modify height and width if desired. --&gt;&lt;iframe class=&#34;tscplayer_inline embeddedObject&#34; name=&#34;tsc_player&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; type=&#34;text/html&#34; style=&#34;overflow:hidden;&#34; src=&#34;http://www.screencast.com/users/joe-watkins-emerge/folders/Snagit/media/fe76ab21-eed3-464b-8665-17d85795fe90/embed&#34; height=&#34;684&#34; width=&#34;922&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
 </description>
     </item>
     
