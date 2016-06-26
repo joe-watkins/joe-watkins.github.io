@@ -85,7 +85,7 @@
 
 <p>Ideally web accessibility should be considered in every phase of a project: Discovery, Content Planning, IA, Design, Prototyping, Development, QA and beyond. In this post we are going to focus on the workflow/tooling development phase.</p>
 
-<h2 id="introducing-tenon-io:f175a9bd49ffe69f4685e15ba4fd8fcb">Introducing Tenon.io</h2>
+<h2 id="introducing-tenon-io">Introducing Tenon.io</h2>
 
 <blockquote>
 <p>&ldquo;Tenon is a one of a kind accessibility testing tool in that it is aimed at offering unprecedented flexibility in tooling for designers developers testers and content authors&rdquo; - tenon.io</p>
@@ -95,7 +95,7 @@
 
 <p>Tenon.io has opened up their API up to the public and have created Grunt/Gulp tasks for everyone to use&hellip; lets see how we can do it!</p>
 
-<h2 id="grunt-tenon-client:f175a9bd49ffe69f4685e15ba4fd8fcb">Grunt-Tenon-Client</h2>
+<h2 id="grunt-tenon-client">Grunt-Tenon-Client</h2>
 
 <p><a href="https://www.npmjs.org/package/grunt-tenon-client">Grunt Tenon Client</a> is a Grunt Plugin for the Tenon Accessibility Testing API. While Tenon.io makes it super simple to test websites using their web services, there is a way to take advantage of their great API using a Grunt plugin. There is also a <a href="https://github.com/egauci/gulp-tenon-client">Gulp version</a> of this. I am going to walk through the basic setup of this Grunt plugin.</p>
 
@@ -103,7 +103,7 @@
 
 <hr>
 
-<h2 id="video-demo:f175a9bd49ffe69f4685e15ba4fd8fcb">Video Demo</h2>
+<h2 id="video-demo">Video Demo</h2>
 
 <p>Here is a quick video demo (no sound) of <a href="https://www.npmjs.org/package/grunt-tenon-client">Grunt Tenon Client</a> in action. In this video I am running Grunt and then making edits to an html file that has accessibility issues in the page so we can see the Tenon catch them.</p>
 
@@ -111,7 +111,7 @@
 
 <hr>
 
-<h2 id="getting-started:f175a9bd49ffe69f4685e15ba4fd8fcb">Getting Started</h2>
+<h2 id="getting-started">Getting Started</h2>
 
 <p>###Step 1
 <strong>Obtain API Key</strong>
@@ -157,7 +157,7 @@ Add the basic task to your Gruntfile.js</p>
 }
 </code></pre>
 
-<h3 id="full-gruntfile-js-example:f175a9bd49ffe69f4685e15ba4fd8fcb">Full Gruntfile.js example</h3>
+<h3 id="full-gruntfile-js-example">Full Gruntfile.js example</h3>
 
 <p>In this example I also am using <a href="https://www.npmjs.org/package/load-grunt-tasks">load-grunt-tasks</a> and <a href="https://www.npmjs.org/package/grunt-contrib-watch">grunt-contrib-watch</a></p>
 
@@ -207,7 +207,7 @@ After you have Grunt setup and running it is time to start testing. Make an edit
 
 <p><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/tenon-errors.png" alt="Grunt Tonon Client Errors"></p>
 
-<h2 id="example-files:f175a9bd49ffe69f4685e15ba4fd8fcb">Example Files</h2>
+<h2 id="example-files">Example Files</h2>
 
 <p>I created a project that includes starter files that you can <a href="https://github.com/joe-watkins/grunt-tenon-client-starter">grab from Github</a>. I hope you consider integrating this tool into your workflow.</p>
 

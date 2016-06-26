@@ -26,6 +26,7 @@ self.addEventListener("install", function(e){
         'https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3aCWcynf_cDxXwCLxiixG1c.ttf',
         'https://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzInF5uFdDttMLvmWuJdhhgs.ttf',
         'https://joe-watkins.io/webdev/progressive-enhancement-and-the-2016-presidential-race/',
+        'https://joe-watkins.io/accessibility/up-and-running-with-jaws-on-a-mac/',
         'https://joe-watkins.io/webdev/migrate-from-jekyll-to-hugo/',
         'https://joe-watkins.io/accessibility/infographics-may-not-belong-on-the-web/',
         'https://joe-watkins.io/accessibility/top-people-to-follow-in-web-accessibility/',

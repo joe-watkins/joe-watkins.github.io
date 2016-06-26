@@ -89,7 +89,7 @@
 
 <p>In this post I will assume you have a basic understanding of the command line, you have <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Git</a>, <a href="https://www.ruby-lang.org/en/documentation/installation/">Ruby</a>, and <a href="http://brew.sh/">Brew</a> installed.</p>
 
-<h2 id="tldr:1473a4d699e45cf0ff02f1224c9d2eff">TLDR</h2>
+<h2 id="tldr">TLDR</h2>
 
 <p>Hugo offers a very easy-to-use <a href="https://gohugo.io/commands/hugo_import_jekyll/">Jekyll to Hugo importer</a>.</p>
 
@@ -98,11 +98,11 @@
 
 <hr />
 
-<h2 id="install-a-jekyll-site:1473a4d699e45cf0ff02f1224c9d2eff">Install a Jekyll site</h2>
+<h2 id="install-a-jekyll-site">Install a Jekyll site</h2>
 
 <p>Let’s install a basic Jekyll site and get it running.</p>
 
-<h3 id="1-install:1473a4d699e45cf0ff02f1224c9d2eff">1. Install</h3>
+<h3 id="1-install">1. Install</h3>
 
 <pre><code>$ gem install jekyll
 $ jekyll new my-awesome-site
@@ -114,18 +114,18 @@ $ jekyll serve
 
 <p>If you are having issues getting thing installed <a href="https://jekyllrb.com/docs/troubleshooting/">try the troubleshooting page</a>.</p>
 
-<h2 id="install-hugo:1473a4d699e45cf0ff02f1224c9d2eff">Install Hugo</h2>
+<h2 id="install-hugo">Install Hugo</h2>
 
 <p>Follow the instructions below to install Hugo using brew. You can learn more from the <a href="https://gohugo.io/overview/quickstart/">Hugo QuickStart Guide</a>.</p>
 
-<h3 id="1-install-1:1473a4d699e45cf0ff02f1224c9d2eff">1. Install</h3>
+<h3 id="1-install-1">1. Install</h3>
 
 <pre><code>$ brew install hugo
 $ which hugo
 &gt; /usr/local/bin/hugo
 </code></pre>
 
-<h3 id="2-create-hugo-site:1473a4d699e45cf0ff02f1224c9d2eff">2. Create Hugo site</h3>
+<h3 id="2-create-hugo-site">2. Create Hugo site</h3>
 
 <p>Now you are ready to create your Hugo site. Let’s name ours bookshelf like <a href="https://gohugo.io/overview/quickstart/">Hugo’s tutorial</a> suggests.</p>
 
@@ -134,7 +134,7 @@ $ cd bookshelf
 $ hugo new post/good-to-great.md
 </code></pre>
 
-<h3 id="3-create-a-theme:1473a4d699e45cf0ff02f1224c9d2eff">3. Create a theme</h3>
+<h3 id="3-create-a-theme">3. Create a theme</h3>
 
 <p>Hugo doesn’t come with a default them so you need to create a themes directory and download a theme. Visit the <a href="http://themes.gohugo.io/">Theme Showcase</a> to see all the cool themes available:</p>
 
@@ -142,7 +142,7 @@ $ hugo new post/good-to-great.md
 $ git clone https://github.com/dim0627/hugo_theme_robust
 </code></pre>
 
-<h3 id="4-add-content:1473a4d699e45cf0ff02f1224c9d2eff">4. Add content</h3>
+<h3 id="4-add-content">4. Add content</h3>
 
 <p>Visit: <code>/content/post/good-to-great.md</code> and add some content below front matter.</p>
 
@@ -155,7 +155,7 @@ $ git clone https://github.com/dim0627/hugo_theme_robust
 
 <p><img src="/images/hugo-first-frontend.jpg" alt="Hugo home page"></p>
 
-<h2 id="import-content-from-jekyll-to-hugo:1473a4d699e45cf0ff02f1224c9d2eff">Import content from Jekyll to Hugo</h2>
+<h2 id="import-content-from-jekyll-to-hugo">Import content from Jekyll to Hugo</h2>
 
 <p>Hugo makes importing content from a Jekyll site very easy with the <a href="https://gohugo.io/commands/hugo_import_jekyll/">hugo import jekyll</a> command. All you need to do is define the source and the destination paths and it will work its magic. It does its best at copying all your Jekyll posts and static content to your Hugo site.</p>
 
@@ -179,7 +179,7 @@ Congratulations! 1 posts imported!
 
 <p><img src="/images/jekyll-post-in-hugo.jpg" alt="Jekyll post in Hugo Site"></p>
 
-<h2 id="handling-templates:1473a4d699e45cf0ff02f1224c9d2eff">Handling Templates</h2>
+<h2 id="handling-templates">Handling Templates</h2>
 
 <p>Once you have your posts migrated you will want to start working on your theme. I elected to just start hacking up the Robust theme I started with. You can learn more about themes in the great documentation. Hugo recommends you <a href="https://gohugo.io/themes/customizing/">override themes</a> by adding new template partials to the <code>/layouts</code> folder.</p>
 
@@ -191,15 +191,15 @@ Congratulations! 1 posts imported!
 
 <p>You will want to integrate the template structure from your Jekyll <code>/_layouts</code> and <code>/_partials</code> folders site to the Hugo theme <code>/layouts</code> folder or the theme’s <code>/themes/theme-name/layouts</code>.</p>
 
-<h2 id="static-pages:1473a4d699e45cf0ff02f1224c9d2eff">Static Pages</h2>
+<h2 id="static-pages">Static Pages</h2>
 
 <p>Some Jekyll sites have static pages that are not posts. You may need to create these manually with <code>$ hugo new page-name-here.md</code> which will stick the static page in the <code>/content</code> folder. You can define the url of those pages in the <a href="https://gohugo.io/content/organization/">front matter</a> of that page.</p>
 
-<h2 id="hosting-your-hugo-site-on-github-pages:1473a4d699e45cf0ff02f1224c9d2eff">Hosting your Hugo site on GitHub Pages</h2>
+<h2 id="hosting-your-hugo-site-on-github-pages">Hosting your Hugo site on GitHub Pages</h2>
 
 <p>If you want to host your Hugo site on GitHub you will want to deploy the <code>/public</code> folder to your GitHub pages repo. Be sure to include a <code>.nojekyll</code> file in your <code>/static</code> before doing this. <a href="https://github.com/blog/572-bypassing-jekyll-on-github-pages">Learn more about the .nojekyll file</a>.</p>
 
-<h2 id="yay:1473a4d699e45cf0ff02f1224c9d2eff">Yay!</h2>
+<h2 id="yay">Yay!</h2>
 
 <p>So far I have really enjoyed the speed and and how easy it is to use Hugo. Now when I have an idea for a post I don&rsquo;t have to wonder if it will make it up to the web! <a href="https://gohugo.io">Go get Hugo now</a>!</p>
 

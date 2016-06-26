@@ -79,7 +79,7 @@
 
       	
 
-<h2 id="accessibility-is-the-key:49c9eedd1aed5ff6edb12c9aedd18ee8">Accessibility is the key :)</h2>
+<h2 id="accessibility-is-the-key">Accessibility is the key :)</h2>
 
 <p>Accessibility is <strong>very</strong> important to keep in mind when authoring web-based experiences.  When you use a <code>placeholder</code> attribute on an <code>input</code> field in place of a <code>label</code> element you are not only misusing an attribute you could be rendering your web form unusable to many users and defying <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#attr-input-placeholder">a spec that clearly states</a>:</p>
 
@@ -93,21 +93,21 @@
 <p>The placeholder attribute is not a substitute for the label element.</p>
 </blockquote>
 
-<h2 id="what-are-placeholders-for:49c9eedd1aed5ff6edb12c9aedd18ee8">What are placeholders for?</h2>
+<h2 id="what-are-placeholders-for">What are placeholders for?</h2>
 
 <p>The placeholder attribute represents a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value. eg. <em>&ldquo;enter your email address&rdquo;</em> <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#attr-input-placeholder">read more</a></p>
 
-<h2 id="what-are-labels-for:49c9eedd1aed5ff6edb12c9aedd18ee8">What are labels for?</h2>
+<h2 id="what-are-labels-for">What are labels for?</h2>
 
 <p>The label element represents a caption in a user interface. The caption can be associated with a specific form control, known as the label element&rsquo;s labeled control, either using the for attribute, or by putting the form control inside the label element itself. <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-label-element">read more</a></p>
 
-<h2 id="in-field-labels-let-s-stop-this-too:49c9eedd1aed5ff6edb12c9aedd18ee8">In-field labels.. let&rsquo;s stop this too!</h2>
+<h2 id="in-field-labels-let-s-stop-this-too">In-field labels.. let&rsquo;s stop this too!</h2>
 
 <p><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/in-field-example-2.png" alt="In-field example"></p>
 
 <p>The &lsquo;classic&rsquo; in-field label is something we should also try stray from using as well. An exception to this may be if the form consists of one or two fields eg. search/log in forms. Through usability testing folks are finding these types of forms are unusable,.. especially on a mobile device. The vertical space you are saving is not worth losing a conversion or excluding a user that requires your form to be accessible.</p>
 
-<h2 id="why-do-we-see-this-pattern:49c9eedd1aed5ff6edb12c9aedd18ee8">Why do we see this pattern?</h2>
+<h2 id="why-do-we-see-this-pattern">Why do we see this pattern?</h2>
 
 <p>I believe there are two major reasons why we are seeing placeholder misuse.</p>
 
@@ -117,36 +117,36 @@
 <li><p>The developer simply does not know what the attribute is for.  There is a shortage of of quality accessibility information out there for developers and it is easy to fall into the trap mentioned in reason #1.</p></li>
 </ol>
 
-<h2 id="placeholder-browser-support:49c9eedd1aed5ff6edb12c9aedd18ee8">Placeholder Browser support</h2>
+<h2 id="placeholder-browser-support">Placeholder Browser support</h2>
 
 <p>It is also important to know browser support for the HTML5 <code>placeholder</code> feature. There are polyfill hacks out there for older browsers.</p>
 
 <p><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/browser-support.png" alt="Placeholder browser support from can i use"></p>
 
-<h2 id="helpers:49c9eedd1aed5ff6edb12c9aedd18ee8">Helpers</h2>
+<h2 id="helpers">Helpers</h2>
 
 <p>Below you will find a couple pens I came up with that you might find useful.</p>
 
-<h3 id="proper-label-placeholder-usage:49c9eedd1aed5ff6edb12c9aedd18ee8">Proper Label / Placeholder usage</h3>
+<h3 id="proper-label-placeholder-usage">Proper Label / Placeholder usage</h3>
 
 <p><p data-height="268" data-theme-id="0" data-slug-hash="adfzl" data-default-tab="result" data-user="joe-watkins" class='codepen'>See the Pen <a href='http://codepen.io/joe-watkins/pen/adfzl/'>Labels/Placeholder example</a> by Joe Watkins (<a href='http://codepen.io/joe-watkins'>@joe-watkins</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
 
-<h3 id="hide-in-field-labels-with-jquery:49c9eedd1aed5ff6edb12c9aedd18ee8">Hide in-field Labels with jQuery</h3>
+<h3 id="hide-in-field-labels-with-jquery">Hide in-field Labels with jQuery</h3>
 
 <p><p data-height="268" data-theme-id="0" data-slug-hash="misCA" data-default-tab="result" data-user="joe-watkins" class='codepen'>See the Pen <a href='http://codepen.io/joe-watkins/pen/misCA/'>Compact Labels</a> by Joe Watkins (<a href='http://codepen.io/joe-watkins'>@joe-watkins</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
 
-<h3 id="show-placeholder-values-while-typing:49c9eedd1aed5ff6edb12c9aedd18ee8">Show placeholder values while typing</h3>
+<h3 id="show-placeholder-values-while-typing">Show placeholder values while typing</h3>
 
 <p><p data-height="386" data-theme-id="0" data-slug-hash="kspFj" data-default-tab="result" data-user="joe-watkins" class='codepen'>See the Pen <a href='http://codepen.io/joe-watkins/pen/kspFj/'>Show placeholder while typing</a> by Joe Watkins (<a href='http://codepen.io/joe-watkins'>@joe-watkins</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script></p>
 
-<h2 id="summary:49c9eedd1aed5ff6edb12c9aedd18ee8">Summary</h2>
+<h2 id="summary">Summary</h2>
 
 <p>Creating web-based projects that are accessible can be tough and there is still a lot to learn for us all. When it comes to an attribute like <code>placeholder</code> it is a cool feature that can add accessibility if used correctly,.. if misused it has quite the opposite effect.</p>
 
-<h3 id="resources:49c9eedd1aed5ff6edb12c9aedd18ee8">Resources</h3>
+<h3 id="resources">Resources</h3>
 
 <ul>
 <li><a href="http://webaim.org">WebAim</a></li>

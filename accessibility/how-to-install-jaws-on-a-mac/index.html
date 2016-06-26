@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Joe Watkins.io is a blog covering topics such as front-end web development, web accessibility, and more!">
     <meta name="keywords" content="Web Development, Accessibility, HTML, CSS, Javascript, jQuery, Grunt, Gulp, Angular, Web Components, Front-end">
-    <title>CSS Visual Regression Testing with Grunt-BackstopJS &middot; JoeWatkins.io</title>
+    <title>How to install JAWS on a Mac &middot; JoeWatkins.io</title>
     <link rel="stylesheet" href="/styles/main.min.css">
   </head>
 
@@ -70,154 +70,14 @@
       <article class="posts-a post-detail">
       	<div class="post">
       	<header>
-      		<h1>CSS Visual Regression Testing with Grunt-BackstopJS</h1>
+      		<h1>How to install JAWS on a Mac</h1>
       		<p class="author">by: Joe Watkins</p>
       		<ul class="meta">
-      			<li class="date">21 March 2015</li>
+      			<li class="date">25 June 2016</li>
       		</ul>
       	</header>
 
-      	
-
-<p>These days as a front-end web developer you can find yourself drowning in new tools to try out.  You can spend hours on end trying to keep up with all of these new tools to add to your workflow.  I find myself down this rabbit hole quite often. (I secretly like it)</p>
-
-<p>##CSS Visual Regression
-CSS visual regression testing is the process of running automated visual test comparisons on pages or elements in your projects. Generally these tests utilize tools consisting of <a href="https://github.com/Huddle/PhantomCSS">PhantomCSS</a>, <a href="http://casperjs.org/">CasperJS</a>, and <a href="http://huddle.github.io/Resemble.js/">Resemble.js</a>. These tools can literally visit specified web pages, take snapshots at different screen sizes and then compare those images to each other. These comparisons can uncover bugs you’d otherwise not learn about until it’s too late.</p>
-
-<p>After being introduced to CSS visual regression testing by my colleague <a href="http://blog.greggant.com/">Greg</a>, I took on the challenge of integrating a testing system into our team’s workflow.</p>
-
-<p>I’ve tested a few CSS regression tools out there and my favorite has been <a href="https://garris.github.io/BackstopJS/">BackstopJS</a>. This tool is fairly easy to configure which allows for you to get up and rolling quickly. Backstop.js loads your tests in a fancy webpage that gives you the visual feedback needed for targeting bugs caused from CSS related issues. There are some <a href="https://css-tricks.com/automating-css-regression-testing/">other great posts</a> out there on BackstopJS to get you <a href="http://davidwalsh.name/visual-regression-testing-angular-applications">familiar with the workflow</a>.</p>
-
-<h2 id="basic-css-regression-workflow">Basic CSS Regression Workflow</h2>
-
-<p>From a high level CSS visual regression testing consists of a few simple steps in your workflow.</p>
-
-<ul>
-<li>Create reference files/images to test against. <a href="http://styleguides.io/examples.html">Style Guides</a> make for awesome testing grounds.</li>
-<li>Make normal changes to your project’s CSS.</li>
-<li>Run CSS visual regression test.</li>
-<li>If the tests fail you will see what is broken in results to fix.</li>
-<li>Fix issues, pass the test, and then deploy.</li>
-</ul>
-
-<h2 id="step-one-required-packages">Step One - Required Packages</h2>
-
-<p>Be sure to have <a href="https://nodejs.org/download/">Node.js</a>, <a href="http://gruntjs.com/">Grunt</a>, <a href="http://gulpjs.com/">Gulp</a>, and <a href="http://bower.io/">Bower Package Manager</a> setup before moving forward. This tooling actually uses both Grunt and Gulp so you will need them both :)</p>
-
-<p>Start things off by installing <a href="https://www.google.com/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;ie=UTF-8#q=phantomjs">PhatomJS</a> and <a href="http://casperjs.org/">Capser.js</a></p>
-
-<p><code>$ sudo npm install -g phantomjs</code></p>
-
-<p><code>$ sudo npm install -g casperjs</code></p>
-
-<h2 id="step-two">Step Two</h2>
-
-<p>Create a project folder and setup a Bower config file in the root. <code>bower init</code> Now you will install Backstop.js using Bower.</p>
-
-<p><code>$ bower install --save-dev backstopjs</code></p>
-
-<p>This will install Backstop.js inside the /bower_components/ folder.</p>
-
-<h2 id="step-three-grunt-backstopjs">Step Three - grunt-backstopjs</h2>
-
-<p>This is where we will deviate from other <a href="https://css-tricks.com/automating-css-regression-testing/">BackstopJS tutorials</a> out there and we will setup <a href="https://github.com/ddluc/grunt-backstop">grunt-backstop</a>. This awesome grunt plugin makes using BackstopJS a cinch.</p>
-
-<p>I challenged my colleague <a href="http://ddluc.com/">Dan</a> at the office, who is comfortable in Node.js, to author the plugin. Together we came up with a solution that we use today on projects. While the plugin is still in its infancy its super easy to setup. BackstopJS, in it’s current state, forces you to work within the /bower_components/ folder. This conflicted with our team’s workflow as we do not check that folder into our version control. We needed to work outside of that folder. <a href="https://github.com/garris/BackstopJS/issues/41">Here’s the issue</a> that started it all :)</p>
-
-<p><code>$ npm install grunt-backstop --save-dev</code></p>
-
-<p>Once the plugin has been installed to the /node_modules/ folder add the task to your Gruntfile.js</p>
-
-<p><code>grunt.loadNpmTasks(‘grunt-backstop’);</code></p>
-
-<h3 id="basic-configuration">Basic Configuration</h3>
-
-<pre><code>backstop: {
-		your_target: {
-			options: {
-				backstop_path: ‘./bower_components/backstopjs’,
-				test_path: ‘./tests’,
-				setup: true,
-				configure: true,
-				create_references: true,
-				run_tests: true
-			}
-		},
-	},
-</code></pre>
-
-<h3 id="advanced-configuration">Advanced Configuration</h3>
-
-<p>Because the standard workflow for BackstopJS is a series of steps to setup I like to break up my Grunt config so that I can have each of these commands at my disposal. e.g. Setup, Create reference files, Run test etc. It is a bit verbose but gives you more control:</p>
-
-<pre><code>backstop: {
-	setup: {
-		options : {
-			backstop_path: ‘./bower_components/backstopjs’,
-			test_path: ‘./tests’,
-			setup: false,
-			configure: true
-		}
-	},
-	test: {
-		options : {
-			backstop_path: ‘./bower_components/backstopjs’,
-			test_path: ‘./tests’,
-			create_references: false,
-			run_tests: true
-		}
-	},
-	reference: {
-		options : {
-			backstop_path: ‘./bower_components/backstopjs’,
-			test_path: ‘./tests’,
-			create_references: true,
-			run_tests: false
-		}
-	}
-}
-</code></pre>
-
-<h2 id="step-four">Step Four</h2>
-
-<p>Once you have your Gruntfile setup you will run the BackstopJS setup. This will trigger BackstopJS’s usual setup.</p>
-
-<p><code>$ grunt backstop:setup</code></p>
-
-<h2 id="step-five">Step Five</h2>
-
-<p>Now if you don’t already have a backstop.json file in your project root let’s create one. We will do this manually. From the project root use these commands:</p>
-
-<p><code>$ cd bower_components/backstopjs/</code> then <code>$ gulp genConfig</code></p>
-
-<p>This will place a <code>backstop.json</code> file in your project root. It has all the settings for screen sizes, target testing urls, and components to test. The default file that BackstopJS creates should work for a quick test.</p>
-
-<p><img src="/images/backstop-json.png" alt="Backstop.json example"></p>
-
-<h2 id="step-six">Step Six</h2>
-
-<p>Everything should be good to go for us to create our first reference files. We will use the default configuration in the generated backstop.json file. This reaches out to Bootstrap’s site and check a couple components. From the project root run:</p>
-
-<p><code>$ grunt backstop:reference</code></p>
-
-<p>This will create a bunch of reference .png files and place them in the /tests folder. These are the images the tests will compare against. When you create new components to test you will update the backstop.json file and then run the reference command again and it will add the new component to the reference files.</p>
-
-<h2 id="step-seven">Step Seven</h2>
-
-<p>Finally we are ready for our first test! Now from the project root run:</p>
-
-<p><code>$ grunt backstopjs:test</code></p>
-
-<p>A web browser will open up and give you your test results.</p>
-
-<p><img src="/images/test-results.png" alt="Test results"><br>
-<img src="/images/visual-feedback.png" alt="Visual Feedback"></p>
-
-<h2 id="wrapping-it-up">Wrapping it up</h2>
-
-<p>So now you are setup for Visual Regression Testing. You can configure the <code>backstop.json</code> file to work with your project either locally or remotely. I highly suggest testing a style guide or component library as part of your deployment strategy.</p>
-
-<p><strong>I have created a <a href="https://github.com/joe-watkins/grunt-backstopjs-demo">Github repo with demo files</a> if you’d like to see this in action.</strong></p>
+      	<p>Begin Post</p>
 
 
         <div id="disqus-comments">
