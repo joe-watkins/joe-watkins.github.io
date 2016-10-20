@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HKG to USD</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="/icon-192x192.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles/base.min.css" media="all">
+  <link rel="stylesheet" href="styles/main.min.css" media="only screen">
+</head>
+
+<body>
+
+  <section class="conversion-app">
+    <h1 class="visually-hidden">HKG to USD</h1>
+    <form action="/some-action" id="conversion-form">
+      <label for="hkg-amount"> <span class="visually-hidden">HKG $ Amount</span>
+        <input type="number" id="hkg-amount" required placeholder="enter HKG $">
+      </label>
+      <button type="submit">Convert</button>
+    </form>
+    <p class="total" tabindex="-1"></p>
+  </section>
+
+  <script src="javascript/jquery.js"></script>
+
+  <script>
+
+      var serviceWorkerFile = "sw.js";
+
+      if(navigator.serviceWorker){
+        _registerServiceWorker();
+      }
+
+      function _registerServiceWorker(){
+          navigator.serviceWorker.register(serviceWorkerFile).then(function(){
+              console.log("service worker running");
+          }).catch(function(){
+              console.log("nope there was a problem");
+          });
+      }
+
+      // api
+      var apiUrl = "https://api.fixer.io/latest?base=HKD";
+
+      if(navigator.onLine){
+        $.ajax({
+          url: apiUrl,
+          success: function(data){
+            localStorage.setItem("usdExchangeRate",data.rates.USD);
+          }
+        });
+      }else{
+        localStorage.setItem("usdExchangeRate",".1289");
+      }
+
+      // handle form
+      var $form = $("#conversion-form");
+
+          $form.on("submit", function(e){
+            e.preventDefault();
+            var hkgAmount = $form.find("#hkg-amount").val(),
+                exchangeRate = localStorage.getItem("usdExchangeRate"),
+                outputTarget = $(".total");
+                outputTarget
+                  .text("$" + (hkgAmount * exchangeRate).toFixed(2)+ " USD")
+                  .focus()
+                  .addClass("zoom");
+
+                setTimeout(function(){
+                  outputTarget.removeClass("zoom");
+                },500);
+          });
+
+
+  </script>
+
+</body>
+
+</html>
