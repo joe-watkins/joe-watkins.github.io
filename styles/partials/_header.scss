@@ -61,7 +61,7 @@
 		color: #fff;
 		text-transform: uppercase;
 		padding: .5em 1em .5em .5em;
-		background: darken($brandPrimary,20%);
+		background: #4d7c80;
 		position: absolute;
 		font-family: $sansSerif;
 		font-weight: normal;
@@ -69,6 +69,7 @@
 		top: 50px;
 		left: 50%;
 		transform: translate(-50%,-50%);
+		display: none;
 		@media(min-width: 300px){
 			padding: 1em 2em 1em 1em;
 			left: 0;
@@ -84,7 +85,7 @@
 		@media(min-width: $mamaBear){
 			top: 50px;
 		}
-		.tld { opacity: .7; }
+		// .tld { opacity: .7; }
 		&:after {
 			position: absolute;
 			content: " ";
