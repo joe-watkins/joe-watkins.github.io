@@ -17,3 +17,25 @@
   height: 1px; width: 1px;
   margin: -1px; padding: 0; border: 0;
 }
+
+
+// offline support
+.offline-message {
+  background: #599094 !important;
+  color: #fff;
+  p {
+    color: #fff;
+    font-size: 60%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans",sans-serif;
+  }
+  &[aria-hidden="true"]{
+    display: none;
+  }
+  .no-network-connection &,
+  &[aria-hidden="false"]{
+    display: block !important;
+  }
+}

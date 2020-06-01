@@ -6,15 +6,74 @@
     <description>Recent content in Accessibility on JoeWatkins.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jun 2016 08:28:24 -0700</lastBuildDate>
     <atom:link href="/categories/accessibility/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Up and Running with JAWS on a MAC</title>
+      <link>/accessibility/up-and-running-with-jaws-on-a-mac/</link>
+      <pubDate>Sat, 25 Jun 2016 08:28:24 -0700</pubDate>
+      
+      <guid>/accessibility/up-and-running-with-jaws-on-a-mac/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://www.freedomscientific.com/Downloads/JAWS&#34;&gt;JAWS&lt;/a&gt; is one of the more popular assistive technologies used by people with disabilities. Since the application is a Windows-based application it can be a little tough to use on a Mac. Learn how you can install it on your Mac for use or accessibility testing.&lt;/p&gt;
+
+&lt;p&gt;Here are the bits of software needed to accomplish this:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A virtual machine application such as &lt;a href=&#34;https://www.virtualbox.org/&#34;&gt;VirtualBox&lt;/a&gt; (free), &lt;a href=&#34;https://www.vmware.com/products/fusion&#34;&gt;VMware Fusion&lt;/a&gt;, or &lt;a href=&#34;https://support.apple.com/en-us/HT201468&#34;&gt;Bootcamp&lt;/a&gt; should work as well. This is how you can run Windows on your Mac.&lt;/li&gt;
+&lt;li&gt;A &lt;a href=&#34;https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/&#34;&gt;Windows Virtual Machine&lt;/a&gt; from Microsoft. Windows 7 Worked for me. This is an actual copy of Windows that you will install on your virtual machine.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.freedomscientific.com/Downloads/JAWS&#34;&gt;JAWS&lt;/a&gt; Screen Reading Software.&lt;/li&gt;
+&lt;li&gt;A keymapper application such as &lt;a href=&#34;https://sharpkeys.codeplex.com/&#34;&gt;SharpKeys&lt;/a&gt;. We will use this to &amp;ldquo;remap&amp;rdquo; a keyboard key that JAWS uses that isn&amp;rsquo;t on most Macs.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;1-set-up-your-virtual-machine&#34;&gt;1. Set up your Virtual Machine&lt;/h2&gt;
+
+&lt;p&gt;Follow directions on how to set up the Virtual Machine software on your Mac and how to install Windows within it. &lt;a href=&#34;https://www.virtualbox.org/manual/ch01.html#gui-createvm&#34;&gt;VirtualBox&lt;/a&gt; makes this fairly simple.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-download-amp-install-jaws-it-s-free&#34;&gt;2. Download &amp;amp; Install JAWS &amp;ndash; It&amp;rsquo;s FREE!!&lt;/h2&gt;
+
+&lt;p&gt;JAWS (Job Access With Speech) is a very powerful application and is fairly expensive for use but you can use the application for &lt;strong&gt;40 minutes at a time for free&lt;/strong&gt;. This model works great for accessibility testing. From the Windows virtual machine visit the &lt;a href=&#34;http://www.freedomscientific.com/Downloads/JAWS&#34;&gt;JAWS download page&lt;/a&gt; and download the appropriate version and then follow the setup instructions for installation.&lt;/p&gt;
+
+&lt;h2 id=&#34;3-set-up-keymapping-for-the-insert-key&#34;&gt;3. Set up keymapping for the INSERT key&lt;/h2&gt;
+
+&lt;p&gt;JAWS leans on the Insert key for some &lt;a href=&#34;http://webaim.org/resources/shortcuts/jaws&#34;&gt;keyboard commands&lt;/a&gt;. On a standard mac laptop keyboard you&amp;rsquo;ll find this key is missing and makes using JAWS very tough. One quick way around this is to map a key we will not more than likely use to the registry on the Windows machine for the insert key.&lt;/p&gt;
+
+&lt;p&gt;On the Windows virtual machine &lt;a href=&#34;https://sharpkeys.codeplex.com/&#34;&gt;download and install SharpKeys&lt;/a&gt;. Once it loads you can map a key (I chose the right command key) to the Insert key. The video below demonstrates mapping the Right Command key to the Insert key on the Windows virtual machine:&lt;/p&gt;
+
+&lt;!-- copy and paste. Modify height and width if desired. --&gt;
+
+&lt;div class=&#34;embed-responsive embed-responsive-16by9&#34; style=&#34;margin-bottom:30px;&#34;&gt;
+&lt;video src=&#34;/images/sharpkeys-demo.mp4&#34; poster=&#34;/images/sharp-keys-demo-poster.png&#34; controls aria-label=&#34;Video demonstration of remapping a key in virtual environment&#34;&gt;&lt;/video&gt;
+&lt;/div&gt;
+
+&lt;p&gt;After rebooting the virtual machine start up JAWS and you should now be able to perform the commands that require the Insert key.&lt;/p&gt;
+
+&lt;h2 id=&#34;4-f1-f2-etc-as-standard-function-keys&#34;&gt;4. F1,F2, etc. as standard function keys&lt;/h2&gt;
+
+&lt;p&gt;JAWS uses standard function keys e.g. F1,F2,F3 etc. On your Mac visit:&lt;/p&gt;
+
+&lt;p&gt;System Preferences -&amp;gt; Keyboard&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/images/function-keys.png&#34; style=&#34;max-width: 600px;&#34; alt=&#34;screenshot of system preferences keyboard settings&#34;&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;5-start-jaws&#34;&gt;5. Start JAWS&lt;/h2&gt;
+
+&lt;p&gt;After you completed the above steps start up your virtual environment and launch JAWS. A good test to make sure things are working correctly would be to open a web browser on the virtual machine with JAWS running, visit a web page and then hit &lt;code&gt;modifier key + F6&lt;/code&gt; (in my case the Right Command key) This will pull of the browse by headings tool. If this wasn&amp;rsquo;t setup correctly it would open the start menu.&lt;/p&gt;
+
+&lt;div class=&#34;embed-responsive embed-responsive-16by9&#34; style=&#34;margin-bottom:30px;&#34;&gt;
+&lt;video src=&#34;/images/running-jaws-mac.mp4&#34; poster=&#34;/images/running-jaws-mac-poster.png&#34; controls aria-label=&#34;Video demonstration of using JAWS on MAC&#34;&gt;&lt;/video&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Infographics may not belong on the web</title>
-      <link>/accessibility/infographics-may-not-belong-on-the-web</link>
+      <link>/accessibility/infographics-may-not-belong-on-the-web/</link>
       <pubDate>Sat, 02 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>/accessibility/infographics-may-not-belong-on-the-web</guid>
+      <guid>/accessibility/infographics-may-not-belong-on-the-web/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;/images/infocrapic.jpg&#34; alt=&#34;Infographic image search result&#34; class=&#34;img-responsive&#34;&gt;&lt;/p&gt;
@@ -31,7 +90,7 @@
 
 &lt;p&gt;There are many fixed/print-centric concepts that do not fit in well with the web. Responsive Web Design has done a great job of helping us shed these antiquated methods of delivering stories.&lt;/p&gt;
 
-&lt;h2 id=&#34;why-infographics-may-not-be-the-best-mechanism-for-delivering-a-story-on-the-web:4ab280357443c886954da978b975f8ee&#34;&gt;Why infographics may not be the best mechanism for delivering a story on the web&lt;/h2&gt;
+&lt;h2 id=&#34;why-infographics-may-not-be-the-best-mechanism-for-delivering-a-story-on-the-web&#34;&gt;Why infographics may not be the best mechanism for delivering a story on the web&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;If done incorrectly, and most are, only people with vision can consume the content.&lt;/li&gt;
@@ -47,7 +106,7 @@
 &lt;li&gt;Scoping costs for infographics can be difficult due to unknown design costs as well as development implementation costs.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;how-to-responsibly-do-infographics-on-the-web:4ab280357443c886954da978b975f8ee&#34;&gt;How to responsibly do infographics on the web&lt;/h2&gt;
+&lt;h2 id=&#34;how-to-responsibly-do-infographics-on-the-web&#34;&gt;How to responsibly do infographics on the web&lt;/h2&gt;
 
 &lt;p&gt;If you or your client is hellbent on having infographics be present in your web-based experience I have some suggestions on how you can make these enjoyable to a wider audience. It should be understood that these suggestions could add complexity and time to your project but are worth the extra effort.&lt;/p&gt;
 
@@ -69,10 +128,10 @@
     
     <item>
       <title>Top People to Follow in Web Accessibility</title>
-      <link>/accessibility/top-people-to-follow-in-web-accessibility</link>
+      <link>/accessibility/top-people-to-follow-in-web-accessibility/</link>
       <pubDate>Sun, 25 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>/accessibility/top-people-to-follow-in-web-accessibility</guid>
+      <guid>/accessibility/top-people-to-follow-in-web-accessibility/</guid>
       <description>&lt;p&gt;The web accessibility community leans on Twitter greatly so it is an awesome way to keep up-to-date and learn from leaders in the industry.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;ve put together a list of &lt;a href=&#34;https://github.com/joe-watkins/top-people-to-follow-in-web-accessibility&#34;&gt;The Top People to follow in Web Accessibility&lt;/a&gt; that I feel you should follow if you are interested in web accessibility. It is an open source project so feel free to contribute names to the list.&lt;/p&gt;
@@ -81,15 +140,15 @@
     
     <item>
       <title>Commonly abused HTML &amp; CSS that hurt accessibility</title>
-      <link>/accessibility/commonly-abused-html-and-css-that-hurt-accessibility</link>
+      <link>/accessibility/commonly-abused-html-and-css-that-hurt-accessibility/</link>
       <pubDate>Fri, 04 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>/accessibility/commonly-abused-html-and-css-that-hurt-accessibility</guid>
+      <guid>/accessibility/commonly-abused-html-and-css-that-hurt-accessibility/</guid>
       <description>
 
 &lt;p&gt;After performing many website accessibility audits for clients, I find myself continually running into the same &lt;em&gt;key offenders&lt;/em&gt; that cause inaccessibility. I thought it would be fun to gather up these few buggers and show them to you and offer up some solutions for each.&lt;/p&gt;
 
-&lt;h2 id=&#34;1-css-outline-none:ba516824fddb9b07fd15a6eb7aca27aa&#34;&gt;1. CSS outline: none;&lt;/h2&gt;
+&lt;h2 id=&#34;1-css-outline-none&#34;&gt;1. CSS outline: none;&lt;/h2&gt;
 
 &lt;p&gt;The CSS &lt;code&gt;outline&lt;/code&gt; property is one that designers and developers often abuse in hopes to remove the unwanted &lt;a href=&#34;http://tjvantoll.com/2013/01/28/stop-messing-with-the-browsers-default-focus-outline/&#34;&gt;focus rings&lt;/a&gt; If &lt;code&gt;outline: none;&lt;/code&gt; is used without offering a custom &lt;code&gt;:focus&lt;/code&gt; state it can make it difficult for some users to navigate around the website. Some keyboard-only users tab around the interface. If there is no &lt;code&gt;:focus&lt;/code&gt; state giving visual feedback to where the user is in the document it is easy for that user to be confused or lost. They will get frustrated and simply leave your website.&lt;/p&gt;
 
@@ -100,7 +159,7 @@ If you remove the outline back it up with a creative &lt;code&gt;:focus&lt;/code
 
 &lt;p&gt;&lt;img src=&#34;/images/uk-gov.gif&#34; alt=&#34;UK.gov website&#34;&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;using-outline:ba516824fddb9b07fd15a6eb7aca27aa&#34;&gt;Using &lt;code&gt;outline&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;using-outline&#34;&gt;Using &lt;code&gt;outline&lt;/code&gt;&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;a:focus {
 	outline: 2px solid red;
@@ -108,7 +167,7 @@ If you remove the outline back it up with a creative &lt;code&gt;:focus&lt;/code
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;removing-outline-with-fallback:ba516824fddb9b07fd15a6eb7aca27aa&#34;&gt;Removing &lt;code&gt;outline&lt;/code&gt; with fallback&lt;/h3&gt;
+&lt;h3 id=&#34;removing-outline-with-fallback&#34;&gt;Removing &lt;code&gt;outline&lt;/code&gt; with fallback&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;a:focus {
 	outline: none;
@@ -117,7 +176,7 @@ If you remove the outline back it up with a creative &lt;code&gt;:focus&lt;/code
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;2-html5-placeholder-attribute:ba516824fddb9b07fd15a6eb7aca27aa&#34;&gt;2. HTML5 Placeholder Attribute&lt;/h2&gt;
+&lt;h2 id=&#34;2-html5-placeholder-attribute&#34;&gt;2. HTML5 Placeholder Attribute&lt;/h2&gt;
 
 &lt;p&gt;I&amp;rsquo;ve &lt;a href=&#34;/accessibility/please-stop-using-placeholders-as-labels/&#34;&gt;written about misusing HTML5 placeholder attributes&lt;/a&gt; before and would love to see that attribute deprecated. I&amp;rsquo;ve even &lt;a href=&#34;https://code.google.com/p/chromium/issues/detail?id=397260&amp;amp;q=placeholder%20accessibility&amp;amp;colspec=ID%20Pri%20M%20Week%20ReleaseBlock%20Cr%20Status%20Owner%20Summary%20OS%20Modified&#34;&gt;submitted bugs to Google Chrome&lt;/a&gt; regarding how the default contrast ratio of the &lt;code&gt;placeholder&lt;/code&gt; text fails WCAG 2.0 contrast ratio tests. Google claims the placeholder is &amp;ldquo;deliberately intended to be hard to see&amp;rdquo;.&lt;/p&gt;
 
@@ -136,7 +195,7 @@ Use the placeholder attribute on forms wisely and sparingly. Remember that not a
 &amp;lt;/form&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;3-missing-lt-label-gt-tags:ba516824fddb9b07fd15a6eb7aca27aa&#34;&gt;3. Missing &amp;lt;label&amp;gt; tags&lt;/h2&gt;
+&lt;h2 id=&#34;3-missing-lt-label-gt-tags&#34;&gt;3. Missing &amp;lt;label&amp;gt; tags&lt;/h2&gt;
 
 &lt;p&gt;When authoring web forms remember to include the &lt;code&gt;&amp;lt;label&amp;gt;&lt;/code&gt; tag for each input field. It is important to remember to tie that &lt;code&gt;&amp;lt;label&amp;gt;&lt;/code&gt; to a particular field by adding the &lt;code&gt;for&lt;/code&gt; attribute.&lt;/p&gt;
 
@@ -151,10 +210,10 @@ Below is a good example of a &lt;code&gt;&amp;lt;label&amp;gt;&lt;/code&gt; tag.
     
     <item>
       <title>Getting started with Grunt Tenon Client</title>
-      <link>/accessibility/getting-started-with-grunt-tenon-client</link>
+      <link>/accessibility/getting-started-with-grunt-tenon-client/</link>
       <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>/accessibility/getting-started-with-grunt-tenon-client</guid>
+      <guid>/accessibility/getting-started-with-grunt-tenon-client/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;http://www.w3.org/WAI/intro/accessibility.php&#34;&gt;Web Accessibility&lt;/a&gt; / A11Y is finally on a path of owning more mindshare in the web development community.  It has a long way to go but will get there eventually when we learn more about all the positive side effects gained from injecting basic web accessibility practices into our workflow.&lt;/p&gt;
@@ -163,7 +222,7 @@ Below is a good example of a &lt;code&gt;&amp;lt;label&amp;gt;&lt;/code&gt; tag.
 
 &lt;p&gt;Ideally web accessibility should be considered in every phase of a project: Discovery, Content Planning, IA, Design, Prototyping, Development, QA and beyond. In this post we are going to focus on the workflow/tooling development phase.&lt;/p&gt;
 
-&lt;h2 id=&#34;introducing-tenon-io:f175a9bd49ffe69f4685e15ba4fd8fcb&#34;&gt;Introducing Tenon.io&lt;/h2&gt;
+&lt;h2 id=&#34;introducing-tenon-io&#34;&gt;Introducing Tenon.io&lt;/h2&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;Tenon is a one of a kind accessibility testing tool in that it is aimed at offering unprecedented flexibility in tooling for designers developers testers and content authors&amp;rdquo; - tenon.io&lt;/p&gt;
@@ -173,7 +232,7 @@ Below is a good example of a &lt;code&gt;&amp;lt;label&amp;gt;&lt;/code&gt; tag.
 
 &lt;p&gt;Tenon.io has opened up their API up to the public and have created Grunt/Gulp tasks for everyone to use&amp;hellip; lets see how we can do it!&lt;/p&gt;
 
-&lt;h2 id=&#34;grunt-tenon-client:f175a9bd49ffe69f4685e15ba4fd8fcb&#34;&gt;Grunt-Tenon-Client&lt;/h2&gt;
+&lt;h2 id=&#34;grunt-tenon-client&#34;&gt;Grunt-Tenon-Client&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://www.npmjs.org/package/grunt-tenon-client&#34;&gt;Grunt Tenon Client&lt;/a&gt; is a Grunt Plugin for the Tenon Accessibility Testing API. While Tenon.io makes it super simple to test websites using their web services, there is a way to take advantage of their great API using a Grunt plugin. There is also a &lt;a href=&#34;https://github.com/egauci/gulp-tenon-client&#34;&gt;Gulp version&lt;/a&gt; of this. I am going to walk through the basic setup of this Grunt plugin.&lt;/p&gt;
 
@@ -181,7 +240,7 @@ Below is a good example of a &lt;code&gt;&amp;lt;label&amp;gt;&lt;/code&gt; tag.
 
 &lt;hr&gt;
 
-&lt;h2 id=&#34;video-demo:f175a9bd49ffe69f4685e15ba4fd8fcb&#34;&gt;Video Demo&lt;/h2&gt;
+&lt;h2 id=&#34;video-demo&#34;&gt;Video Demo&lt;/h2&gt;
 
 &lt;p&gt;Here is a quick video demo (no sound) of &lt;a href=&#34;https://www.npmjs.org/package/grunt-tenon-client&#34;&gt;Grunt Tenon Client&lt;/a&gt; in action. In this video I am running Grunt and then making edits to an html file that has accessibility issues in the page so we can see the Tenon catch them.&lt;/p&gt;
 
@@ -189,7 +248,7 @@ Below is a good example of a &lt;code&gt;&amp;lt;label&amp;gt;&lt;/code&gt; tag.
 
 &lt;hr&gt;
 
-&lt;h2 id=&#34;getting-started:f175a9bd49ffe69f4685e15ba4fd8fcb&#34;&gt;Getting Started&lt;/h2&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
 
 &lt;p&gt;###Step 1
 &lt;strong&gt;Obtain API Key&lt;/strong&gt;
@@ -235,7 +294,7 @@ Add the basic task to your Gruntfile.js&lt;/p&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;full-gruntfile-js-example:f175a9bd49ffe69f4685e15ba4fd8fcb&#34;&gt;Full Gruntfile.js example&lt;/h3&gt;
+&lt;h3 id=&#34;full-gruntfile-js-example&#34;&gt;Full Gruntfile.js example&lt;/h3&gt;
 
 &lt;p&gt;In this example I also am using &lt;a href=&#34;https://www.npmjs.org/package/load-grunt-tasks&#34;&gt;load-grunt-tasks&lt;/a&gt; and &lt;a href=&#34;https://www.npmjs.org/package/grunt-contrib-watch&#34;&gt;grunt-contrib-watch&lt;/a&gt;&lt;/p&gt;
 
@@ -285,7 +344,7 @@ After you have Grunt setup and running it is time to start testing. Make an edit
 
 &lt;p&gt;&lt;img src=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/tenon-errors.png&#34; alt=&#34;Grunt Tonon Client Errors&#34;&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;example-files:f175a9bd49ffe69f4685e15ba4fd8fcb&#34;&gt;Example Files&lt;/h2&gt;
+&lt;h2 id=&#34;example-files&#34;&gt;Example Files&lt;/h2&gt;
 
 &lt;p&gt;I created a project that includes starter files that you can &lt;a href=&#34;https://github.com/joe-watkins/grunt-tenon-client-starter&#34;&gt;grab from Github&lt;/a&gt;. I hope you consider integrating this tool into your workflow.&lt;/p&gt;
 </description>
@@ -293,13 +352,13 @@ After you have Grunt setup and running it is time to start testing. Make an edit
     
     <item>
       <title>Please stop using placeholders as labels!!!!</title>
-      <link>/accessibility/please-stop-using-placeholders-as-labels</link>
+      <link>/accessibility/please-stop-using-placeholders-as-labels/</link>
       <pubDate>Wed, 30 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>/accessibility/please-stop-using-placeholders-as-labels</guid>
+      <guid>/accessibility/please-stop-using-placeholders-as-labels/</guid>
       <description>
 
-&lt;h2 id=&#34;accessibility-is-the-key:49c9eedd1aed5ff6edb12c9aedd18ee8&#34;&gt;Accessibility is the key :)&lt;/h2&gt;
+&lt;h2 id=&#34;accessibility-is-the-key&#34;&gt;Accessibility is the key :)&lt;/h2&gt;
 
 &lt;p&gt;Accessibility is &lt;strong&gt;very&lt;/strong&gt; important to keep in mind when authoring web-based experiences.  When you use a &lt;code&gt;placeholder&lt;/code&gt; attribute on an &lt;code&gt;input&lt;/code&gt; field in place of a &lt;code&gt;label&lt;/code&gt; element you are not only misusing an attribute you could be rendering your web form unusable to many users and defying &lt;a href=&#34;http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#attr-input-placeholder&#34;&gt;a spec that clearly states&lt;/a&gt;:&lt;/p&gt;
 
@@ -313,21 +372,21 @@ After you have Grunt setup and running it is time to start testing. Make an edit
 &lt;p&gt;The placeholder attribute is not a substitute for the label element.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&#34;what-are-placeholders-for:49c9eedd1aed5ff6edb12c9aedd18ee8&#34;&gt;What are placeholders for?&lt;/h2&gt;
+&lt;h2 id=&#34;what-are-placeholders-for&#34;&gt;What are placeholders for?&lt;/h2&gt;
 
 &lt;p&gt;The placeholder attribute represents a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value. eg. &lt;em&gt;&amp;ldquo;enter your email address&amp;rdquo;&lt;/em&gt; &lt;a href=&#34;http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#attr-input-placeholder&#34;&gt;read more&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;what-are-labels-for:49c9eedd1aed5ff6edb12c9aedd18ee8&#34;&gt;What are labels for?&lt;/h2&gt;
+&lt;h2 id=&#34;what-are-labels-for&#34;&gt;What are labels for?&lt;/h2&gt;
 
 &lt;p&gt;The label element represents a caption in a user interface. The caption can be associated with a specific form control, known as the label element&amp;rsquo;s labeled control, either using the for attribute, or by putting the form control inside the label element itself. &lt;a href=&#34;http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-label-element&#34;&gt;read more&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;in-field-labels-let-s-stop-this-too:49c9eedd1aed5ff6edb12c9aedd18ee8&#34;&gt;In-field labels.. let&amp;rsquo;s stop this too!&lt;/h2&gt;
+&lt;h2 id=&#34;in-field-labels-let-s-stop-this-too&#34;&gt;In-field labels.. let&amp;rsquo;s stop this too!&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/in-field-example-2.png&#34; alt=&#34;In-field example&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;The &amp;lsquo;classic&amp;rsquo; in-field label is something we should also try stray from using as well. An exception to this may be if the form consists of one or two fields eg. search/log in forms. Through usability testing folks are finding these types of forms are unusable,.. especially on a mobile device. The vertical space you are saving is not worth losing a conversion or excluding a user that requires your form to be accessible.&lt;/p&gt;
 
-&lt;h2 id=&#34;why-do-we-see-this-pattern:49c9eedd1aed5ff6edb12c9aedd18ee8&#34;&gt;Why do we see this pattern?&lt;/h2&gt;
+&lt;h2 id=&#34;why-do-we-see-this-pattern&#34;&gt;Why do we see this pattern?&lt;/h2&gt;
 
 &lt;p&gt;I believe there are two major reasons why we are seeing placeholder misuse.&lt;/p&gt;
 
@@ -337,36 +396,36 @@ After you have Grunt setup and running it is time to start testing. Make an edit
 &lt;li&gt;&lt;p&gt;The developer simply does not know what the attribute is for.  There is a shortage of of quality accessibility information out there for developers and it is easy to fall into the trap mentioned in reason #1.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;placeholder-browser-support:49c9eedd1aed5ff6edb12c9aedd18ee8&#34;&gt;Placeholder Browser support&lt;/h2&gt;
+&lt;h2 id=&#34;placeholder-browser-support&#34;&gt;Placeholder Browser support&lt;/h2&gt;
 
 &lt;p&gt;It is also important to know browser support for the HTML5 &lt;code&gt;placeholder&lt;/code&gt; feature. There are polyfill hacks out there for older browsers.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/browser-support.png&#34; alt=&#34;Placeholder browser support from can i use&#34;&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;helpers:49c9eedd1aed5ff6edb12c9aedd18ee8&#34;&gt;Helpers&lt;/h2&gt;
+&lt;h2 id=&#34;helpers&#34;&gt;Helpers&lt;/h2&gt;
 
 &lt;p&gt;Below you will find a couple pens I came up with that you might find useful.&lt;/p&gt;
 
-&lt;h3 id=&#34;proper-label-placeholder-usage:49c9eedd1aed5ff6edb12c9aedd18ee8&#34;&gt;Proper Label / Placeholder usage&lt;/h3&gt;
+&lt;h3 id=&#34;proper-label-placeholder-usage&#34;&gt;Proper Label / Placeholder usage&lt;/h3&gt;
 
 &lt;p&gt;&lt;p data-height=&#34;268&#34; data-theme-id=&#34;0&#34; data-slug-hash=&#34;adfzl&#34; data-default-tab=&#34;result&#34; data-user=&#34;joe-watkins&#34; class=&#39;codepen&#39;&gt;See the Pen &lt;a href=&#39;http://codepen.io/joe-watkins/pen/adfzl/&#39;&gt;Labels/Placeholder example&lt;/a&gt; by Joe Watkins (&lt;a href=&#39;http://codepen.io/joe-watkins&#39;&gt;@joe-watkins&lt;/a&gt;) on &lt;a href=&#39;http://codepen.io&#39;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
 &lt;script async src=&#34;//assets.codepen.io/assets/embed/ei.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;hide-in-field-labels-with-jquery:49c9eedd1aed5ff6edb12c9aedd18ee8&#34;&gt;Hide in-field Labels with jQuery&lt;/h3&gt;
+&lt;h3 id=&#34;hide-in-field-labels-with-jquery&#34;&gt;Hide in-field Labels with jQuery&lt;/h3&gt;
 
 &lt;p&gt;&lt;p data-height=&#34;268&#34; data-theme-id=&#34;0&#34; data-slug-hash=&#34;misCA&#34; data-default-tab=&#34;result&#34; data-user=&#34;joe-watkins&#34; class=&#39;codepen&#39;&gt;See the Pen &lt;a href=&#39;http://codepen.io/joe-watkins/pen/misCA/&#39;&gt;Compact Labels&lt;/a&gt; by Joe Watkins (&lt;a href=&#39;http://codepen.io/joe-watkins&#39;&gt;@joe-watkins&lt;/a&gt;) on &lt;a href=&#39;http://codepen.io&#39;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
 &lt;script async src=&#34;//assets.codepen.io/assets/embed/ei.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;show-placeholder-values-while-typing:49c9eedd1aed5ff6edb12c9aedd18ee8&#34;&gt;Show placeholder values while typing&lt;/h3&gt;
+&lt;h3 id=&#34;show-placeholder-values-while-typing&#34;&gt;Show placeholder values while typing&lt;/h3&gt;
 
 &lt;p&gt;&lt;p data-height=&#34;386&#34; data-theme-id=&#34;0&#34; data-slug-hash=&#34;kspFj&#34; data-default-tab=&#34;result&#34; data-user=&#34;joe-watkins&#34; class=&#39;codepen&#39;&gt;See the Pen &lt;a href=&#39;http://codepen.io/joe-watkins/pen/kspFj/&#39;&gt;Show placeholder while typing&lt;/a&gt; by Joe Watkins (&lt;a href=&#39;http://codepen.io/joe-watkins&#39;&gt;@joe-watkins&lt;/a&gt;) on &lt;a href=&#39;http://codepen.io&#39;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
 &lt;script async src=&#34;//assets.codepen.io/assets/embed/ei.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;summary:49c9eedd1aed5ff6edb12c9aedd18ee8&#34;&gt;Summary&lt;/h2&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
 
 &lt;p&gt;Creating web-based projects that are accessible can be tough and there is still a lot to learn for us all. When it comes to an attribute like &lt;code&gt;placeholder&lt;/code&gt; it is a cool feature that can add accessibility if used correctly,.. if misused it has quite the opposite effect.&lt;/p&gt;
 
-&lt;h3 id=&#34;resources:49c9eedd1aed5ff6edb12c9aedd18ee8&#34;&gt;Resources&lt;/h3&gt;
+&lt;h3 id=&#34;resources&#34;&gt;Resources&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://webaim.org&#34;&gt;WebAim&lt;/a&gt;&lt;/li&gt;

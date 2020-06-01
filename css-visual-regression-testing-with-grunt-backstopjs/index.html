@@ -51,6 +51,8 @@
 
 
 
+<div class="offline-message" tabindex="-1" aria-hidden="true" style="display: none;"><p>Offline Mode: There is no network connection.</p></div>
+
 <a id="skip-to-content" href="#main">skip to main content</a>
 
 <header id="header" role="banner">
@@ -86,7 +88,7 @@ CSS visual regression testing is the process of running automated visual test co
 
 <p>I’ve tested a few CSS regression tools out there and my favorite has been <a href="https://garris.github.io/BackstopJS/">BackstopJS</a>. This tool is fairly easy to configure which allows for you to get up and rolling quickly. Backstop.js loads your tests in a fancy webpage that gives you the visual feedback needed for targeting bugs caused from CSS related issues. There are some <a href="https://css-tricks.com/automating-css-regression-testing/">other great posts</a> out there on BackstopJS to get you <a href="http://davidwalsh.name/visual-regression-testing-angular-applications">familiar with the workflow</a>.</p>
 
-<h2 id="basic-css-regression-workflow:26a721ae680ad9eb08c41e5ab21cd241">Basic CSS Regression Workflow</h2>
+<h2 id="basic-css-regression-workflow">Basic CSS Regression Workflow</h2>
 
 <p>From a high level CSS visual regression testing consists of a few simple steps in your workflow.</p>
 
@@ -98,7 +100,7 @@ CSS visual regression testing is the process of running automated visual test co
 <li>Fix issues, pass the test, and then deploy.</li>
 </ul>
 
-<h2 id="step-one-required-packages:26a721ae680ad9eb08c41e5ab21cd241">Step One - Required Packages</h2>
+<h2 id="step-one-required-packages">Step One - Required Packages</h2>
 
 <p>Be sure to have <a href="https://nodejs.org/download/">Node.js</a>, <a href="http://gruntjs.com/">Grunt</a>, <a href="http://gulpjs.com/">Gulp</a>, and <a href="http://bower.io/">Bower Package Manager</a> setup before moving forward. This tooling actually uses both Grunt and Gulp so you will need them both :)</p>
 
@@ -108,7 +110,7 @@ CSS visual regression testing is the process of running automated visual test co
 
 <p><code>$ sudo npm install -g casperjs</code></p>
 
-<h2 id="step-two:26a721ae680ad9eb08c41e5ab21cd241">Step Two</h2>
+<h2 id="step-two">Step Two</h2>
 
 <p>Create a project folder and setup a Bower config file in the root. <code>bower init</code> Now you will install Backstop.js using Bower.</p>
 
@@ -116,7 +118,7 @@ CSS visual regression testing is the process of running automated visual test co
 
 <p>This will install Backstop.js inside the /bower_components/ folder.</p>
 
-<h2 id="step-three-grunt-backstopjs:26a721ae680ad9eb08c41e5ab21cd241">Step Three - grunt-backstopjs</h2>
+<h2 id="step-three-grunt-backstopjs">Step Three - grunt-backstopjs</h2>
 
 <p>This is where we will deviate from other <a href="https://css-tricks.com/automating-css-regression-testing/">BackstopJS tutorials</a> out there and we will setup <a href="https://github.com/ddluc/grunt-backstop">grunt-backstop</a>. This awesome grunt plugin makes using BackstopJS a cinch.</p>
 
@@ -128,7 +130,7 @@ CSS visual regression testing is the process of running automated visual test co
 
 <p><code>grunt.loadNpmTasks(‘grunt-backstop’);</code></p>
 
-<h3 id="basic-configuration:26a721ae680ad9eb08c41e5ab21cd241">Basic Configuration</h3>
+<h3 id="basic-configuration">Basic Configuration</h3>
 
 <pre><code>backstop: {
 		your_target: {
@@ -144,7 +146,7 @@ CSS visual regression testing is the process of running automated visual test co
 	},
 </code></pre>
 
-<h3 id="advanced-configuration:26a721ae680ad9eb08c41e5ab21cd241">Advanced Configuration</h3>
+<h3 id="advanced-configuration">Advanced Configuration</h3>
 
 <p>Because the standard workflow for BackstopJS is a series of steps to setup I like to break up my Grunt config so that I can have each of these commands at my disposal. e.g. Setup, Create reference files, Run test etc. It is a bit verbose but gives you more control:</p>
 
@@ -176,13 +178,13 @@ CSS visual regression testing is the process of running automated visual test co
 }
 </code></pre>
 
-<h2 id="step-four:26a721ae680ad9eb08c41e5ab21cd241">Step Four</h2>
+<h2 id="step-four">Step Four</h2>
 
 <p>Once you have your Gruntfile setup you will run the BackstopJS setup. This will trigger BackstopJS’s usual setup.</p>
 
 <p><code>$ grunt backstop:setup</code></p>
 
-<h2 id="step-five:26a721ae680ad9eb08c41e5ab21cd241">Step Five</h2>
+<h2 id="step-five">Step Five</h2>
 
 <p>Now if you don’t already have a backstop.json file in your project root let’s create one. We will do this manually. From the project root use these commands:</p>
 
@@ -192,7 +194,7 @@ CSS visual regression testing is the process of running automated visual test co
 
 <p><img src="/images/backstop-json.png" alt="Backstop.json example"></p>
 
-<h2 id="step-six:26a721ae680ad9eb08c41e5ab21cd241">Step Six</h2>
+<h2 id="step-six">Step Six</h2>
 
 <p>Everything should be good to go for us to create our first reference files. We will use the default configuration in the generated backstop.json file. This reaches out to Bootstrap’s site and check a couple components. From the project root run:</p>
 
@@ -200,7 +202,7 @@ CSS visual regression testing is the process of running automated visual test co
 
 <p>This will create a bunch of reference .png files and place them in the /tests folder. These are the images the tests will compare against. When you create new components to test you will update the backstop.json file and then run the reference command again and it will add the new component to the reference files.</p>
 
-<h2 id="step-seven:26a721ae680ad9eb08c41e5ab21cd241">Step Seven</h2>
+<h2 id="step-seven">Step Seven</h2>
 
 <p>Finally we are ready for our first test! Now from the project root run:</p>
 
@@ -211,7 +213,7 @@ CSS visual regression testing is the process of running automated visual test co
 <p><img src="/images/test-results.png" alt="Test results"><br>
 <img src="/images/visual-feedback.png" alt="Visual Feedback"></p>
 
-<h2 id="wrapping-it-up:26a721ae680ad9eb08c41e5ab21cd241">Wrapping it up</h2>
+<h2 id="wrapping-it-up">Wrapping it up</h2>
 
 <p>So now you are setup for Visual Regression Testing. You can configure the <code>backstop.json</code> file to work with your project either locally or remotely. I highly suggest testing a style guide or component library as part of your deployment strategy.</p>
 
@@ -255,30 +257,30 @@ CSS visual regression testing is the process of running automated visual test co
 
 				<div class="social--properties">
 					<a href="https://twitter.com/_josephwatkins" onclick="_gaq.push(['_trackEvent', 'Footer Social Links', 'click', 'Twitter']);">
-						<svg role="image" aria-labeledby="label-icon-twitter">
+						<span class="visually-hidden">Twitter</span>
+						<svg role="img" aria-labeledby="label-icon-twitter" aria-hidden="true">
 							<use xlink:href="#icon-twitter"></use>
-							<title id="label-icon-twitter">Twitter Icon</title>
 						</svg>
 					</a>
 
 					<a href="https://github.com/joe-watkins" onclick="_gaq.push(['_trackEvent', 'Footer Social Links', 'click', 'GitHub']);">
-						<svg role="image" aria-labeledby="label-icon-github">
+						<span class="visually-hidden">GitHub</span>
+						<svg role="img" aria-labeledby="label-icon-github" aria-hidden="true">
 							<use xlink:href="#icon-github"></use>
-							<title id="label-icon-github">GitHub Icon</title>
 						</svg>
 					</a>
 
 					<a href="https://www.linkedin.com/profile/view?id=19392469" onclick="_gaq.push(['_trackEvent', 'Footer Social Links', 'click', 'LinkedIn']);">
-						<svg role="image" aria-labeledby="label-icon-linkedin">
+						<span class="visually-hidden">LinkedIn</span>
+						<svg role="img" aria-labeledby="label-icon-linkedin" aria-hidden="true">
 							<use xlink:href="#icon-linkedin"></use>
-							<title id="label-icon-linkedin">LinkedIn Icon</title>
 						</svg>
 					</a>
 
 					<a href="http://codepen.io/joe-watkins" onclick="_gaq.push(['_trackEvent', 'Footer Social Links', 'click', 'CodePen']);">
-						<svg role="image" aria-labeledby="label-icon-codepen">
+						<span class="visually-hidden">CodePen</span>
+						<svg role="img" aria-labeledby="label-icon-codepen" aria-hidden="true">
 							<use xlink:href="#icon-codepen"></use>
-							<title id="label-icon-codepen">Codepen Icon</title>
 						</svg>
 					</a>
 

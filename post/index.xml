@@ -6,15 +6,278 @@
     <description>Recent content in Posts on JoeWatkins.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jun 2016 08:28:24 -0700</lastBuildDate>
     <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Up and Running with JAWS on a MAC</title>
+      <link>/accessibility/up-and-running-with-jaws-on-a-mac/</link>
+      <pubDate>Sat, 25 Jun 2016 08:28:24 -0700</pubDate>
+      
+      <guid>/accessibility/up-and-running-with-jaws-on-a-mac/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://www.freedomscientific.com/Downloads/JAWS&#34;&gt;JAWS&lt;/a&gt; is one of the more popular assistive technologies used by people with disabilities. Since the application is a Windows-based application it can be a little tough to use on a Mac. Learn how you can install it on your Mac for use or accessibility testing.&lt;/p&gt;
+
+&lt;p&gt;Here are the bits of software needed to accomplish this:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A virtual machine application such as &lt;a href=&#34;https://www.virtualbox.org/&#34;&gt;VirtualBox&lt;/a&gt; (free), &lt;a href=&#34;https://www.vmware.com/products/fusion&#34;&gt;VMware Fusion&lt;/a&gt;, or &lt;a href=&#34;https://support.apple.com/en-us/HT201468&#34;&gt;Bootcamp&lt;/a&gt; should work as well. This is how you can run Windows on your Mac.&lt;/li&gt;
+&lt;li&gt;A &lt;a href=&#34;https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/&#34;&gt;Windows Virtual Machine&lt;/a&gt; from Microsoft. Windows 7 Worked for me. This is an actual copy of Windows that you will install on your virtual machine.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.freedomscientific.com/Downloads/JAWS&#34;&gt;JAWS&lt;/a&gt; Screen Reading Software.&lt;/li&gt;
+&lt;li&gt;A keymapper application such as &lt;a href=&#34;https://sharpkeys.codeplex.com/&#34;&gt;SharpKeys&lt;/a&gt;. We will use this to &amp;ldquo;remap&amp;rdquo; a keyboard key that JAWS uses that isn&amp;rsquo;t on most Macs.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;1-set-up-your-virtual-machine&#34;&gt;1. Set up your Virtual Machine&lt;/h2&gt;
+
+&lt;p&gt;Follow directions on how to set up the Virtual Machine software on your Mac and how to install Windows within it. &lt;a href=&#34;https://www.virtualbox.org/manual/ch01.html#gui-createvm&#34;&gt;VirtualBox&lt;/a&gt; makes this fairly simple.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-download-amp-install-jaws-it-s-free&#34;&gt;2. Download &amp;amp; Install JAWS &amp;ndash; It&amp;rsquo;s FREE!!&lt;/h2&gt;
+
+&lt;p&gt;JAWS (Job Access With Speech) is a very powerful application and is fairly expensive for use but you can use the application for &lt;strong&gt;40 minutes at a time for free&lt;/strong&gt;. This model works great for accessibility testing. From the Windows virtual machine visit the &lt;a href=&#34;http://www.freedomscientific.com/Downloads/JAWS&#34;&gt;JAWS download page&lt;/a&gt; and download the appropriate version and then follow the setup instructions for installation.&lt;/p&gt;
+
+&lt;h2 id=&#34;3-set-up-keymapping-for-the-insert-key&#34;&gt;3. Set up keymapping for the INSERT key&lt;/h2&gt;
+
+&lt;p&gt;JAWS leans on the Insert key for some &lt;a href=&#34;http://webaim.org/resources/shortcuts/jaws&#34;&gt;keyboard commands&lt;/a&gt;. On a standard mac laptop keyboard you&amp;rsquo;ll find this key is missing and makes using JAWS very tough. One quick way around this is to map a key we will not more than likely use to the registry on the Windows machine for the insert key.&lt;/p&gt;
+
+&lt;p&gt;On the Windows virtual machine &lt;a href=&#34;https://sharpkeys.codeplex.com/&#34;&gt;download and install SharpKeys&lt;/a&gt;. Once it loads you can map a key (I chose the right command key) to the Insert key. The video below demonstrates mapping the Right Command key to the Insert key on the Windows virtual machine:&lt;/p&gt;
+
+&lt;!-- copy and paste. Modify height and width if desired. --&gt;
+
+&lt;div class=&#34;embed-responsive embed-responsive-16by9&#34; style=&#34;margin-bottom:30px;&#34;&gt;
+&lt;video src=&#34;/images/sharpkeys-demo.mp4&#34; poster=&#34;/images/sharp-keys-demo-poster.png&#34; controls aria-label=&#34;Video demonstration of remapping a key in virtual environment&#34;&gt;&lt;/video&gt;
+&lt;/div&gt;
+
+&lt;p&gt;After rebooting the virtual machine start up JAWS and you should now be able to perform the commands that require the Insert key.&lt;/p&gt;
+
+&lt;h2 id=&#34;4-f1-f2-etc-as-standard-function-keys&#34;&gt;4. F1,F2, etc. as standard function keys&lt;/h2&gt;
+
+&lt;p&gt;JAWS uses standard function keys e.g. F1,F2,F3 etc. On your Mac visit:&lt;/p&gt;
+
+&lt;p&gt;System Preferences -&amp;gt; Keyboard&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/images/function-keys.png&#34; style=&#34;max-width: 600px;&#34; alt=&#34;screenshot of system preferences keyboard settings&#34;&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;5-start-jaws&#34;&gt;5. Start JAWS&lt;/h2&gt;
+
+&lt;p&gt;After you completed the above steps start up your virtual environment and launch JAWS. A good test to make sure things are working correctly would be to open a web browser on the virtual machine with JAWS running, visit a web page and then hit &lt;code&gt;modifier key + F6&lt;/code&gt; (in my case the Right Command key) This will pull of the browse by headings tool. If this wasn&amp;rsquo;t setup correctly it would open the start menu.&lt;/p&gt;
+
+&lt;div class=&#34;embed-responsive embed-responsive-16by9&#34; style=&#34;margin-bottom:30px;&#34;&gt;
+&lt;video src=&#34;/images/running-jaws-mac.mp4&#34; poster=&#34;/images/running-jaws-mac-poster.png&#34; controls aria-label=&#34;Video demonstration of using JAWS on MAC&#34;&gt;&lt;/video&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Progressive Enhancement and the 2016 Presidential Race</title>
+      <link>/webdev/progressive-enhancement-and-the-2016-presidential-race/</link>
+      <pubDate>Sun, 17 Apr 2016 08:28:24 -0700</pubDate>
+      
+      <guid>/webdev/progressive-enhancement-and-the-2016-presidential-race/</guid>
+      <description>
+
+&lt;figure&gt;
+  &lt;img src=&#34;/images/no-js-2016-candidates.jpg&#34; alt=&#34;2016 Candidates on Progressive Enhancement&#34; id=&#34;pe&#34;&gt;
+    &lt;style&gt;
+        #pe {
+            width: 100%;
+            margin-bottom: 1em;
+        }
+    &lt;/style&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;With the exception of Bernie&amp;rsquo;s, it appears that the development teams behind all the major presidential candidates are dropping the ball on &lt;a href=&#34;http://alistapart.com/article/understandingprogressiveenhancement&#34;&gt;progressive enhancement&lt;/a&gt;. It&amp;rsquo;s pretty clear that &lt;a href=&#34;http://letsfreecongress.org/&#34;&gt;money wins elections&lt;/a&gt; so I&amp;rsquo;m amazed that more of these candidates aren&amp;rsquo;t onboard with progressive enhancement.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;It&amp;rsquo;s not a technique, it&amp;rsquo;s not a technology. It&amp;rsquo;s a way of viewing how you build, it&amp;rsquo;s an engineering approach.” - Jeremy Keith&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Who supports Progressive Enhancement?&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;bernie-sanders-span-class-bg-success-yes-span&#34;&gt;Bernie Sanders - &lt;span class=&#34;bg-success&#34;&gt;yes&lt;/span&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://secure.actblue.com/contribute/page/lets-go-bernie?refcode=homepage_main_nav&#34;&gt;url tested&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&#34;embed-responsive embed-responsive-16by9&#34;&gt;
+    &lt;iframe width=&#34;960&#34; height=&#34;720&#34; src=&#34;https://www.youtube.com/embed/t4y5rh3ZQek&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;hillary-clinton-span-class-bg-danger-no-span&#34;&gt;Hillary Clinton - &lt;span class=&#34;bg-danger&#34;&gt;no&lt;/span&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.hillaryclinton.com/contribute/donate/?amount=5&#34;&gt;url tested&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&#34;embed-responsive embed-responsive-16by9&#34;&gt;
+    &lt;iframe width=&#34;960&#34; height=&#34;720&#34; src=&#34;https://www.youtube.com/embed/Q_hHFGVWQNg&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+
+&lt;h2 id=&#34;donald-trump-span-class-bg-danger-no-span&#34;&gt;Donald Trump - &lt;span class=&#34;bg-danger&#34;&gt;no&lt;/span&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://secure.donaldjtrump.com/donate/&#34;&gt;url tested&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&#34;embed-responsive embed-responsive-16by9&#34;&gt;
+    &lt;iframe width=&#34;960&#34; height=&#34;720&#34; src=&#34;https://www.youtube.com/embed/pmMdpa6Btus&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;ted-cruz-span-class-bg-danger-no-span&#34;&gt;Ted Cruz - &lt;span class=&#34;bg-danger&#34;&gt;no&lt;/span&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://contribute.tedcruz.org/road-to-victory-fund/?source=hpredirect&#34;&gt;url tested&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe width=&#34;960&#34; height=&#34;720&#34; src=&#34;https://www.youtube.com/embed/twkfc5RgRRs&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h2 id=&#34;john-kasich-span-class-bg-danger-no-span&#34;&gt;John Kasich - &lt;span class=&#34;bg-danger&#34;&gt;no&lt;/span&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.johnkasich.com/donate/?sc=home1&#34;&gt;url tested&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe width=&#34;960&#34; height=&#34;720&#34; src=&#34;https://www.youtube.com/embed/fhg7JCWgzPs&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Migrate from Jekyll to Hugo</title>
+      <link>/webdev/migrate-from-jekyll-to-hugo/</link>
+      <pubDate>Sat, 16 Apr 2016 00:11:03 -0700</pubDate>
+      
+      <guid>/webdev/migrate-from-jekyll-to-hugo/</guid>
+      <description>
+
+&lt;p&gt;Early one Saturday morning I found myself unable to write a new blog post because my Jekyll site would not build. I was in what we call &lt;strong&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Dependency_hell&#34;&gt;Dependency Hell&lt;/a&gt;!!&lt;/strong&gt; This prompted me to research alternatives to &lt;a href=&#34;https://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt; and this is how I found &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt;. In this post I’ll show you how convert a Jekyll site to Hugo.&lt;/p&gt;
+
+&lt;p&gt;Jekyll is an awesome static site generator and by no means do I mean to bag on it in this post. I just could not handle all of the dependancies that came with using it. If I updated Ruby something would break,.. if I updated my OS something would break.&lt;/p&gt;
+
+&lt;p&gt;I did finally fix all of the build errors in my Jekyll site but it took all weekend of nerding out to do it. I was bound and determined to find a better and more trustworthy solution for my blogging platform and Hugo was it! It is a binary that works across multiple operating systems and is a cinch to install. You’ll find yourself up and running in no time!&lt;/p&gt;
+
+&lt;p&gt;I’d like to start with a fresh install of a Jekyll site and migrate that to a Hugo site. You can build upon these basic steps for your Jekyll-based site. Hugo makes it fairly simple to move things over. &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt; offers free hosting for static websites and works well with Hugo.&lt;/p&gt;
+
+&lt;p&gt;In this post I will assume you have a basic understanding of the command line, you have &lt;a href=&#34;https://git-scm.com/book/en/v2/Getting-Started-Installing-Git&#34;&gt;Git&lt;/a&gt;, &lt;a href=&#34;https://www.ruby-lang.org/en/documentation/installation/&#34;&gt;Ruby&lt;/a&gt;, and &lt;a href=&#34;http://brew.sh/&#34;&gt;Brew&lt;/a&gt; installed.&lt;/p&gt;
+
+&lt;h2 id=&#34;tldr&#34;&gt;TLDR&lt;/h2&gt;
+
+&lt;p&gt;Hugo offers a very easy-to-use &lt;a href=&#34;https://gohugo.io/commands/hugo_import_jekyll/&#34;&gt;Jekyll to Hugo importer&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ hugo import jekyll path/to/jekyll/root path/to/hugo/root
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;install-a-jekyll-site&#34;&gt;Install a Jekyll site&lt;/h2&gt;
+
+&lt;p&gt;Let’s install a basic Jekyll site and get it running.&lt;/p&gt;
+
+&lt;h3 id=&#34;1-install&#34;&gt;1. Install&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gem install jekyll
+$ jekyll new my-awesome-site
+$ cd my-awesome-site
+$ jekyll serve
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;/images/jekyll-site.jpg&#34; alt=&#34;Jekyll site&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are having issues getting thing installed &lt;a href=&#34;https://jekyllrb.com/docs/troubleshooting/&#34;&gt;try the troubleshooting page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;install-hugo&#34;&gt;Install Hugo&lt;/h2&gt;
+
+&lt;p&gt;Follow the instructions below to install Hugo using brew. You can learn more from the &lt;a href=&#34;https://gohugo.io/overview/quickstart/&#34;&gt;Hugo QuickStart Guide&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;1-install-1&#34;&gt;1. Install&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;$ brew install hugo
+$ which hugo
+&amp;gt; /usr/local/bin/hugo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;2-create-hugo-site&#34;&gt;2. Create Hugo site&lt;/h3&gt;
+
+&lt;p&gt;Now you are ready to create your Hugo site. Let’s name ours bookshelf like &lt;a href=&#34;https://gohugo.io/overview/quickstart/&#34;&gt;Hugo’s tutorial&lt;/a&gt; suggests.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ hugo new site bookshelf
+$ cd bookshelf
+$ hugo new post/good-to-great.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;3-create-a-theme&#34;&gt;3. Create a theme&lt;/h3&gt;
+
+&lt;p&gt;Hugo doesn’t come with a default them so you need to create a themes directory and download a theme. Visit the &lt;a href=&#34;http://themes.gohugo.io/&#34;&gt;Theme Showcase&lt;/a&gt; to see all the cool themes available:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ mkdir themes &amp;amp;&amp;amp; cd themes
+$ git clone https://github.com/dim0627/hugo_theme_robust
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;4-add-content&#34;&gt;4. Add content&lt;/h3&gt;
+
+&lt;p&gt;Visit: &lt;code&gt;/content/post/good-to-great.md&lt;/code&gt; and add some content below front matter.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/images/hugo-first-post.jpg&#34; alt=&#34;First Hugo post&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;Start your Hugo site with the new theme:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ hugo server --theme=hugo_theme_robust --buildDrafts
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;/images/hugo-first-frontend.jpg&#34; alt=&#34;Hugo home page&#34;&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;import-content-from-jekyll-to-hugo&#34;&gt;Import content from Jekyll to Hugo&lt;/h2&gt;
+
+&lt;p&gt;Hugo makes importing content from a Jekyll site very easy with the &lt;a href=&#34;https://gohugo.io/commands/hugo_import_jekyll/&#34;&gt;hugo import jekyll&lt;/a&gt; command. All you need to do is define the source and the destination paths and it will work its magic. It does its best at copying all your Jekyll posts and static content to your Hugo site.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ hugo import jekyll path/to/jekyll/root path/to/hugo/root
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here is what it looked like for this demo on my machine.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$hugo import jekyll /Users/joewatkins/Desktop/my-awesome-site/ /Users/joewatkins/Desktop/bookshelf/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After running this command I got:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Importing…
+Congratulations! 1 posts imported!
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;/images/jekyll-migrated-post.jpg&#34; alt=&#34;Jekyll post in file system&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;Below you can see the the Jekyll blog post is now in the Hugo site!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/images/jekyll-post-in-hugo.jpg&#34; alt=&#34;Jekyll post in Hugo Site&#34;&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;handling-templates&#34;&gt;Handling Templates&lt;/h2&gt;
+
+&lt;p&gt;Once you have your posts migrated you will want to start working on your theme. I elected to just start hacking up the Robust theme I started with. You can learn more about themes in the great documentation. Hugo recommends you &lt;a href=&#34;https://gohugo.io/themes/customizing/&#34;&gt;override themes&lt;/a&gt; by adding new template partials to the &lt;code&gt;/layouts&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;p&gt;You will want to copy over your static assets from your Jekyll site over to the &lt;code&gt;/static&lt;/code&gt; folder in the Hugo site. When Hugo builds it will copy all the contents of that folder over to the &lt;code&gt;/public&lt;/code&gt; folder which you would then deploy.&lt;/p&gt;
+
+&lt;p&gt;I prefer to stick my images, Sass, JavaScript, package.json, and Gulpfile etc. in the &lt;code&gt;/static&lt;/code&gt; folder as well.&lt;/p&gt;
+
+&lt;p&gt;The templates out-of-the-box are fairly easy to understand. They leverage &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; syntax and one can easily port Jekyll’s &lt;a href=&#34;https://jekyllrb.com/docs/templates/&#34;&gt;liquid syntax&lt;/a&gt; to Go. e.g. &lt;code&gt;{{ my_page.title }}&lt;/code&gt; to &lt;code&gt;{{ .Title }}&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;You will want to integrate the template structure from your Jekyll &lt;code&gt;/_layouts&lt;/code&gt; and &lt;code&gt;/_partials&lt;/code&gt; folders site to the Hugo theme &lt;code&gt;/layouts&lt;/code&gt; folder or the theme’s &lt;code&gt;/themes/theme-name/layouts&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;static-pages&#34;&gt;Static Pages&lt;/h2&gt;
+
+&lt;p&gt;Some Jekyll sites have static pages that are not posts. You may need to create these manually with &lt;code&gt;$ hugo new page-name-here.md&lt;/code&gt; which will stick the static page in the &lt;code&gt;/content&lt;/code&gt; folder. You can define the url of those pages in the &lt;a href=&#34;https://gohugo.io/content/organization/&#34;&gt;front matter&lt;/a&gt; of that page.&lt;/p&gt;
+
+&lt;h2 id=&#34;hosting-your-hugo-site-on-github-pages&#34;&gt;Hosting your Hugo site on GitHub Pages&lt;/h2&gt;
+
+&lt;p&gt;If you want to host your Hugo site on GitHub you will want to deploy the &lt;code&gt;/public&lt;/code&gt; folder to your GitHub pages repo. Be sure to include a &lt;code&gt;.nojekyll&lt;/code&gt; file in your &lt;code&gt;/static&lt;/code&gt; before doing this. &lt;a href=&#34;https://github.com/blog/572-bypassing-jekyll-on-github-pages&#34;&gt;Learn more about the .nojekyll file&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;yay&#34;&gt;Yay!&lt;/h2&gt;
+
+&lt;p&gt;So far I have really enjoyed the speed and and how easy it is to use Hugo. Now when I have an idea for a post I don&amp;rsquo;t have to wonder if it will make it up to the web! &lt;a href=&#34;https://gohugo.io&#34;&gt;Go get Hugo now&lt;/a&gt;!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Infographics may not belong on the web</title>
-      <link>/accessibility/infographics-may-not-belong-on-the-web</link>
+      <link>/accessibility/infographics-may-not-belong-on-the-web/</link>
       <pubDate>Sat, 02 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>/accessibility/infographics-may-not-belong-on-the-web</guid>
+      <guid>/accessibility/infographics-may-not-belong-on-the-web/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;/images/infocrapic.jpg&#34; alt=&#34;Infographic image search result&#34; class=&#34;img-responsive&#34;&gt;&lt;/p&gt;
@@ -31,7 +294,7 @@
 
 &lt;p&gt;There are many fixed/print-centric concepts that do not fit in well with the web. Responsive Web Design has done a great job of helping us shed these antiquated methods of delivering stories.&lt;/p&gt;
 
-&lt;h2 id=&#34;why-infographics-may-not-be-the-best-mechanism-for-delivering-a-story-on-the-web:4ab280357443c886954da978b975f8ee&#34;&gt;Why infographics may not be the best mechanism for delivering a story on the web&lt;/h2&gt;
+&lt;h2 id=&#34;why-infographics-may-not-be-the-best-mechanism-for-delivering-a-story-on-the-web&#34;&gt;Why infographics may not be the best mechanism for delivering a story on the web&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;If done incorrectly, and most are, only people with vision can consume the content.&lt;/li&gt;
@@ -47,7 +310,7 @@
 &lt;li&gt;Scoping costs for infographics can be difficult due to unknown design costs as well as development implementation costs.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;how-to-responsibly-do-infographics-on-the-web:4ab280357443c886954da978b975f8ee&#34;&gt;How to responsibly do infographics on the web&lt;/h2&gt;
+&lt;h2 id=&#34;how-to-responsibly-do-infographics-on-the-web&#34;&gt;How to responsibly do infographics on the web&lt;/h2&gt;
 
 &lt;p&gt;If you or your client is hellbent on having infographics be present in your web-based experience I have some suggestions on how you can make these enjoyable to a wider audience. It should be understood that these suggestions could add complexity and time to your project but are worth the extra effort.&lt;/p&gt;
 
@@ -69,10 +332,10 @@
     
     <item>
       <title>Top People to Follow in Web Accessibility</title>
-      <link>/accessibility/top-people-to-follow-in-web-accessibility</link>
+      <link>/accessibility/top-people-to-follow-in-web-accessibility/</link>
       <pubDate>Sun, 25 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>/accessibility/top-people-to-follow-in-web-accessibility</guid>
+      <guid>/accessibility/top-people-to-follow-in-web-accessibility/</guid>
       <description>&lt;p&gt;The web accessibility community leans on Twitter greatly so it is an awesome way to keep up-to-date and learn from leaders in the industry.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;ve put together a list of &lt;a href=&#34;https://github.com/joe-watkins/top-people-to-follow-in-web-accessibility&#34;&gt;The Top People to follow in Web Accessibility&lt;/a&gt; that I feel you should follow if you are interested in web accessibility. It is an open source project so feel free to contribute names to the list.&lt;/p&gt;
@@ -81,15 +344,15 @@
     
     <item>
       <title>Commonly abused HTML &amp; CSS that hurt accessibility</title>
-      <link>/accessibility/commonly-abused-html-and-css-that-hurt-accessibility</link>
+      <link>/accessibility/commonly-abused-html-and-css-that-hurt-accessibility/</link>
       <pubDate>Fri, 04 Sep 2015 00:00:00 +0000</pubDate>
       
-      <guid>/accessibility/commonly-abused-html-and-css-that-hurt-accessibility</guid>
+      <guid>/accessibility/commonly-abused-html-and-css-that-hurt-accessibility/</guid>
       <description>
 
 &lt;p&gt;After performing many website accessibility audits for clients, I find myself continually running into the same &lt;em&gt;key offenders&lt;/em&gt; that cause inaccessibility. I thought it would be fun to gather up these few buggers and show them to you and offer up some solutions for each.&lt;/p&gt;
 
-&lt;h2 id=&#34;1-css-outline-none:ba516824fddb9b07fd15a6eb7aca27aa&#34;&gt;1. CSS outline: none;&lt;/h2&gt;
+&lt;h2 id=&#34;1-css-outline-none&#34;&gt;1. CSS outline: none;&lt;/h2&gt;
 
 &lt;p&gt;The CSS &lt;code&gt;outline&lt;/code&gt; property is one that designers and developers often abuse in hopes to remove the unwanted &lt;a href=&#34;http://tjvantoll.com/2013/01/28/stop-messing-with-the-browsers-default-focus-outline/&#34;&gt;focus rings&lt;/a&gt; If &lt;code&gt;outline: none;&lt;/code&gt; is used without offering a custom &lt;code&gt;:focus&lt;/code&gt; state it can make it difficult for some users to navigate around the website. Some keyboard-only users tab around the interface. If there is no &lt;code&gt;:focus&lt;/code&gt; state giving visual feedback to where the user is in the document it is easy for that user to be confused or lost. They will get frustrated and simply leave your website.&lt;/p&gt;
 
@@ -100,7 +363,7 @@ If you remove the outline back it up with a creative &lt;code&gt;:focus&lt;/code
 
 &lt;p&gt;&lt;img src=&#34;/images/uk-gov.gif&#34; alt=&#34;UK.gov website&#34;&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;using-outline:ba516824fddb9b07fd15a6eb7aca27aa&#34;&gt;Using &lt;code&gt;outline&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;using-outline&#34;&gt;Using &lt;code&gt;outline&lt;/code&gt;&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;a:focus {
 	outline: 2px solid red;
@@ -108,7 +371,7 @@ If you remove the outline back it up with a creative &lt;code&gt;:focus&lt;/code
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;removing-outline-with-fallback:ba516824fddb9b07fd15a6eb7aca27aa&#34;&gt;Removing &lt;code&gt;outline&lt;/code&gt; with fallback&lt;/h3&gt;
+&lt;h3 id=&#34;removing-outline-with-fallback&#34;&gt;Removing &lt;code&gt;outline&lt;/code&gt; with fallback&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;a:focus {
 	outline: none;
@@ -117,7 +380,7 @@ If you remove the outline back it up with a creative &lt;code&gt;:focus&lt;/code
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;2-html5-placeholder-attribute:ba516824fddb9b07fd15a6eb7aca27aa&#34;&gt;2. HTML5 Placeholder Attribute&lt;/h2&gt;
+&lt;h2 id=&#34;2-html5-placeholder-attribute&#34;&gt;2. HTML5 Placeholder Attribute&lt;/h2&gt;
 
 &lt;p&gt;I&amp;rsquo;ve &lt;a href=&#34;/accessibility/please-stop-using-placeholders-as-labels/&#34;&gt;written about misusing HTML5 placeholder attributes&lt;/a&gt; before and would love to see that attribute deprecated. I&amp;rsquo;ve even &lt;a href=&#34;https://code.google.com/p/chromium/issues/detail?id=397260&amp;amp;q=placeholder%20accessibility&amp;amp;colspec=ID%20Pri%20M%20Week%20ReleaseBlock%20Cr%20Status%20Owner%20Summary%20OS%20Modified&#34;&gt;submitted bugs to Google Chrome&lt;/a&gt; regarding how the default contrast ratio of the &lt;code&gt;placeholder&lt;/code&gt; text fails WCAG 2.0 contrast ratio tests. Google claims the placeholder is &amp;ldquo;deliberately intended to be hard to see&amp;rdquo;.&lt;/p&gt;
 
@@ -136,7 +399,7 @@ Use the placeholder attribute on forms wisely and sparingly. Remember that not a
 &amp;lt;/form&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;3-missing-lt-label-gt-tags:ba516824fddb9b07fd15a6eb7aca27aa&#34;&gt;3. Missing &amp;lt;label&amp;gt; tags&lt;/h2&gt;
+&lt;h2 id=&#34;3-missing-lt-label-gt-tags&#34;&gt;3. Missing &amp;lt;label&amp;gt; tags&lt;/h2&gt;
 
 &lt;p&gt;When authoring web forms remember to include the &lt;code&gt;&amp;lt;label&amp;gt;&lt;/code&gt; tag for each input field. It is important to remember to tie that &lt;code&gt;&amp;lt;label&amp;gt;&lt;/code&gt; to a particular field by adding the &lt;code&gt;for&lt;/code&gt; attribute.&lt;/p&gt;
 
@@ -151,10 +414,10 @@ Below is a good example of a &lt;code&gt;&amp;lt;label&amp;gt;&lt;/code&gt; tag.
     
     <item>
       <title>Inline Critical CSS with Wordpress</title>
-      <link>/javascript/inline-critical-css-with-wordpress</link>
+      <link>/javascript/inline-critical-css-with-wordpress/</link>
       <pubDate>Sun, 05 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>/javascript/inline-critical-css-with-wordpress</guid>
+      <guid>/javascript/inline-critical-css-with-wordpress/</guid>
       <description>
 
 &lt;p&gt;The importance of &lt;a href=&#34;https://developers.google.com/web/fundamentals/performance/index?hl=en&#34;&gt;web performance&lt;/a&gt; is at an all-time high now due to the proliferation of mobile devices. Google is now promoting &amp;ldquo;Mobile Friendly&amp;rdquo; websites giving them higher rank for meeting a &lt;a href=&#34;http://googlewebmastercentral.blogspot.com/2015/02/finding-more-mobile-friendly-search.html&#34;&gt;few key guidelines&lt;/a&gt;. One piece of that #webperf puzzle is the practice of inlining &lt;a href=&#34;https://css-tricks.com/authoring-critical-fold-css/&#34;&gt;Critical CSS&lt;/a&gt; (only styles needed to render the page &amp;lsquo;above-the-fold&amp;rsquo;) into the document&amp;rsquo;s &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; alongside calling CSS and JavaScript asynchronously. This &amp;ldquo;progressive loading&amp;rdquo; will make your website hit quicker and render faster for the user. There are a few awesome tools out there to assist with capturing these styles.&lt;/p&gt;
@@ -170,13 +433,13 @@ Below is a good example of a &lt;code&gt;&amp;lt;label&amp;gt;&lt;/code&gt; tag.
 
 &lt;p&gt;This tutorial assumes you have a basic understanding of &lt;a href=&#34;http://gruntjs.com/&#34;&gt;GruntJS&lt;/a&gt; and modern web development workflow tooling. Oh.. and you understand the ins and outs of a Wordpress template setup.&lt;/p&gt;
 
-&lt;h2 id=&#34;ok-how-do-you-handle-critical-css-in-wordpress:37551fcff895a68d9a541a25f1f9bfa9&#34;&gt;Ok.. how do you handle Critical CSS in Wordpress?&lt;/h2&gt;
+&lt;h2 id=&#34;ok-how-do-you-handle-critical-css-in-wordpress&#34;&gt;Ok.. how do you handle Critical CSS in Wordpress?&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://wordpress.org&#34;&gt;Wordpress&lt;/a&gt; is an awesome CMS/Blogging platform! BUT… it currently doesn&amp;rsquo;t play well with the webperf-minded. Wordpress, out-of-the-box, can have excessive calls to CSS and JavaScript files in the &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; of the document. When you start adding plugins the list will get even longer. The less http file requests, the quicker the page will load.&lt;/p&gt;
 
 &lt;p&gt;An important step to pull off inline Critical CSS successfully in Wordpress is to limit all of those extra http requests so our Critical CSS efforts are not lost on other files slowing down the render &lt;a href=&#34;http://www.feedthebot.com/pagespeed/critical-render-path.html&#34;&gt;due to load blocking&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;step-one-grab-critical-css:37551fcff895a68d9a541a25f1f9bfa9&#34;&gt;Step One: Grab Critical CSS&lt;/h2&gt;
+&lt;h2 id=&#34;step-one-grab-critical-css&#34;&gt;Step One: Grab Critical CSS&lt;/h2&gt;
 
 &lt;p&gt;The first thing you will want to do is grab the actual Above-the-fold styles using your preferred automated task. I use &lt;a href=&#34;https://github.com/filamentgroup/grunt-criticalcss&#34;&gt;grunt-criticalcss&lt;/a&gt;&lt;/p&gt;
 
@@ -227,7 +490,7 @@ criticalcss: {
 
 &lt;p&gt;&lt;code&gt;grunt.registerTask(&#39;cssBuild&#39;,[&#39;criticalcss&#39;,&#39;cssmin&#39;]);&lt;/code&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;step-two-install-async-js-and-css-plugin:37551fcff895a68d9a541a25f1f9bfa9&#34;&gt;Step Two: Install Async JS and CSS Plugin&lt;/h2&gt;
+&lt;h2 id=&#34;step-two-install-async-js-and-css-plugin&#34;&gt;Step Two: Install Async JS and CSS Plugin&lt;/h2&gt;
 
 &lt;p&gt;A great plugin for Critical CSS loading in Wordpress is called &lt;a href=&#34;https://wordpress.org/plugins/async-js-and-css/&#34;&gt;Async JS and CSS&lt;/a&gt;. It is important to note that the plugin can affect only those files loaded using Worpdress&amp;rsquo;s queue, which most do.&lt;/p&gt;
 
@@ -245,7 +508,7 @@ criticalcss: {
 
 &lt;p&gt;&lt;img src=&#34;/images/wp-plugin-shot.png&#34; alt=&#34;Plugin settings&#34;&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;step-four-optional-setup-dev-mode-in-your-template:37551fcff895a68d9a541a25f1f9bfa9&#34;&gt;Step Four (Optional): Setup Dev Mode in your template&lt;/h2&gt;
+&lt;h2 id=&#34;step-four-optional-setup-dev-mode-in-your-template&#34;&gt;Step Four (Optional): Setup Dev Mode in your template&lt;/h2&gt;
 
 &lt;p&gt;I like to setup a &lt;strong&gt;Dev&lt;/strong&gt; state so that while I&amp;rsquo;m developing I&amp;rsquo;m not wrestling the inline styles as they will take precedence over files called via HTTP and make debugging tougher. While in &lt;strong&gt;Dev&lt;/strong&gt; mode I actually call files the old fashioned way using hardcoded &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; tags and then turn this mode off prior to building and pushing out to staging or production.&lt;/p&gt;
 
@@ -254,13 +517,13 @@ criticalcss: {
 ?&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;step-five-setup-your-head-with-loadcss-and-php-includes:37551fcff895a68d9a541a25f1f9bfa9&#34;&gt;Step Five: Setup your &lt;head&gt; with loadCSS and PHP Includes&lt;/h2&gt;
+&lt;h2 id=&#34;step-five-setup-your-head-with-loadcss-and-php-includes&#34;&gt;Step Five: Setup your &lt;head&gt; with loadCSS and PHP Includes&lt;/h2&gt;
 
 &lt;p&gt;Now we are going to make sure that we are calling our main site styles asynchronously by using &lt;a href=&#34;https://github.com/filamentgroup/loadCSS&#34;&gt;LoadCSS&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;This is super simple to setup you just include the loadCSS() function in the &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; and point it to your main styles file.&lt;/p&gt;
 
-&lt;h3 id=&#34;header-php-file:37551fcff895a68d9a541a25f1f9bfa9&#34;&gt;header.php file&lt;/h3&gt;
+&lt;h3 id=&#34;header-php-file&#34;&gt;header.php file&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;?php
 	if(!$dev_mode){
@@ -306,11 +569,11 @@ criticalcss: {
 &lt;li&gt;Then push changes&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;old-ie-support:37551fcff895a68d9a541a25f1f9bfa9&#34;&gt;Old IE Support&lt;/h2&gt;
+&lt;h2 id=&#34;old-ie-support&#34;&gt;Old IE Support&lt;/h2&gt;
 
 &lt;p&gt;I noticed some odd behavior with IE8-9 with this method of loading Critical CSS. I found that creatively using conditionals for those browsers did the trick to simply have those browsers load the CSS from the &lt;code&gt;&amp;lt;link&amp;gt;&lt;/code&gt; tags. Something like this:&lt;/p&gt;
 
-&lt;h3 id=&#34;modern-browsers-and-ie10:37551fcff895a68d9a541a25f1f9bfa9&#34;&gt;Modern browsers and IE10+&lt;/h3&gt;
+&lt;h3 id=&#34;modern-browsers-and-ie10&#34;&gt;Modern browsers and IE10+&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;lt;!--[if !IE]&amp;gt; --&amp;gt;
 	function loadCSS(e,t,n){..}
@@ -318,14 +581,14 @@ criticalcss: {
 &amp;lt;!-- &amp;lt;![endif]--&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;ie9:37551fcff895a68d9a541a25f1f9bfa9&#34;&gt;IE9&lt;/h3&gt;
+&lt;h3 id=&#34;ie9&#34;&gt;IE9&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;lt;!--[if IE 9]&amp;gt;
 	&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;&amp;lt;?php bloginfo(&#39;template_url&#39;); ?&amp;gt;/styles/main.min.css&amp;quot;&amp;gt;
 &amp;lt;![endif]--&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;ie8-and-below:37551fcff895a68d9a541a25f1f9bfa9&#34;&gt;IE8 and below&lt;/h3&gt;
+&lt;h3 id=&#34;ie8-and-below&#34;&gt;IE8 and below&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;&amp;lt;!--[if lt IE 9]&amp;gt;
 	&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;&amp;lt;?php bloginfo(&#39;template_url&#39;); ?&amp;gt;/styles/main.min.css&amp;quot;&amp;gt;
@@ -340,10 +603,10 @@ criticalcss: {
     
     <item>
       <title>Organize your jQuery with Object Literal Notation</title>
-      <link>/javascript/organize-your-jquery-with-object-literal-notation</link>
+      <link>/javascript/organize-your-jquery-with-object-literal-notation/</link>
       <pubDate>Tue, 24 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>/javascript/organize-your-jquery-with-object-literal-notation</guid>
+      <guid>/javascript/organize-your-jquery-with-object-literal-notation/</guid>
       <description>
 
 &lt;p&gt;A few years back I learned of a great way to organize JavaScript using &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects&#34;&gt;Object Literal Notation&lt;/a&gt;. I use this method daily to keep my jQuery driven projects organized and easier to maintain.&lt;/p&gt;
@@ -354,7 +617,7 @@ criticalcss: {
 &lt;p&gt;Almost everything in JavaScript is an object.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&#34;what-are-some-benefits-of-using-object-literals:9d97ad479cc5ffe24873fb0a57d509ec&#34;&gt;What are some benefits of using Object Literals?&lt;/h2&gt;
+&lt;h2 id=&#34;what-are-some-benefits-of-using-object-literals&#34;&gt;What are some benefits of using Object Literals?&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Makes our JavaScript easier to read&lt;/li&gt;
@@ -365,7 +628,7 @@ criticalcss: {
 &lt;li&gt;Plays nicely with minification&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;ladies-and-gentlemen-start-your-engines:9d97ad479cc5ffe24873fb0a57d509ec&#34;&gt;Ladies and Gentlemen start your Engines&lt;/h2&gt;
+&lt;h2 id=&#34;ladies-and-gentlemen-start-your-engines&#34;&gt;Ladies and Gentlemen start your Engines&lt;/h2&gt;
 
 &lt;p&gt;To start things off we will setup the &lt;code&gt;Engine&lt;/code&gt; object inside of the &lt;a href=&#34;https://api.jquery.com/ready/&#34;&gt;jQuery ready method&lt;/a&gt;. I like to throw a comment at the end of each object. As we add objects this can help keep track of where you are in the code.&lt;/p&gt;
 
@@ -378,7 +641,7 @@ criticalcss: {
 });
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;creatively-naming-your-objects-helps-with-organization:9d97ad479cc5ffe24873fb0a57d509ec&#34;&gt;Creatively naming your objects helps with organization&lt;/h2&gt;
+&lt;h2 id=&#34;creatively-naming-your-objects-helps-with-organization&#34;&gt;Creatively naming your objects helps with organization&lt;/h2&gt;
 
 &lt;p&gt;I like to stick with a naming convention that makes sense to me when I&amp;rsquo;m creating new objects and functions. Let&amp;rsquo;s add a &lt;code&gt;ui&lt;/code&gt; property that will house our first few methods inside of the &lt;code&gt;Engine&lt;/code&gt; object. Spend some time thinking about naming here so when revisiting the code things make sense. These properties should be comma separated should you add more.&lt;/p&gt;
 
@@ -414,7 +677,7 @@ criticalcss: {
 });
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;how-to-trigger-your-functions:9d97ad479cc5ffe24873fb0a57d509ec&#34;&gt;How to trigger your functions&lt;/h2&gt;
+&lt;h2 id=&#34;how-to-trigger-your-functions&#34;&gt;How to trigger your functions&lt;/h2&gt;
 
 &lt;p&gt;Now that we have created our app&amp;rsquo;s scaffolding and our &lt;code&gt;helloWorld&lt;/code&gt; function is in place we can trigger it by simply using dot notation. e.g. &lt;code&gt;Engine.ui.helloWorld();&lt;/code&gt; Be sure to do this inside of the jQuery ready method so it fires when the document is ready.&lt;/p&gt;
 
@@ -437,7 +700,7 @@ criticalcss: {
 });
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;multiple-functions-with-variables:9d97ad479cc5ffe24873fb0a57d509ec&#34;&gt;Multiple functions with variables&lt;/h2&gt;
+&lt;h2 id=&#34;multiple-functions-with-variables&#34;&gt;Multiple functions with variables&lt;/h2&gt;
 
 &lt;p&gt;Now we are ready to start rocking by adding more functions. Be sure to remember that these are objects and should be comma separated. These objects can be passed variables as well. Don&amp;rsquo;t forget to add your comments to each function as well.&lt;/p&gt;
 
@@ -475,10 +738,10 @@ criticalcss: {
     
     <item>
       <title>CSS Visual Regression Testing with Grunt-BackstopJS</title>
-      <link>/css-visual-regression-testing-with-grunt-backstopjs</link>
+      <link>/css-visual-regression-testing-with-grunt-backstopjs/</link>
       <pubDate>Sat, 21 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>/css-visual-regression-testing-with-grunt-backstopjs</guid>
+      <guid>/css-visual-regression-testing-with-grunt-backstopjs/</guid>
       <description>
 
 &lt;p&gt;These days as a front-end web developer you can find yourself drowning in new tools to try out.  You can spend hours on end trying to keep up with all of these new tools to add to your workflow.  I find myself down this rabbit hole quite often. (I secretly like it)&lt;/p&gt;
@@ -490,7 +753,7 @@ CSS visual regression testing is the process of running automated visual test co
 
 &lt;p&gt;I’ve tested a few CSS regression tools out there and my favorite has been &lt;a href=&#34;https://garris.github.io/BackstopJS/&#34;&gt;BackstopJS&lt;/a&gt;. This tool is fairly easy to configure which allows for you to get up and rolling quickly. Backstop.js loads your tests in a fancy webpage that gives you the visual feedback needed for targeting bugs caused from CSS related issues. There are some &lt;a href=&#34;https://css-tricks.com/automating-css-regression-testing/&#34;&gt;other great posts&lt;/a&gt; out there on BackstopJS to get you &lt;a href=&#34;http://davidwalsh.name/visual-regression-testing-angular-applications&#34;&gt;familiar with the workflow&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;basic-css-regression-workflow:26a721ae680ad9eb08c41e5ab21cd241&#34;&gt;Basic CSS Regression Workflow&lt;/h2&gt;
+&lt;h2 id=&#34;basic-css-regression-workflow&#34;&gt;Basic CSS Regression Workflow&lt;/h2&gt;
 
 &lt;p&gt;From a high level CSS visual regression testing consists of a few simple steps in your workflow.&lt;/p&gt;
 
@@ -502,7 +765,7 @@ CSS visual regression testing is the process of running automated visual test co
 &lt;li&gt;Fix issues, pass the test, and then deploy.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;step-one-required-packages:26a721ae680ad9eb08c41e5ab21cd241&#34;&gt;Step One - Required Packages&lt;/h2&gt;
+&lt;h2 id=&#34;step-one-required-packages&#34;&gt;Step One - Required Packages&lt;/h2&gt;
 
 &lt;p&gt;Be sure to have &lt;a href=&#34;https://nodejs.org/download/&#34;&gt;Node.js&lt;/a&gt;, &lt;a href=&#34;http://gruntjs.com/&#34;&gt;Grunt&lt;/a&gt;, &lt;a href=&#34;http://gulpjs.com/&#34;&gt;Gulp&lt;/a&gt;, and &lt;a href=&#34;http://bower.io/&#34;&gt;Bower Package Manager&lt;/a&gt; setup before moving forward. This tooling actually uses both Grunt and Gulp so you will need them both :)&lt;/p&gt;
 
@@ -512,7 +775,7 @@ CSS visual regression testing is the process of running automated visual test co
 
 &lt;p&gt;&lt;code&gt;$ sudo npm install -g casperjs&lt;/code&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;step-two:26a721ae680ad9eb08c41e5ab21cd241&#34;&gt;Step Two&lt;/h2&gt;
+&lt;h2 id=&#34;step-two&#34;&gt;Step Two&lt;/h2&gt;
 
 &lt;p&gt;Create a project folder and setup a Bower config file in the root. &lt;code&gt;bower init&lt;/code&gt; Now you will install Backstop.js using Bower.&lt;/p&gt;
 
@@ -520,7 +783,7 @@ CSS visual regression testing is the process of running automated visual test co
 
 &lt;p&gt;This will install Backstop.js inside the /bower_components/ folder.&lt;/p&gt;
 
-&lt;h2 id=&#34;step-three-grunt-backstopjs:26a721ae680ad9eb08c41e5ab21cd241&#34;&gt;Step Three - grunt-backstopjs&lt;/h2&gt;
+&lt;h2 id=&#34;step-three-grunt-backstopjs&#34;&gt;Step Three - grunt-backstopjs&lt;/h2&gt;
 
 &lt;p&gt;This is where we will deviate from other &lt;a href=&#34;https://css-tricks.com/automating-css-regression-testing/&#34;&gt;BackstopJS tutorials&lt;/a&gt; out there and we will setup &lt;a href=&#34;https://github.com/ddluc/grunt-backstop&#34;&gt;grunt-backstop&lt;/a&gt;. This awesome grunt plugin makes using BackstopJS a cinch.&lt;/p&gt;
 
@@ -532,7 +795,7 @@ CSS visual regression testing is the process of running automated visual test co
 
 &lt;p&gt;&lt;code&gt;grunt.loadNpmTasks(‘grunt-backstop’);&lt;/code&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;basic-configuration:26a721ae680ad9eb08c41e5ab21cd241&#34;&gt;Basic Configuration&lt;/h3&gt;
+&lt;h3 id=&#34;basic-configuration&#34;&gt;Basic Configuration&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;backstop: {
 		your_target: {
@@ -548,7 +811,7 @@ CSS visual regression testing is the process of running automated visual test co
 	},
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;advanced-configuration:26a721ae680ad9eb08c41e5ab21cd241&#34;&gt;Advanced Configuration&lt;/h3&gt;
+&lt;h3 id=&#34;advanced-configuration&#34;&gt;Advanced Configuration&lt;/h3&gt;
 
 &lt;p&gt;Because the standard workflow for BackstopJS is a series of steps to setup I like to break up my Grunt config so that I can have each of these commands at my disposal. e.g. Setup, Create reference files, Run test etc. It is a bit verbose but gives you more control:&lt;/p&gt;
 
@@ -580,13 +843,13 @@ CSS visual regression testing is the process of running automated visual test co
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;step-four:26a721ae680ad9eb08c41e5ab21cd241&#34;&gt;Step Four&lt;/h2&gt;
+&lt;h2 id=&#34;step-four&#34;&gt;Step Four&lt;/h2&gt;
 
 &lt;p&gt;Once you have your Gruntfile setup you will run the BackstopJS setup. This will trigger BackstopJS’s usual setup.&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;$ grunt backstop:setup&lt;/code&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;step-five:26a721ae680ad9eb08c41e5ab21cd241&#34;&gt;Step Five&lt;/h2&gt;
+&lt;h2 id=&#34;step-five&#34;&gt;Step Five&lt;/h2&gt;
 
 &lt;p&gt;Now if you don’t already have a backstop.json file in your project root let’s create one. We will do this manually. From the project root use these commands:&lt;/p&gt;
 
@@ -596,7 +859,7 @@ CSS visual regression testing is the process of running automated visual test co
 
 &lt;p&gt;&lt;img src=&#34;/images/backstop-json.png&#34; alt=&#34;Backstop.json example&#34;&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;step-six:26a721ae680ad9eb08c41e5ab21cd241&#34;&gt;Step Six&lt;/h2&gt;
+&lt;h2 id=&#34;step-six&#34;&gt;Step Six&lt;/h2&gt;
 
 &lt;p&gt;Everything should be good to go for us to create our first reference files. We will use the default configuration in the generated backstop.json file. This reaches out to Bootstrap’s site and check a couple components. From the project root run:&lt;/p&gt;
 
@@ -604,7 +867,7 @@ CSS visual regression testing is the process of running automated visual test co
 
 &lt;p&gt;This will create a bunch of reference .png files and place them in the /tests folder. These are the images the tests will compare against. When you create new components to test you will update the backstop.json file and then run the reference command again and it will add the new component to the reference files.&lt;/p&gt;
 
-&lt;h2 id=&#34;step-seven:26a721ae680ad9eb08c41e5ab21cd241&#34;&gt;Step Seven&lt;/h2&gt;
+&lt;h2 id=&#34;step-seven&#34;&gt;Step Seven&lt;/h2&gt;
 
 &lt;p&gt;Finally we are ready for our first test! Now from the project root run:&lt;/p&gt;
 
@@ -615,7 +878,7 @@ CSS visual regression testing is the process of running automated visual test co
 &lt;p&gt;&lt;img src=&#34;/images/test-results.png&#34; alt=&#34;Test results&#34;&gt;&lt;br&gt;
 &lt;img src=&#34;/images/visual-feedback.png&#34; alt=&#34;Visual Feedback&#34;&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;wrapping-it-up:26a721ae680ad9eb08c41e5ab21cd241&#34;&gt;Wrapping it up&lt;/h2&gt;
+&lt;h2 id=&#34;wrapping-it-up&#34;&gt;Wrapping it up&lt;/h2&gt;
 
 &lt;p&gt;So now you are setup for Visual Regression Testing. You can configure the &lt;code&gt;backstop.json&lt;/code&gt; file to work with your project either locally or remotely. I highly suggest testing a style guide or component library as part of your deployment strategy.&lt;/p&gt;
 
@@ -625,10 +888,10 @@ CSS visual regression testing is the process of running automated visual test co
     
     <item>
       <title>Getting started with Grunt Tenon Client</title>
-      <link>/accessibility/getting-started-with-grunt-tenon-client</link>
+      <link>/accessibility/getting-started-with-grunt-tenon-client/</link>
       <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>/accessibility/getting-started-with-grunt-tenon-client</guid>
+      <guid>/accessibility/getting-started-with-grunt-tenon-client/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;http://www.w3.org/WAI/intro/accessibility.php&#34;&gt;Web Accessibility&lt;/a&gt; / A11Y is finally on a path of owning more mindshare in the web development community.  It has a long way to go but will get there eventually when we learn more about all the positive side effects gained from injecting basic web accessibility practices into our workflow.&lt;/p&gt;
@@ -637,7 +900,7 @@ CSS visual regression testing is the process of running automated visual test co
 
 &lt;p&gt;Ideally web accessibility should be considered in every phase of a project: Discovery, Content Planning, IA, Design, Prototyping, Development, QA and beyond. In this post we are going to focus on the workflow/tooling development phase.&lt;/p&gt;
 
-&lt;h2 id=&#34;introducing-tenon-io:f175a9bd49ffe69f4685e15ba4fd8fcb&#34;&gt;Introducing Tenon.io&lt;/h2&gt;
+&lt;h2 id=&#34;introducing-tenon-io&#34;&gt;Introducing Tenon.io&lt;/h2&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;Tenon is a one of a kind accessibility testing tool in that it is aimed at offering unprecedented flexibility in tooling for designers developers testers and content authors&amp;rdquo; - tenon.io&lt;/p&gt;
@@ -647,7 +910,7 @@ CSS visual regression testing is the process of running automated visual test co
 
 &lt;p&gt;Tenon.io has opened up their API up to the public and have created Grunt/Gulp tasks for everyone to use&amp;hellip; lets see how we can do it!&lt;/p&gt;
 
-&lt;h2 id=&#34;grunt-tenon-client:f175a9bd49ffe69f4685e15ba4fd8fcb&#34;&gt;Grunt-Tenon-Client&lt;/h2&gt;
+&lt;h2 id=&#34;grunt-tenon-client&#34;&gt;Grunt-Tenon-Client&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://www.npmjs.org/package/grunt-tenon-client&#34;&gt;Grunt Tenon Client&lt;/a&gt; is a Grunt Plugin for the Tenon Accessibility Testing API. While Tenon.io makes it super simple to test websites using their web services, there is a way to take advantage of their great API using a Grunt plugin. There is also a &lt;a href=&#34;https://github.com/egauci/gulp-tenon-client&#34;&gt;Gulp version&lt;/a&gt; of this. I am going to walk through the basic setup of this Grunt plugin.&lt;/p&gt;
 
@@ -655,7 +918,7 @@ CSS visual regression testing is the process of running automated visual test co
 
 &lt;hr&gt;
 
-&lt;h2 id=&#34;video-demo:f175a9bd49ffe69f4685e15ba4fd8fcb&#34;&gt;Video Demo&lt;/h2&gt;
+&lt;h2 id=&#34;video-demo&#34;&gt;Video Demo&lt;/h2&gt;
 
 &lt;p&gt;Here is a quick video demo (no sound) of &lt;a href=&#34;https://www.npmjs.org/package/grunt-tenon-client&#34;&gt;Grunt Tenon Client&lt;/a&gt; in action. In this video I am running Grunt and then making edits to an html file that has accessibility issues in the page so we can see the Tenon catch them.&lt;/p&gt;
 
@@ -663,7 +926,7 @@ CSS visual regression testing is the process of running automated visual test co
 
 &lt;hr&gt;
 
-&lt;h2 id=&#34;getting-started:f175a9bd49ffe69f4685e15ba4fd8fcb&#34;&gt;Getting Started&lt;/h2&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
 
 &lt;p&gt;###Step 1
 &lt;strong&gt;Obtain API Key&lt;/strong&gt;
@@ -709,7 +972,7 @@ Add the basic task to your Gruntfile.js&lt;/p&gt;
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;full-gruntfile-js-example:f175a9bd49ffe69f4685e15ba4fd8fcb&#34;&gt;Full Gruntfile.js example&lt;/h3&gt;
+&lt;h3 id=&#34;full-gruntfile-js-example&#34;&gt;Full Gruntfile.js example&lt;/h3&gt;
 
 &lt;p&gt;In this example I also am using &lt;a href=&#34;https://www.npmjs.org/package/load-grunt-tasks&#34;&gt;load-grunt-tasks&lt;/a&gt; and &lt;a href=&#34;https://www.npmjs.org/package/grunt-contrib-watch&#34;&gt;grunt-contrib-watch&lt;/a&gt;&lt;/p&gt;
 
@@ -759,7 +1022,7 @@ After you have Grunt setup and running it is time to start testing. Make an edit
 
 &lt;p&gt;&lt;img src=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/tenon-errors.png&#34; alt=&#34;Grunt Tonon Client Errors&#34;&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;example-files:f175a9bd49ffe69f4685e15ba4fd8fcb&#34;&gt;Example Files&lt;/h2&gt;
+&lt;h2 id=&#34;example-files&#34;&gt;Example Files&lt;/h2&gt;
 
 &lt;p&gt;I created a project that includes starter files that you can &lt;a href=&#34;https://github.com/joe-watkins/grunt-tenon-client-starter&#34;&gt;grab from Github&lt;/a&gt;. I hope you consider integrating this tool into your workflow.&lt;/p&gt;
 </description>
@@ -767,13 +1030,13 @@ After you have Grunt setup and running it is time to start testing. Make an edit
     
     <item>
       <title>Please stop using placeholders as labels!!!!</title>
-      <link>/accessibility/please-stop-using-placeholders-as-labels</link>
+      <link>/accessibility/please-stop-using-placeholders-as-labels/</link>
       <pubDate>Wed, 30 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>/accessibility/please-stop-using-placeholders-as-labels</guid>
+      <guid>/accessibility/please-stop-using-placeholders-as-labels/</guid>
       <description>
 
-&lt;h2 id=&#34;accessibility-is-the-key:49c9eedd1aed5ff6edb12c9aedd18ee8&#34;&gt;Accessibility is the key :)&lt;/h2&gt;
+&lt;h2 id=&#34;accessibility-is-the-key&#34;&gt;Accessibility is the key :)&lt;/h2&gt;
 
 &lt;p&gt;Accessibility is &lt;strong&gt;very&lt;/strong&gt; important to keep in mind when authoring web-based experiences.  When you use a &lt;code&gt;placeholder&lt;/code&gt; attribute on an &lt;code&gt;input&lt;/code&gt; field in place of a &lt;code&gt;label&lt;/code&gt; element you are not only misusing an attribute you could be rendering your web form unusable to many users and defying &lt;a href=&#34;http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#attr-input-placeholder&#34;&gt;a spec that clearly states&lt;/a&gt;:&lt;/p&gt;
 
@@ -787,21 +1050,21 @@ After you have Grunt setup and running it is time to start testing. Make an edit
 &lt;p&gt;The placeholder attribute is not a substitute for the label element.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&#34;what-are-placeholders-for:49c9eedd1aed5ff6edb12c9aedd18ee8&#34;&gt;What are placeholders for?&lt;/h2&gt;
+&lt;h2 id=&#34;what-are-placeholders-for&#34;&gt;What are placeholders for?&lt;/h2&gt;
 
 &lt;p&gt;The placeholder attribute represents a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value. eg. &lt;em&gt;&amp;ldquo;enter your email address&amp;rdquo;&lt;/em&gt; &lt;a href=&#34;http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#attr-input-placeholder&#34;&gt;read more&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;what-are-labels-for:49c9eedd1aed5ff6edb12c9aedd18ee8&#34;&gt;What are labels for?&lt;/h2&gt;
+&lt;h2 id=&#34;what-are-labels-for&#34;&gt;What are labels for?&lt;/h2&gt;
 
 &lt;p&gt;The label element represents a caption in a user interface. The caption can be associated with a specific form control, known as the label element&amp;rsquo;s labeled control, either using the for attribute, or by putting the form control inside the label element itself. &lt;a href=&#34;http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#the-label-element&#34;&gt;read more&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;in-field-labels-let-s-stop-this-too:49c9eedd1aed5ff6edb12c9aedd18ee8&#34;&gt;In-field labels.. let&amp;rsquo;s stop this too!&lt;/h2&gt;
+&lt;h2 id=&#34;in-field-labels-let-s-stop-this-too&#34;&gt;In-field labels.. let&amp;rsquo;s stop this too!&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/in-field-example-2.png&#34; alt=&#34;In-field example&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;The &amp;lsquo;classic&amp;rsquo; in-field label is something we should also try stray from using as well. An exception to this may be if the form consists of one or two fields eg. search/log in forms. Through usability testing folks are finding these types of forms are unusable,.. especially on a mobile device. The vertical space you are saving is not worth losing a conversion or excluding a user that requires your form to be accessible.&lt;/p&gt;
 
-&lt;h2 id=&#34;why-do-we-see-this-pattern:49c9eedd1aed5ff6edb12c9aedd18ee8&#34;&gt;Why do we see this pattern?&lt;/h2&gt;
+&lt;h2 id=&#34;why-do-we-see-this-pattern&#34;&gt;Why do we see this pattern?&lt;/h2&gt;
 
 &lt;p&gt;I believe there are two major reasons why we are seeing placeholder misuse.&lt;/p&gt;
 
@@ -811,36 +1074,36 @@ After you have Grunt setup and running it is time to start testing. Make an edit
 &lt;li&gt;&lt;p&gt;The developer simply does not know what the attribute is for.  There is a shortage of of quality accessibility information out there for developers and it is easy to fall into the trap mentioned in reason #1.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;placeholder-browser-support:49c9eedd1aed5ff6edb12c9aedd18ee8&#34;&gt;Placeholder Browser support&lt;/h2&gt;
+&lt;h2 id=&#34;placeholder-browser-support&#34;&gt;Placeholder Browser support&lt;/h2&gt;
 
 &lt;p&gt;It is also important to know browser support for the HTML5 &lt;code&gt;placeholder&lt;/code&gt; feature. There are polyfill hacks out there for older browsers.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/browser-support.png&#34; alt=&#34;Placeholder browser support from can i use&#34;&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;helpers:49c9eedd1aed5ff6edb12c9aedd18ee8&#34;&gt;Helpers&lt;/h2&gt;
+&lt;h2 id=&#34;helpers&#34;&gt;Helpers&lt;/h2&gt;
 
 &lt;p&gt;Below you will find a couple pens I came up with that you might find useful.&lt;/p&gt;
 
-&lt;h3 id=&#34;proper-label-placeholder-usage:49c9eedd1aed5ff6edb12c9aedd18ee8&#34;&gt;Proper Label / Placeholder usage&lt;/h3&gt;
+&lt;h3 id=&#34;proper-label-placeholder-usage&#34;&gt;Proper Label / Placeholder usage&lt;/h3&gt;
 
 &lt;p&gt;&lt;p data-height=&#34;268&#34; data-theme-id=&#34;0&#34; data-slug-hash=&#34;adfzl&#34; data-default-tab=&#34;result&#34; data-user=&#34;joe-watkins&#34; class=&#39;codepen&#39;&gt;See the Pen &lt;a href=&#39;http://codepen.io/joe-watkins/pen/adfzl/&#39;&gt;Labels/Placeholder example&lt;/a&gt; by Joe Watkins (&lt;a href=&#39;http://codepen.io/joe-watkins&#39;&gt;@joe-watkins&lt;/a&gt;) on &lt;a href=&#39;http://codepen.io&#39;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
 &lt;script async src=&#34;//assets.codepen.io/assets/embed/ei.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;hide-in-field-labels-with-jquery:49c9eedd1aed5ff6edb12c9aedd18ee8&#34;&gt;Hide in-field Labels with jQuery&lt;/h3&gt;
+&lt;h3 id=&#34;hide-in-field-labels-with-jquery&#34;&gt;Hide in-field Labels with jQuery&lt;/h3&gt;
 
 &lt;p&gt;&lt;p data-height=&#34;268&#34; data-theme-id=&#34;0&#34; data-slug-hash=&#34;misCA&#34; data-default-tab=&#34;result&#34; data-user=&#34;joe-watkins&#34; class=&#39;codepen&#39;&gt;See the Pen &lt;a href=&#39;http://codepen.io/joe-watkins/pen/misCA/&#39;&gt;Compact Labels&lt;/a&gt; by Joe Watkins (&lt;a href=&#39;http://codepen.io/joe-watkins&#39;&gt;@joe-watkins&lt;/a&gt;) on &lt;a href=&#39;http://codepen.io&#39;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
 &lt;script async src=&#34;//assets.codepen.io/assets/embed/ei.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;show-placeholder-values-while-typing:49c9eedd1aed5ff6edb12c9aedd18ee8&#34;&gt;Show placeholder values while typing&lt;/h3&gt;
+&lt;h3 id=&#34;show-placeholder-values-while-typing&#34;&gt;Show placeholder values while typing&lt;/h3&gt;
 
 &lt;p&gt;&lt;p data-height=&#34;386&#34; data-theme-id=&#34;0&#34; data-slug-hash=&#34;kspFj&#34; data-default-tab=&#34;result&#34; data-user=&#34;joe-watkins&#34; class=&#39;codepen&#39;&gt;See the Pen &lt;a href=&#39;http://codepen.io/joe-watkins/pen/kspFj/&#39;&gt;Show placeholder while typing&lt;/a&gt; by Joe Watkins (&lt;a href=&#39;http://codepen.io/joe-watkins&#39;&gt;@joe-watkins&lt;/a&gt;) on &lt;a href=&#39;http://codepen.io&#39;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
 &lt;script async src=&#34;//assets.codepen.io/assets/embed/ei.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;summary:49c9eedd1aed5ff6edb12c9aedd18ee8&#34;&gt;Summary&lt;/h2&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
 
 &lt;p&gt;Creating web-based projects that are accessible can be tough and there is still a lot to learn for us all. When it comes to an attribute like &lt;code&gt;placeholder&lt;/code&gt; it is a cool feature that can add accessibility if used correctly,.. if misused it has quite the opposite effect.&lt;/p&gt;
 
-&lt;h3 id=&#34;resources:49c9eedd1aed5ff6edb12c9aedd18ee8&#34;&gt;Resources&lt;/h3&gt;
+&lt;h3 id=&#34;resources&#34;&gt;Resources&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://webaim.org&#34;&gt;WebAim&lt;/a&gt;&lt;/li&gt;

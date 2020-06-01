@@ -32,7 +32,57 @@ $(document).ready(function(){
 				$('pre code').each(function(i, block) {
 					hljs.highlightBlock(block);
 				});
-			} // highlightjs
+			}, // highlightjs
+
+			offlineSupport: function(){
+
+				var serviceWorkerFile = "/sw.js",
+						offlineClass = "no-network-connection";
+
+				if(navigator.serviceWorker){
+					_registerServiceWorker();
+				}
+
+				function _registerServiceWorker(){
+					navigator.serviceWorker.register(serviceWorkerFile).then(function(){
+						console.log("service worker running");
+					}).catch(function(){
+						console.log("nope there was a problem");
+					});
+				}
+
+				// handle no network
+				if(!navigator.onLine){
+					_showOfflineMessage();
+				}
+
+				window.addEventListener("offline", _showOfflineMessage, false);
+
+				window.addEventListener("online", _killOfflineMessage, false);
+
+				function _showOfflineMessage(){
+
+					$("body").addClass(offlineClass);
+
+					setTimeout(function(){
+						$(".offline-message")
+							.attr("aria-hidden",false)
+							.attr("style","")
+							.show()
+							.focus();
+					},300);
+				}
+
+				function _killOfflineMessage(){
+
+					$("body").removeClass(offlineClass);
+
+					$(".offline-message")
+						.hide()
+						.attr("aria-hidden",true);
+				}
+
+			} // offlineSupport
 
 		} // ui
 
@@ -40,5 +90,6 @@ $(document).ready(function(){
 
 	Engine.ui.mainNav();
 	Engine.ui.highlightjs();
+	Engine.ui.offlineSupport();
 
 });
