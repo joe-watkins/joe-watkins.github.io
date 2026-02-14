@@ -51,6 +51,8 @@
 
 
 
+<div class="offline-message" tabindex="-1" aria-hidden="true" style="display: none;"><p>Offline Mode: There is no network connection.</p></div>
+
 <a id="skip-to-content" href="#main">skip to main content</a>
 
 <header id="header" role="banner">
@@ -85,7 +87,7 @@
 <p>Almost everything in JavaScript is an object.</p>
 </blockquote>
 
-<h2 id="what-are-some-benefits-of-using-object-literals:9d97ad479cc5ffe24873fb0a57d509ec">What are some benefits of using Object Literals?</h2>
+<h2 id="what-are-some-benefits-of-using-object-literals">What are some benefits of using Object Literals?</h2>
 
 <ul>
 <li>Makes our JavaScript easier to read</li>
@@ -96,7 +98,7 @@
 <li>Plays nicely with minification</li>
 </ul>
 
-<h2 id="ladies-and-gentlemen-start-your-engines:9d97ad479cc5ffe24873fb0a57d509ec">Ladies and Gentlemen start your Engines</h2>
+<h2 id="ladies-and-gentlemen-start-your-engines">Ladies and Gentlemen start your Engines</h2>
 
 <p>To start things off we will setup the <code>Engine</code> object inside of the <a href="https://api.jquery.com/ready/">jQuery ready method</a>. I like to throw a comment at the end of each object. As we add objects this can help keep track of where you are in the code.</p>
 
@@ -109,7 +111,7 @@
 });
 </code></pre>
 
-<h2 id="creatively-naming-your-objects-helps-with-organization:9d97ad479cc5ffe24873fb0a57d509ec">Creatively naming your objects helps with organization</h2>
+<h2 id="creatively-naming-your-objects-helps-with-organization">Creatively naming your objects helps with organization</h2>
 
 <p>I like to stick with a naming convention that makes sense to me when I&rsquo;m creating new objects and functions. Let&rsquo;s add a <code>ui</code> property that will house our first few methods inside of the <code>Engine</code> object. Spend some time thinking about naming here so when revisiting the code things make sense. These properties should be comma separated should you add more.</p>
 
@@ -145,7 +147,7 @@
 });
 </code></pre>
 
-<h2 id="how-to-trigger-your-functions:9d97ad479cc5ffe24873fb0a57d509ec">How to trigger your functions</h2>
+<h2 id="how-to-trigger-your-functions">How to trigger your functions</h2>
 
 <p>Now that we have created our app&rsquo;s scaffolding and our <code>helloWorld</code> function is in place we can trigger it by simply using dot notation. e.g. <code>Engine.ui.helloWorld();</code> Be sure to do this inside of the jQuery ready method so it fires when the document is ready.</p>
 
@@ -168,7 +170,7 @@
 });
 </code></pre>
 
-<h2 id="multiple-functions-with-variables:9d97ad479cc5ffe24873fb0a57d509ec">Multiple functions with variables</h2>
+<h2 id="multiple-functions-with-variables">Multiple functions with variables</h2>
 
 <p>Now we are ready to start rocking by adding more functions. Be sure to remember that these are objects and should be comma separated. These objects can be passed variables as well. Don&rsquo;t forget to add your comments to each function as well.</p>
 
@@ -240,30 +242,30 @@
 
 				<div class="social--properties">
 					<a href="https://twitter.com/_josephwatkins" onclick="_gaq.push(['_trackEvent', 'Footer Social Links', 'click', 'Twitter']);">
-						<svg role="image" aria-labeledby="label-icon-twitter">
+						<span class="visually-hidden">Twitter</span>
+						<svg role="img" aria-labeledby="label-icon-twitter" aria-hidden="true">
 							<use xlink:href="#icon-twitter"></use>
-							<title id="label-icon-twitter">Twitter Icon</title>
 						</svg>
 					</a>
 
 					<a href="https://github.com/joe-watkins" onclick="_gaq.push(['_trackEvent', 'Footer Social Links', 'click', 'GitHub']);">
-						<svg role="image" aria-labeledby="label-icon-github">
+						<span class="visually-hidden">GitHub</span>
+						<svg role="img" aria-labeledby="label-icon-github" aria-hidden="true">
 							<use xlink:href="#icon-github"></use>
-							<title id="label-icon-github">GitHub Icon</title>
 						</svg>
 					</a>
 
 					<a href="https://www.linkedin.com/profile/view?id=19392469" onclick="_gaq.push(['_trackEvent', 'Footer Social Links', 'click', 'LinkedIn']);">
-						<svg role="image" aria-labeledby="label-icon-linkedin">
+						<span class="visually-hidden">LinkedIn</span>
+						<svg role="img" aria-labeledby="label-icon-linkedin" aria-hidden="true">
 							<use xlink:href="#icon-linkedin"></use>
-							<title id="label-icon-linkedin">LinkedIn Icon</title>
 						</svg>
 					</a>
 
 					<a href="http://codepen.io/joe-watkins" onclick="_gaq.push(['_trackEvent', 'Footer Social Links', 'click', 'CodePen']);">
-						<svg role="image" aria-labeledby="label-icon-codepen">
+						<span class="visually-hidden">CodePen</span>
+						<svg role="img" aria-labeledby="label-icon-codepen" aria-hidden="true">
 							<use xlink:href="#icon-codepen"></use>
-							<title id="label-icon-codepen">Codepen Icon</title>
 						</svg>
 					</a>
 

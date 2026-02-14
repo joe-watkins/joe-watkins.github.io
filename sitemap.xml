@@ -3,47 +3,61 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2016-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2016-06-25T08:28:24-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/accessibility/infographics-may-not-belong-on-the-web</loc>
+    <loc>/accessibility/up-and-running-with-jaws-on-a-mac/</loc>
+    <lastmod>2016-06-25T08:28:24-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webdev/progressive-enhancement-and-the-2016-presidential-race/</loc>
+    <lastmod>2016-04-17T08:28:24-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/webdev/migrate-from-jekyll-to-hugo/</loc>
+    <lastmod>2016-04-16T00:11:03-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/accessibility/infographics-may-not-belong-on-the-web/</loc>
     <lastmod>2016-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/accessibility/top-people-to-follow-in-web-accessibility</loc>
+    <loc>/accessibility/top-people-to-follow-in-web-accessibility/</loc>
     <lastmod>2015-10-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/accessibility/commonly-abused-html-and-css-that-hurt-accessibility</loc>
+    <loc>/accessibility/commonly-abused-html-and-css-that-hurt-accessibility/</loc>
     <lastmod>2015-09-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/javascript/inline-critical-css-with-wordpress</loc>
+    <loc>/javascript/inline-critical-css-with-wordpress/</loc>
     <lastmod>2015-04-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/javascript/organize-your-jquery-with-object-literal-notation</loc>
+    <loc>/javascript/organize-your-jquery-with-object-literal-notation/</loc>
     <lastmod>2015-03-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/css-visual-regression-testing-with-grunt-backstopjs</loc>
+    <loc>/css-visual-regression-testing-with-grunt-backstopjs/</loc>
     <lastmod>2015-03-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/accessibility/getting-started-with-grunt-tenon-client</loc>
+    <loc>/accessibility/getting-started-with-grunt-tenon-client/</loc>
     <lastmod>2014-12-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/accessibility/please-stop-using-placeholders-as-labels</loc>
+    <loc>/accessibility/please-stop-using-placeholders-as-labels/</loc>
     <lastmod>2014-07-30T00:00:00+00:00</lastmod>
   </url>
   

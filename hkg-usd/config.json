@@ -1,0 +1,21 @@
+{
+	"stylesDir": "styles/",
+	"localProxy": "",
+	"sassDir": "styles/",
+	"cssDir": "styles/",
+	"targetSass": "styles/main.scss",
+	"compiledCss": "styles/main.min.css",
+	"sassStyle": "expanded",
+	"sassLineNumbers" : "true",
+	"baseDir": ".",
+	"tmpDir": ".tmp",
+	"imagesDir": "images",
+	"iconsDir": "images/icons/",
+	"iconFontsDir": "styles/fonts/",
+	"svgDefsOutput": "svgDefs.svg",
+	"mainJsFiles": [
+		"scripts/main.js",
+		"scripts/partials/breakpointer.js",
+		"scripts/main.init.js"
+	]
+}

@@ -51,6 +51,8 @@
 
 
 
+<div class="offline-message" tabindex="-1" aria-hidden="true" style="display: none;"><p>Offline Mode: There is no network connection.</p></div>
+
 <a id="skip-to-content" href="#main">skip to main content</a>
 
 <header id="header" role="banner">
@@ -79,7 +81,7 @@
 
 <p>After performing many website accessibility audits for clients, I find myself continually running into the same <em>key offenders</em> that cause inaccessibility. I thought it would be fun to gather up these few buggers and show them to you and offer up some solutions for each.</p>
 
-<h2 id="1-css-outline-none:ba516824fddb9b07fd15a6eb7aca27aa">1. CSS outline: none;</h2>
+<h2 id="1-css-outline-none">1. CSS outline: none;</h2>
 
 <p>The CSS <code>outline</code> property is one that designers and developers often abuse in hopes to remove the unwanted <a href="http://tjvantoll.com/2013/01/28/stop-messing-with-the-browsers-default-focus-outline/">focus rings</a> If <code>outline: none;</code> is used without offering a custom <code>:focus</code> state it can make it difficult for some users to navigate around the website. Some keyboard-only users tab around the interface. If there is no <code>:focus</code> state giving visual feedback to where the user is in the document it is easy for that user to be confused or lost. They will get frustrated and simply leave your website.</p>
 
@@ -90,7 +92,7 @@ If you remove the outline back it up with a creative <code>:focus</code> state. 
 
 <p><img src="/images/uk-gov.gif" alt="UK.gov website"></p>
 
-<h3 id="using-outline:ba516824fddb9b07fd15a6eb7aca27aa">Using <code>outline</code></h3>
+<h3 id="using-outline">Using <code>outline</code></h3>
 
 <pre><code>a:focus {
 	outline: 2px solid red;
@@ -98,7 +100,7 @@ If you remove the outline back it up with a creative <code>:focus</code> state. 
 }
 </code></pre>
 
-<h3 id="removing-outline-with-fallback:ba516824fddb9b07fd15a6eb7aca27aa">Removing <code>outline</code> with fallback</h3>
+<h3 id="removing-outline-with-fallback">Removing <code>outline</code> with fallback</h3>
 
 <pre><code>a:focus {
 	outline: none;
@@ -107,7 +109,7 @@ If you remove the outline back it up with a creative <code>:focus</code> state. 
 }
 </code></pre>
 
-<h2 id="2-html5-placeholder-attribute:ba516824fddb9b07fd15a6eb7aca27aa">2. HTML5 Placeholder Attribute</h2>
+<h2 id="2-html5-placeholder-attribute">2. HTML5 Placeholder Attribute</h2>
 
 <p>I&rsquo;ve <a href="/accessibility/please-stop-using-placeholders-as-labels/">written about misusing HTML5 placeholder attributes</a> before and would love to see that attribute deprecated. I&rsquo;ve even <a href="https://code.google.com/p/chromium/issues/detail?id=397260&amp;q=placeholder%20accessibility&amp;colspec=ID%20Pri%20M%20Week%20ReleaseBlock%20Cr%20Status%20Owner%20Summary%20OS%20Modified">submitted bugs to Google Chrome</a> regarding how the default contrast ratio of the <code>placeholder</code> text fails WCAG 2.0 contrast ratio tests. Google claims the placeholder is &ldquo;deliberately intended to be hard to see&rdquo;.</p>
 
@@ -126,7 +128,7 @@ Use the placeholder attribute on forms wisely and sparingly. Remember that not a
 &lt;/form&gt;
 </code></pre>
 
-<h2 id="3-missing-lt-label-gt-tags:ba516824fddb9b07fd15a6eb7aca27aa">3. Missing &lt;label&gt; tags</h2>
+<h2 id="3-missing-lt-label-gt-tags">3. Missing &lt;label&gt; tags</h2>
 
 <p>When authoring web forms remember to include the <code>&lt;label&gt;</code> tag for each input field. It is important to remember to tie that <code>&lt;label&gt;</code> to a particular field by adding the <code>for</code> attribute.</p>
 
@@ -175,30 +177,30 @@ Below is a good example of a <code>&lt;label&gt;</code> tag. Notice the ID of th
 
 				<div class="social--properties">
 					<a href="https://twitter.com/_josephwatkins" onclick="_gaq.push(['_trackEvent', 'Footer Social Links', 'click', 'Twitter']);">
-						<svg role="image" aria-labeledby="label-icon-twitter">
+						<span class="visually-hidden">Twitter</span>
+						<svg role="img" aria-labeledby="label-icon-twitter" aria-hidden="true">
 							<use xlink:href="#icon-twitter"></use>
-							<title id="label-icon-twitter">Twitter Icon</title>
 						</svg>
 					</a>
 
 					<a href="https://github.com/joe-watkins" onclick="_gaq.push(['_trackEvent', 'Footer Social Links', 'click', 'GitHub']);">
-						<svg role="image" aria-labeledby="label-icon-github">
+						<span class="visually-hidden">GitHub</span>
+						<svg role="img" aria-labeledby="label-icon-github" aria-hidden="true">
 							<use xlink:href="#icon-github"></use>
-							<title id="label-icon-github">GitHub Icon</title>
 						</svg>
 					</a>
 
 					<a href="https://www.linkedin.com/profile/view?id=19392469" onclick="_gaq.push(['_trackEvent', 'Footer Social Links', 'click', 'LinkedIn']);">
-						<svg role="image" aria-labeledby="label-icon-linkedin">
+						<span class="visually-hidden">LinkedIn</span>
+						<svg role="img" aria-labeledby="label-icon-linkedin" aria-hidden="true">
 							<use xlink:href="#icon-linkedin"></use>
-							<title id="label-icon-linkedin">LinkedIn Icon</title>
 						</svg>
 					</a>
 
 					<a href="http://codepen.io/joe-watkins" onclick="_gaq.push(['_trackEvent', 'Footer Social Links', 'click', 'CodePen']);">
-						<svg role="image" aria-labeledby="label-icon-codepen">
+						<span class="visually-hidden">CodePen</span>
+						<svg role="img" aria-labeledby="label-icon-codepen" aria-hidden="true">
 							<use xlink:href="#icon-codepen"></use>
-							<title id="label-icon-codepen">Codepen Icon</title>
 						</svg>
 					</a>
 

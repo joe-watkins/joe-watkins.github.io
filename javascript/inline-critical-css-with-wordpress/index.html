@@ -51,6 +51,8 @@
 
 
 
+<div class="offline-message" tabindex="-1" aria-hidden="true" style="display: none;"><p>Offline Mode: There is no network connection.</p></div>
+
 <a id="skip-to-content" href="#main">skip to main content</a>
 
 <header id="header" role="banner">
@@ -90,13 +92,13 @@
 
 <p>This tutorial assumes you have a basic understanding of <a href="http://gruntjs.com/">GruntJS</a> and modern web development workflow tooling. Oh.. and you understand the ins and outs of a Wordpress template setup.</p>
 
-<h2 id="ok-how-do-you-handle-critical-css-in-wordpress:37551fcff895a68d9a541a25f1f9bfa9">Ok.. how do you handle Critical CSS in Wordpress?</h2>
+<h2 id="ok-how-do-you-handle-critical-css-in-wordpress">Ok.. how do you handle Critical CSS in Wordpress?</h2>
 
 <p><a href="http://wordpress.org">Wordpress</a> is an awesome CMS/Blogging platform! BUT… it currently doesn&rsquo;t play well with the webperf-minded. Wordpress, out-of-the-box, can have excessive calls to CSS and JavaScript files in the <code>&lt;head&gt;</code> of the document. When you start adding plugins the list will get even longer. The less http file requests, the quicker the page will load.</p>
 
 <p>An important step to pull off inline Critical CSS successfully in Wordpress is to limit all of those extra http requests so our Critical CSS efforts are not lost on other files slowing down the render <a href="http://www.feedthebot.com/pagespeed/critical-render-path.html">due to load blocking</a>.</p>
 
-<h2 id="step-one-grab-critical-css:37551fcff895a68d9a541a25f1f9bfa9">Step One: Grab Critical CSS</h2>
+<h2 id="step-one-grab-critical-css">Step One: Grab Critical CSS</h2>
 
 <p>The first thing you will want to do is grab the actual Above-the-fold styles using your preferred automated task. I use <a href="https://github.com/filamentgroup/grunt-criticalcss">grunt-criticalcss</a></p>
 
@@ -147,7 +149,7 @@ criticalcss: {
 
 <p><code>grunt.registerTask('cssBuild',['criticalcss','cssmin']);</code></p>
 
-<h2 id="step-two-install-async-js-and-css-plugin:37551fcff895a68d9a541a25f1f9bfa9">Step Two: Install Async JS and CSS Plugin</h2>
+<h2 id="step-two-install-async-js-and-css-plugin">Step Two: Install Async JS and CSS Plugin</h2>
 
 <p>A great plugin for Critical CSS loading in Wordpress is called <a href="https://wordpress.org/plugins/async-js-and-css/">Async JS and CSS</a>. It is important to note that the plugin can affect only those files loaded using Worpdress&rsquo;s queue, which most do.</p>
 
@@ -165,7 +167,7 @@ criticalcss: {
 
 <p><img src="/images/wp-plugin-shot.png" alt="Plugin settings"></p>
 
-<h2 id="step-four-optional-setup-dev-mode-in-your-template:37551fcff895a68d9a541a25f1f9bfa9">Step Four (Optional): Setup Dev Mode in your template</h2>
+<h2 id="step-four-optional-setup-dev-mode-in-your-template">Step Four (Optional): Setup Dev Mode in your template</h2>
 
 <p>I like to setup a <strong>Dev</strong> state so that while I&rsquo;m developing I&rsquo;m not wrestling the inline styles as they will take precedence over files called via HTTP and make debugging tougher. While in <strong>Dev</strong> mode I actually call files the old fashioned way using hardcoded <code>&lt;style&gt;</code> tags and then turn this mode off prior to building and pushing out to staging or production.</p>
 
@@ -174,13 +176,13 @@ criticalcss: {
 ?&gt;
 </code></pre>
 
-<h2 id="step-five-setup-your-head-with-loadcss-and-php-includes:37551fcff895a68d9a541a25f1f9bfa9">Step Five: Setup your <head> with loadCSS and PHP Includes</h2>
+<h2 id="step-five-setup-your-head-with-loadcss-and-php-includes">Step Five: Setup your <head> with loadCSS and PHP Includes</h2>
 
 <p>Now we are going to make sure that we are calling our main site styles asynchronously by using <a href="https://github.com/filamentgroup/loadCSS">LoadCSS</a>.</p>
 
 <p>This is super simple to setup you just include the loadCSS() function in the <code>&lt;head&gt;</code> and point it to your main styles file.</p>
 
-<h3 id="header-php-file:37551fcff895a68d9a541a25f1f9bfa9">header.php file</h3>
+<h3 id="header-php-file">header.php file</h3>
 
 <pre><code class="language-html">&lt;?php
 	if(!$dev_mode){
@@ -226,11 +228,11 @@ criticalcss: {
 <li>Then push changes</li>
 </ul>
 
-<h2 id="old-ie-support:37551fcff895a68d9a541a25f1f9bfa9">Old IE Support</h2>
+<h2 id="old-ie-support">Old IE Support</h2>
 
 <p>I noticed some odd behavior with IE8-9 with this method of loading Critical CSS. I found that creatively using conditionals for those browsers did the trick to simply have those browsers load the CSS from the <code>&lt;link&gt;</code> tags. Something like this:</p>
 
-<h3 id="modern-browsers-and-ie10:37551fcff895a68d9a541a25f1f9bfa9">Modern browsers and IE10+</h3>
+<h3 id="modern-browsers-and-ie10">Modern browsers and IE10+</h3>
 
 <pre><code>&lt;!--[if !IE]&gt; --&gt;
 	function loadCSS(e,t,n){..}
@@ -238,14 +240,14 @@ criticalcss: {
 &lt;!-- &lt;![endif]--&gt;
 </code></pre>
 
-<h3 id="ie9:37551fcff895a68d9a541a25f1f9bfa9">IE9</h3>
+<h3 id="ie9">IE9</h3>
 
 <pre><code>&lt;!--[if IE 9]&gt;
 	&lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?php bloginfo('template_url'); ?&gt;/styles/main.min.css&quot;&gt;
 &lt;![endif]--&gt;
 </code></pre>
 
-<h3 id="ie8-and-below:37551fcff895a68d9a541a25f1f9bfa9">IE8 and below</h3>
+<h3 id="ie8-and-below">IE8 and below</h3>
 
 <pre><code>&lt;!--[if lt IE 9]&gt;
 	&lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;?php bloginfo('template_url'); ?&gt;/styles/main.min.css&quot;&gt;
@@ -294,30 +296,30 @@ criticalcss: {
 
 				<div class="social--properties">
 					<a href="https://twitter.com/_josephwatkins" onclick="_gaq.push(['_trackEvent', 'Footer Social Links', 'click', 'Twitter']);">
-						<svg role="image" aria-labeledby="label-icon-twitter">
+						<span class="visually-hidden">Twitter</span>
+						<svg role="img" aria-labeledby="label-icon-twitter" aria-hidden="true">
 							<use xlink:href="#icon-twitter"></use>
-							<title id="label-icon-twitter">Twitter Icon</title>
 						</svg>
 					</a>
 
 					<a href="https://github.com/joe-watkins" onclick="_gaq.push(['_trackEvent', 'Footer Social Links', 'click', 'GitHub']);">
-						<svg role="image" aria-labeledby="label-icon-github">
+						<span class="visually-hidden">GitHub</span>
+						<svg role="img" aria-labeledby="label-icon-github" aria-hidden="true">
 							<use xlink:href="#icon-github"></use>
-							<title id="label-icon-github">GitHub Icon</title>
 						</svg>
 					</a>
 
 					<a href="https://www.linkedin.com/profile/view?id=19392469" onclick="_gaq.push(['_trackEvent', 'Footer Social Links', 'click', 'LinkedIn']);">
-						<svg role="image" aria-labeledby="label-icon-linkedin">
+						<span class="visually-hidden">LinkedIn</span>
+						<svg role="img" aria-labeledby="label-icon-linkedin" aria-hidden="true">
 							<use xlink:href="#icon-linkedin"></use>
-							<title id="label-icon-linkedin">LinkedIn Icon</title>
 						</svg>
 					</a>
 
 					<a href="http://codepen.io/joe-watkins" onclick="_gaq.push(['_trackEvent', 'Footer Social Links', 'click', 'CodePen']);">
-						<svg role="image" aria-labeledby="label-icon-codepen">
+						<span class="visually-hidden">CodePen</span>
+						<svg role="img" aria-labeledby="label-icon-codepen" aria-hidden="true">
 							<use xlink:href="#icon-codepen"></use>
-							<title id="label-icon-codepen">Codepen Icon</title>
 						</svg>
 					</a>
 
